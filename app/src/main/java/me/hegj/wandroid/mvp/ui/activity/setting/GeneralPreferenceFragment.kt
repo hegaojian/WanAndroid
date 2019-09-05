@@ -104,7 +104,7 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.
             false
         }
         findPreference<Preference>("project")?.setOnPreferenceClickListener {
-            val data = BannerResponse("", 0, "", 0, 0, "做一个产品级的玩安卓App", 0, findPreference<Preference>("project")?.summary.toString())
+            val data = BannerResponse("", 0, "", 0, 0, "一位练习长达两年半的安卓练习生根据鸿神提供的WanAndroid开放Api来制作的产品级App", 0, findPreference<Preference>("project")?.summary.toString())
             parentActivity.launchActivity(Intent(parentActivity, WebviewActivity::class.java).apply {
                 putExtras(Bundle().apply {
                     putSerializable("bannerdata", data)
