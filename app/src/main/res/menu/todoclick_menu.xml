@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/todo_update"
+        android:title="@string/todo_update" />
+    <item
+        android:id="@+id/todo_delete"
+        android:title="@string/todo_delete" />
+    <item
+        android:id="@+id/todo_confirm"
+        android:title="@string/todo_confirm" />
+</menu>

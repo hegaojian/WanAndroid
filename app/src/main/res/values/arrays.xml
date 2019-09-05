@@ -1,0 +1,20 @@
+<resources>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+    <string-array name="setting_modes">
+        <item>无</item>
+        <item>渐显</item>
+        <item>缩放</item>
+        <item>从下到上</item>
+        <item>从左到右</item>
+        <item>从右到左</item>
+    </string-array>
+</resources>
