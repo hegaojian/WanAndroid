@@ -33,14 +33,6 @@
 - 布局优化，大量使用ConstraintLayout
 - 集成Bugly收集bug并实现App更新
 
-
-## 应用截图
-![](image/1-3.png)
-![](image/4-6.png)
-![](image/7-9.png)
-![](image/10-12.png)
-![](image/13-15.png)
-
 ## APP下载
 
 - [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.0/app-release.apk)
@@ -51,6 +43,15 @@
 
 ![](image/qrcode_img.png)
  
+
+## 应用截图
+
+![](image/1-3.png)
+![](image/4-6.png)
+![](image/7-9.png)
+![](image/10-12.png)
+![](image/13-15.png)
+
 ## 主要开源框架
 - [一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的框架-RxJava2](https://github.com/ReactiveX/RxJava)
 - [一个依赖注入框架-Dagger2](https://github.com/square/dagger)
