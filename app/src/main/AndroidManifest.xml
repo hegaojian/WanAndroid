@@ -102,7 +102,6 @@
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"
-            android:label="第三方Bugly的配置界面"
             android:theme="@android:style/Theme.Translucent" /> <!-- Arms 配置 -->
         <meta-data
             android:name="design_width_in_dp"

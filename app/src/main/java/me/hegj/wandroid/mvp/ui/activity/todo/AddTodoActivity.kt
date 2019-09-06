@@ -48,10 +48,10 @@ class AddTodoActivity : BaseActivity<AddTodoPresenter>(), AddTodoContract.View {
             todoResponse = getSerializableExtra("data") as TodoResponse?
         }
         toolbar.run {
+            setSupportActionBar(this)
             title = "添加待办清单"
             setNavigationIcon(R.drawable.ic_back)
             setNavigationOnClickListener { finish() }
-            setSupportActionBar(this)
         }
         if (todoResponse == null) {
             add_todo_colorview.setView(TodoType.TodoType1.color)
