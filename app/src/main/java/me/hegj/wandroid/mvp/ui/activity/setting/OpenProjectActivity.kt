@@ -30,10 +30,10 @@ class OpenProjectActivity : BaseActivity<IPresenter>() {
 
     override fun initData(savedInstanceState: Bundle?) {
         toolbar.run {
+            setSupportActionBar(this)
             title = "开源项目"
             setNavigationIcon(R.drawable.ic_back)
             setNavigationOnClickListener { finish() }
-            setSupportActionBar(this)
         }
         getOpenData()
         openAdapter = OpenProjectAdapter(openData).apply {

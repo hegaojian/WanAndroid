@@ -93,6 +93,7 @@ dependencies {
     //dagger
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
+
     //黄油刀
     implementation "com.jakewharton:butterknife:10.0.0"
     kapt "com.jakewharton:butterknife-compiler:10.0.0"
