@@ -35,7 +35,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.0/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.2/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
