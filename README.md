@@ -14,7 +14,7 @@
 如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
 
 # 前言
-前段时间学习了 **Kotlin** ，就打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是我都不是特别满意，所以我想做一个自己喜欢的能让我平常用的舒服的app。界面的话参考了很多的app风格，根据了自己的喜好搭配出来，个人觉得还不错
+前段时间学习了 **Kotlin** ，就打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 虽然根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是每个人的喜好与审美不一样，所以都没有做到我心目中的最完美，于是我就想做一个自己觉得最满意的app。界面的话参考了很多的app风格，根据自己的搭配实现，感觉还不错吧
 
 ## 实现的功能
 
@@ -85,6 +85,10 @@
 - 感谢[goweii](https://github.com/goweii/WanAndroid)老哥，这位老哥开发的App很优秀，使用了老哥的App图标，和收藏红心的控件
 
 # 更新日志
+
+## 1.0.1
+
+- 修复开源项目界面点击返回无反应bug
 
 ## 1.0.0
 
