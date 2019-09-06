@@ -9,9 +9,12 @@
 
 
 # WanAndroid
-一位练习长达两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，采用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发
+一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，采用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
 如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
+
+# 前言
+前段时间学习了 **Kotlin** ，就打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是我都不是特别满意，所以我想做一个自己喜欢的能让我平常用的舒服的app。界面的话参考了很多的app风格，根据了自己的喜好搭配出来，个人觉得还不错
 
 ## 实现的功能
 
@@ -30,17 +33,24 @@
 - 布局优化，大量使用ConstraintLayout
 - 集成Bugly收集bug并实现App更新
 
+## APP下载
+
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.0/app-release.apk)
+
+- [fir.im下载](https://fir.im/4ybt)
+
+- 扫码
+
+![](image/qrcode_img.png)
+ 
 
 ## 应用截图
+
 ![](image/1-3.png)
 ![](image/4-6.png)
 ![](image/7-9.png)
 ![](image/10-12.png)
 ![](image/13-15.png)
-
-## APP下载
-
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.0/app-release.apk)
 
 ## 主要开源框架
 - [一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的框架-RxJava2](https://github.com/ReactiveX/RxJava)
@@ -79,7 +89,7 @@
 ## 1.0.0
 
 - 首次提交，大致完成功能，但存在一些问题，后期慢慢解决吧
-- 1.因为侧滑返回库的原因导致输入法弹出出现黑屏
+- 1.因为侧滑返回库的原因导致输入法弹出出现黑屏，实在不行就换个其他的库了
 - 2.kotlin用的不是特别熟练，感觉很多地方还可以精简或者有其他更好的方案替代
 - 3.启动页因为考虑到要根据用户选择的主题色来动态显示，就没有设置纯色背景，所以会导致冷启动时会出现短暂白屏
 
