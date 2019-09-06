@@ -9,7 +9,7 @@
 
 
 # WanAndroid
-一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，采用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,代码有超详细的注释，方便大家练手
+一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，采用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
 如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
 
