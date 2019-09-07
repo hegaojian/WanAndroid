@@ -82,7 +82,6 @@
 
 ## 特别感谢
 - 感谢[鸿神](https://github.com/hongyangAndroid)的[WanAndroid网站提供的开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
-- 感谢[goweii](https://github.com/goweii/WanAndroid)老哥，这位老哥开发的App很优秀，使用了老哥的App图标，和收藏红心的控件
 
 # 更新日志
 
