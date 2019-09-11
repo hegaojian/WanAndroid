@@ -128,13 +128,16 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
         } else {
             loadsir.showSuccess()
             this.mDataList = titles
-            //根据头部集合循环添加对应的Fragment
-            for (i in titles.indices) {
-                fragments.add(ProjectChildFragment.newInstance(titles[i].id, 1))//分类项目页码从1开始
+            if(fragments.size==0){
+                //防止重复添加，出现 Can't change tag of fragment xxx bug
+                //根据头部集合循环添加对应的Fragment
+                for (i in titles.indices) {
+                    fragments.add(ProjectChildFragment.newInstance(titles[i].id, 1))//分类项目页码从1开始
+                }
+                //在第一个添加 最新项目Fragment
+                this.mDataList.add(0, ClassifyResponse(arrayListOf(), 0, 0, "最新项目", 0, 0, false, 0))
+                fragments.add(0, ProjectChildFragment.newInstance(true, 0))//最新项目页码从0开始
             }
-            //在第一个添加 最新项目Fragment
-            this.mDataList.add(0, ClassifyResponse(arrayListOf(), 0, 0, "最新项目", 0, 0, false, 0))
-            fragments.add(0, ProjectChildFragment.newInstance(true, 0))//最新项目页码从0开始
             //如果viewpager和 magicindicator 不为空的话，刷新他们 为空的话说明 用户还没有进来 这个Fragment
             pagerAdapter?.notifyDataSetChanged()
             magic_indicator?.navigator?.notifyDataSetChanged()

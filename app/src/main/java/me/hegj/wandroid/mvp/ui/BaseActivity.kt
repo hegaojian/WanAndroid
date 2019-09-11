@@ -20,12 +20,10 @@ import com.jess.arms.utils.ThirdViewUtil.convertAutoView
 import com.trello.rxlifecycle2.android.ActivityEvent
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
-import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.utils.ShowUtils
 import me.hegj.wandroid.app.utils.StatusBarUtil
 import me.yokeyword.fragmentation.SupportActivity
-import org.greenrobot.eventbus.Subscribe
 import javax.inject.Inject
 
 abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, ActivityLifecycleable, IView {
@@ -36,7 +34,6 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
     @Inject
     @JvmField
     var mPresenter: P? = null//如果当前页面逻辑简单, Presenter 可以为 null
-
     @Synchronized
     override fun provideCache(): Cache<String, Any> {
         if (mCache == null) {
@@ -120,7 +117,6 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
     }
 
 
-
     override fun showLoading() {
         ShowUtils.showLoading(this)
     }
@@ -132,5 +128,6 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
     override fun showMessage(message: String) {
         ShowUtils.showDialog(this, message)
     }
+
 
 }

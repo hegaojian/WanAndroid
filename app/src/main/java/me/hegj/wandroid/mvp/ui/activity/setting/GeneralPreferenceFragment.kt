@@ -116,7 +116,6 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.
             parentActivity.launchActivity(Intent(parentActivity, OpenProjectActivity::class.java))
             false
         }
-
     }
 
     /**

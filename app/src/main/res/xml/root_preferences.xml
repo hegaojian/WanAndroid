@@ -26,10 +26,10 @@
             android:key="mode"
             android:summary="@string/setting_modetip"
             android:title="@string/setting_mode" />
-        <SwitchPreferenceCompat
+       <!-- <SwitchPreferenceCompat
             android:key="slidable"
             android:summary="@string/setting_slidable_summary"
-            android:title="@string/setting_slidable_title" />
+            android:title="@string/setting_slidable_title" />-->
         <me.hegj.wandroid.app.weight.IconPreference
             android:key="color"
             android:summary="@string/choose_theme_color_summary"

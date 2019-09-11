@@ -1,6 +1,5 @@
 package me.hegj.wandroid.mvp.ui.adapter
 
-import android.os.Build
 import android.util.TypedValue
 import android.widget.ImageView
 import androidx.cardview.widget.CardView
@@ -32,32 +31,24 @@ class TodoAdapter(data: ArrayList<TodoResponse>?) : BaseQuickAdapter<TodoRespons
                 //已完成
                 helper.setVisible(R.id.item_todo_status, true)
                 helper.setImageResource(R.id.item_todo_status, R.drawable.ic_done)
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                    helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(R.drawable.forground_shap)
-                }
+                helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(R.drawable.forground_shap)
             } else {
                 if (date < DatetimeUtil.nows.time) {
                     //未完成并且超过了预定完成时间
                     helper.setVisible(R.id.item_todo_status, true)
                     helper.setImageResource(R.id.item_todo_status, R.drawable.ic_yiguoqi)
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(R.drawable.forground_shap)
-                    }
+                    helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(R.drawable.forground_shap)
                 } else {
                     //未完成
                     helper.setVisible(R.id.item_todo_status, false)
                     TypedValue().apply {
                         mContext.theme.resolveAttribute(R.attr.selectableItemBackground, this, true)
                     }.run {
-                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                            helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(resourceId)
-                        }
+                        helper.getView<CardView>(R.id.item_todo_cardview).foreground = mContext.getDrawable(resourceId)
                     }
                 }
             }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                helper.getView<ImageView>(R.id.item_todo_tag).imageTintList = SettingUtil.getOneColorStateList(TodoType.byType(priority).color)
-            }
+            helper.getView<ImageView>(R.id.item_todo_tag).imageTintList = SettingUtil.getOneColorStateList(TodoType.byType(priority).color)
         }
     }
 }

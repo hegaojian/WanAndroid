@@ -42,4 +42,8 @@
     <string name="todo_update">编辑</string>
     <string name="todo_confirm">完成</string>
 
+
+    <string name="error_occurred">发生了意外错误。\n抱歉给老哥你带来了不便。</string>
+    <string name="error_details">错误详情</string>
+
 </resources>

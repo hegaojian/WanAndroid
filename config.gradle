@@ -3,10 +3,10 @@ ext {
     android = [
             compileSdkVersion: 28,
             buildToolsVersion: "28.0.3",
-            minSdkVersion    : 16,
+            minSdkVersion    : 21,
             targetSdkVersion : 28,
-            versionCode      : 3,
-            versionName      : "1.0.2"
+            versionCode      : 4,
+            versionName      : "1.0.3"
     ]
 
     version = [
@@ -151,7 +151,9 @@ ext {
             //高性能通用 key-value 组件
             "mmkv"                  : 'com.tencent:mmkv:1.0.22',
             //侧滑返回
-            "swipe"                 : 'com.billy.android:smart-swipe:1.0.6',
+            "swipe"                 : 'com.billy.android:smart-swipe:1.0.7',
+            //阻止app崩溃
+            "customactivityoncrash" : 'cat.ereza:customactivityoncrash:2.2.0',
 
     ]
     customLibs = customDeps.values()

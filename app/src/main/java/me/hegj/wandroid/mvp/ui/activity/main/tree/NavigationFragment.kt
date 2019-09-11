@@ -167,29 +167,24 @@ class NavigationFragment : BaseFragment<NavigationPresenter>(), NavigationContra
     fun freshLogin(event: LoginFreshEvent) {
         //因为导航界面没有需要显示是否收藏，所以只要改动数据就好了
         //如果是登录了， 当前界面的数据与账户收藏集合id匹配的值需要设置已经收藏
-        GlobalScope.launch{
-            async{
-                if (event.login) {
-                    event.collectIds.forEach {
-                        for (item in adapter.data) {
-                            for (actri in item.articles) {
-                                if (it.toInt() == actri.id) {
-                                    actri.collect = true
-                                }
-                            }
-                        }
-                    }
-                } else {
-                    //退出了，把所有的收藏全部变为未收藏
-                    for (item in adapter.data) {
-                        for (actri in item.articles) {
-                            actri.collect = false
+        if (event.login) {
+            event.collectIds.forEach {
+                for (item in adapter.data) {
+                    for (actri in item.articles) {
+                        if (it.toInt() == actri.id) {
+                            actri.collect = true
                         }
                     }
                 }
             }
+        } else {
+            //退出了，把所有的收藏全部变为未收藏
+            for (item in adapter.data) {
+                for (actri in item.articles) {
+                    actri.collect = false
+                }
+            }
         }
-
     }
 
     /**

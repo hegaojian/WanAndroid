@@ -226,27 +226,22 @@ class SearchResultActivity : BaseActivity<SearchResultPresenter>(), SearchResult
     @Subscribe
     fun freshLogin(event: LoginFreshEvent) {
         //如果是登录了， 当前界面的数据与账户收藏集合id匹配的值需要设置已经收藏
-        GlobalScope.launch {
-            async {
-                if (event.login) {
-                    event.collectIds.forEach {
-                        for (item in ariticleAdapter.data) {
-                            if (item.id == it.toInt()) {
-                                item.collect = true
-                                break
-                            }
-                        }
-                    }
-                } else {
-                    //退出了，把所有的收藏全部变为未收藏
-                    for (item in ariticleAdapter.data) {
-                        item.collect = false
+        if (event.login) {
+            event.collectIds.forEach {
+                for (item in ariticleAdapter.data) {
+                    if (item.id == it.toInt()) {
+                        item.collect = true
+                        break
                     }
                 }
-            }.run {
-                ariticleAdapter.notifyDataSetChanged()
+            }
+        } else {
+            //退出了，把所有的收藏全部变为未收藏
+            for (item in ariticleAdapter.data) {
+                item.collect = false
             }
         }
+        ariticleAdapter.notifyDataSetChanged()
     }
 
     /**

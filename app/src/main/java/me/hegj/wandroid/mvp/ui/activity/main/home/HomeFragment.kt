@@ -203,7 +203,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
         val view = LayoutInflater.from(_mActivity).inflate(R.layout.include_banner, null).apply {
             banner.run {
                 setAdapter(BGABanner.Adapter<ImageView, BannerResponse> { _: BGABanner, view: ImageView, banner: BannerResponse?, i: Int ->
-                    ArmsUtils.obtainAppComponentFromContext(_mActivity).imageLoader().loadImage(_mActivity,
+                    ArmsUtils.obtainAppComponentFromContext(_mActivity).imageLoader().loadImage(_mActivity.applicationContext,
                             ImageConfigImpl
                                     .builder()
                                     .url(banner?.imagePath)
@@ -293,27 +293,22 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
     @Subscribe
     fun freshLogin(event: LoginFreshEvent) {
         //如果是登录了， 当前界面的数据与账户收藏集合id匹配的值需要设置已经收藏
-        GlobalScope.launch{
-            async{
-                if (event.login) {
-                    event.collectIds.forEach {
-                        for (item in adapter.data) {
-                            if (item.id == it.toInt()) {
-                                item.collect = true
-                                break
-                            }
-                        }
-                    }
-                } else {
-                    //退出了，把所有的收藏全部变为未收藏
-                    for (item in adapter.data) {
-                        item.collect = false
+        if (event.login) {
+            event.collectIds.forEach {
+                for (item in adapter.data) {
+                    if (item.id == it.toInt()) {
+                        item.collect = true
+                        break
                     }
                 }
-            }.run {
-                adapter.notifyDataSetChanged()
+            }
+        } else {
+            //退出了，把所有的收藏全部变为未收藏
+            for (item in adapter.data) {
+                item.collect = false
             }
         }
+        adapter.notifyDataSetChanged()
     }
 
     /**
@@ -322,7 +317,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
     @Subscribe
     fun collectChange(event: CollectEvent) {
         //使用协程做耗时操作
-        GlobalScope.launch{
+        GlobalScope.launch {
             async {
                 var indexResult = -1
                 for (index in adapter.data.indices) {
@@ -334,7 +329,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
                 }
                 indexResult
             }.run {
-                if(await()!=-1){
+                if (await() != -1) {
                     adapter.notifyItemChanged(await())
                 }
             }

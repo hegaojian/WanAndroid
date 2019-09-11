@@ -95,7 +95,7 @@ class AriticleAdapter(data: ArrayList<AriticleResponse>?) : BaseQuickAdapter<Ari
                             helper.setGone(R.id.item_project_new, false)
                         }
                         helper.getView<CollectView>(R.id.item_project_collect).isChecked = collect
-                        ArmsUtils.obtainAppComponentFromContext(mContext).imageLoader().loadImage(mContext,
+                        ArmsUtils.obtainAppComponentFromContext(mContext).imageLoader().loadImage(mContext.applicationContext,
                                 ImageConfigImpl
                                         .builder()
                                         .url(envelopePic)

@@ -1,6 +1,6 @@
 # compiler: R8
 # compiler_version: 1.4.94
-# min_api: 16
+# min_api: 21
 butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY -> butterknife.a:
     butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY INSTANCE -> a
 butterknife.Unbinder$-CC -> butterknife.b:
@@ -9,6 +9,131 @@ butterknife.internal.-$$Lambda$DebouncingOnClickListener$EDavjG1Da3G8JTdFPVGk_7O
     butterknife.internal.-$$Lambda$DebouncingOnClickListener$EDavjG1Da3G8JTdFPVGk_7OErB8 INSTANCE -> a
 butterknife.internal.DebouncingOnClickListener -> butterknife.internal.DebouncingOnClickListener:
     void lambda$static$0() -> a
+cat.ereza.customactivityoncrash.CustomActivityOnCrash -> cat.ereza.customactivityoncrash.CustomActivityOnCrash:
+    java.util.Deque activityLog -> c
+    android.app.Application application -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig config -> b
+    java.lang.ref.WeakReference lastActivityCreated -> d
+    boolean isInBackground -> e
+    cat.ereza.customactivityoncrash.config.CaocConfig access$000() -> a
+    boolean access$200(android.content.Context) -> a
+    void access$300(android.content.Context,long) -> a
+    boolean access$500(java.lang.Throwable,java.lang.Class) -> a
+    boolean access$602(boolean) -> a
+    java.lang.ref.WeakReference access$902(java.lang.ref.WeakReference) -> a
+    java.lang.String capitalize(java.lang.String) -> a
+    void closeApplication(android.app.Activity,cat.ereza.customactivityoncrash.config.CaocConfig) -> a
+    java.lang.String getActivityLogFromIntent(android.content.Intent) -> a
+    java.lang.String getAllErrorDetailsFromIntent(android.content.Context,android.content.Intent) -> a
+    java.lang.String getBuildDateAsString(android.content.Context,java.text.DateFormat) -> a
+    void restartApplicationWithIntent(android.app.Activity,android.content.Intent,cat.ereza.customactivityoncrash.config.CaocConfig) -> a
+    void setConfig(cat.ereza.customactivityoncrash.config.CaocConfig) -> a
+    android.app.Application access$100() -> b
+    java.lang.Class access$400(android.content.Context) -> b
+    cat.ereza.customactivityoncrash.config.CaocConfig getConfigFromIntent(android.content.Intent) -> b
+    boolean isStackTraceLikelyConflictive(java.lang.Throwable,java.lang.Class) -> b
+    void restartApplication(android.app.Activity,cat.ereza.customactivityoncrash.config.CaocConfig) -> b
+    void setLastCrashTimestamp(android.content.Context,long) -> b
+    void access$1000() -> c
+    java.lang.Class access$800(android.content.Context) -> c
+    java.lang.String getStackTraceFromIntent(android.content.Intent) -> c
+    boolean access$600() -> d
+    void install(android.content.Context) -> d
+    java.util.Deque access$700() -> e
+    java.lang.Class getErrorActivityClassWithIntentFilter(android.content.Context) -> e
+    java.lang.ref.WeakReference access$900() -> f
+    long getLastCrashTimestamp(android.content.Context) -> f
+    cat.ereza.customactivityoncrash.config.CaocConfig getConfig() -> g
+    java.lang.Class getLauncherActivity(android.content.Context) -> g
+    java.lang.String getDeviceModelName() -> h
+    java.lang.Class getRestartActivityClassWithIntentFilter(android.content.Context) -> h
+    java.lang.String getVersionName(android.content.Context) -> i
+    void killCurrentProcess() -> i
+    java.lang.Class guessErrorActivityClass(android.content.Context) -> j
+    java.lang.Class guessRestartActivityClass(android.content.Context) -> k
+    boolean hasCrashedInTheLastSeconds(android.content.Context) -> l
+cat.ereza.customactivityoncrash.CustomActivityOnCrash$1 -> cat.ereza.customactivityoncrash.a:
+    java.lang.Thread$UncaughtExceptionHandler val$oldHandler -> a
+cat.ereza.customactivityoncrash.CustomActivityOnCrash$2 -> cat.ereza.customactivityoncrash.b:
+    java.text.DateFormat dateFormat -> b
+    int currentlyStartedActivities -> a
+cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener -> cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener:
+    void onLaunchErrorActivity() -> c
+    void onCloseAppFromErrorActivity() -> d
+    void onRestartAppFromErrorActivity() -> e
+cat.ereza.customactivityoncrash.activity.DefaultErrorActivity -> cat.ereza.customactivityoncrash.activity.DefaultErrorActivity:
+    void access$000(cat.ereza.customactivityoncrash.activity.DefaultErrorActivity) -> a
+    void copyErrorToClipboard() -> a
+cat.ereza.customactivityoncrash.activity.DefaultErrorActivity$1 -> cat.ereza.customactivityoncrash.activity.a:
+    cat.ereza.customactivityoncrash.config.CaocConfig val$config -> a
+    cat.ereza.customactivityoncrash.activity.DefaultErrorActivity this$0 -> b
+cat.ereza.customactivityoncrash.activity.DefaultErrorActivity$2 -> cat.ereza.customactivityoncrash.activity.b:
+    cat.ereza.customactivityoncrash.config.CaocConfig val$config -> a
+    cat.ereza.customactivityoncrash.activity.DefaultErrorActivity this$0 -> b
+cat.ereza.customactivityoncrash.activity.DefaultErrorActivity$3 -> cat.ereza.customactivityoncrash.activity.d:
+    cat.ereza.customactivityoncrash.activity.DefaultErrorActivity this$0 -> a
+cat.ereza.customactivityoncrash.activity.DefaultErrorActivity$3$1 -> cat.ereza.customactivityoncrash.activity.c:
+    cat.ereza.customactivityoncrash.activity.DefaultErrorActivity$3 this$1 -> a
+cat.ereza.customactivityoncrash.config.CaocConfig -> cat.ereza.customactivityoncrash.config.CaocConfig:
+    java.lang.Class restartActivityClass -> j
+    cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener eventListener -> k
+    java.lang.Integer errorDrawable -> h
+    java.lang.Class errorActivityClass -> i
+    boolean logErrorOnRestart -> e
+    boolean trackActivities -> f
+    int minTimeBetweenCrashesMs -> g
+    boolean enabled -> b
+    boolean showErrorDetails -> c
+    int backgroundMode -> a
+    boolean showRestartButton -> d
+    int access$000(cat.ereza.customactivityoncrash.config.CaocConfig) -> a
+    int access$002(cat.ereza.customactivityoncrash.config.CaocConfig,int) -> a
+    cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener access$1002(cat.ereza.customactivityoncrash.config.CaocConfig,cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener) -> a
+    boolean access$102(cat.ereza.customactivityoncrash.config.CaocConfig,boolean) -> a
+    java.lang.Integer access$702(cat.ereza.customactivityoncrash.config.CaocConfig,java.lang.Integer) -> a
+    java.lang.Class access$802(cat.ereza.customactivityoncrash.config.CaocConfig,java.lang.Class) -> a
+    int getBackgroundMode() -> a
+    void setRestartActivityClass(java.lang.Class) -> a
+    boolean access$100(cat.ereza.customactivityoncrash.config.CaocConfig) -> b
+    boolean access$202(cat.ereza.customactivityoncrash.config.CaocConfig,boolean) -> b
+    int access$602(cat.ereza.customactivityoncrash.config.CaocConfig,int) -> b
+    java.lang.Class access$902(cat.ereza.customactivityoncrash.config.CaocConfig,java.lang.Class) -> b
+    java.lang.Class getErrorActivityClass() -> b
+    cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener access$1000(cat.ereza.customactivityoncrash.config.CaocConfig) -> c
+    boolean access$302(cat.ereza.customactivityoncrash.config.CaocConfig,boolean) -> c
+    boolean access$200(cat.ereza.customactivityoncrash.config.CaocConfig) -> d
+    boolean access$402(cat.ereza.customactivityoncrash.config.CaocConfig,boolean) -> d
+    boolean access$300(cat.ereza.customactivityoncrash.config.CaocConfig) -> e
+    boolean access$502(cat.ereza.customactivityoncrash.config.CaocConfig,boolean) -> e
+    boolean access$400(cat.ereza.customactivityoncrash.config.CaocConfig) -> f
+    java.lang.Integer getErrorDrawable() -> f
+    boolean access$500(cat.ereza.customactivityoncrash.config.CaocConfig) -> g
+    cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener getEventListener() -> g
+    int access$600(cat.ereza.customactivityoncrash.config.CaocConfig) -> h
+    int getMinTimeBetweenCrashesMs() -> h
+    java.lang.Integer access$700(cat.ereza.customactivityoncrash.config.CaocConfig) -> i
+    java.lang.Class getRestartActivityClass() -> i
+    java.lang.Class access$800(cat.ereza.customactivityoncrash.config.CaocConfig) -> j
+    boolean isEnabled() -> j
+    java.lang.Class access$900(cat.ereza.customactivityoncrash.config.CaocConfig) -> k
+    boolean isLogErrorOnRestart() -> k
+    boolean isShowErrorDetails() -> l
+    boolean isShowRestartButton() -> m
+    boolean isTrackActivities() -> n
+cat.ereza.customactivityoncrash.config.CaocConfig$Builder -> cat.ereza.customactivityoncrash.config.CaocConfig$a:
+    cat.ereza.customactivityoncrash.config.CaocConfig config -> a
+    void apply() -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder backgroundMode(int) -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder enabled(boolean) -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder errorActivity(java.lang.Class) -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder eventListener(cat.ereza.customactivityoncrash.CustomActivityOnCrash$EventListener) -> a
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder create() -> b
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder logErrorOnRestart(boolean) -> b
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder minTimeBetweenCrashesMs(int) -> b
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder restartActivity(java.lang.Class) -> b
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder showErrorDetails(boolean) -> c
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder showRestartButton(boolean) -> d
+    cat.ereza.customactivityoncrash.config.CaocConfig$Builder trackActivities(boolean) -> e
 cn.bingoogolapple.bgabanner.BGABanner -> cn.bingoogolapple.bgabanner.BGABanner:
     int mPointContainerLeftRightPadding -> n
     float mAspectRatio -> L
@@ -207,6 +332,17 @@ cn.bingoogolapple.bgabanner.transformer.ZoomStackPageTransformer -> cn.bingoogol
     void handleInvisiblePage(android.view.View,float) -> a
     void handleLeftPage(android.view.View,float) -> b
     void handleRightPage(android.view.View,float) -> c
+cn.simonlee.widget.swipeback.ShadowView -> cn.simonlee.widget.swipeback.ShadowView:
+    int[] colors -> f
+    float[] positions -> g
+    android.graphics.Paint mShadowBarPaint -> b
+    boolean isShowShadowBar -> e
+    int mShadowColor -> d
+    float density -> a
+    int mLinearShaderWidth -> c
+    int getShadowAlpha(float) -> a
+    float getShadowPosition(int) -> a
+    void setShowColor(int,boolean,boolean) -> a
 com.afollestad.date.CalendarsKt -> com.afollestad.date.a:
     java.util.Calendar decrementMonth(java.util.Calendar) -> a
     void setDayOfMonth(java.util.Calendar,int) -> a
@@ -236,23 +372,23 @@ com.afollestad.date.DatePicker -> com.afollestad.date.DatePicker:
 com.afollestad.date.DatePicker$1 -> com.afollestad.date.DatePicker$1:
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     void invoke(java.util.Calendar,java.util.Calendar) -> a
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.DatePicker$10 -> com.afollestad.date.DatePicker$10:
     com.afollestad.date.DatePicker this$0 -> a
     void invoke(int) -> a
 com.afollestad.date.DatePicker$2 -> com.afollestad.date.DatePicker$2:
     void invoke(java.util.List) -> a
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.DatePicker$3 -> com.afollestad.date.DatePicker$3:
     void invoke(boolean) -> a
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.DatePicker$4 -> com.afollestad.date.DatePicker$4:
     void invoke(boolean) -> a
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.DatePicker$5 -> com.afollestad.date.DatePicker$5:
     com.afollestad.date.DatePicker this$0 -> a
     java.lang.Object invoke() -> b
@@ -279,13 +415,13 @@ com.afollestad.date.DatePicker$onDateChanged$1 -> com.afollestad.date.DatePicker
 com.afollestad.date.DatePicker$onFinishInflate$1 -> com.afollestad.date.DatePicker$onFinishInflate$1:
     java.lang.Object invoke() -> b
     void invoke() -> b
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.DatePicker$onFinishInflate$2 -> com.afollestad.date.DatePicker$onFinishInflate$2:
     java.lang.Object invoke() -> b
     void invoke() -> b
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.date.adapters.MonthAdapter -> com.afollestad.date.adapters.MonthAdapter:
     java.util.Calendar calendar -> b
     kotlin.jvm.functions.Function1 onSelection -> g
@@ -1049,8 +1185,8 @@ com.afollestad.materialdialogs.internal.list.DialogRecyclerView -> com.afollesta
 com.afollestad.materialdialogs.internal.list.DialogRecyclerView$attach$1 -> com.afollestad.materialdialogs.internal.list.DialogRecyclerView$attach$1:
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     void invoke(boolean,boolean) -> a
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 com.afollestad.materialdialogs.internal.list.DialogRecyclerView$onAttachedToWindow$1 -> com.afollestad.materialdialogs.internal.list.DialogRecyclerView$onAttachedToWindow$1:
     com.afollestad.materialdialogs.internal.list.DialogRecyclerView$onAttachedToWindow$1 INSTANCE -> a
     void invoke(com.afollestad.materialdialogs.internal.list.DialogRecyclerView) -> a
@@ -1300,74 +1436,49 @@ com.afollestad.viewpagerdots.UtilKt -> com.afollestad.viewpagerdots.a:
     android.graphics.drawable.Drawable tint(android.graphics.drawable.Drawable,int) -> a
 com.billy.android.swipe.SmartSwipe -> com.billy.android.swipe.a:
     com.billy.android.swipe.SmartSwipe$IWrapperFactory factory -> a
-    com.billy.android.swipe.SmartSwipeWrapper createNewWrapper(android.content.Context) -> a
     int dp2px(int,android.content.Context) -> a
     float ensureBetween(float,float,float) -> a
     int ensureBetween(int,int,int) -> a
     boolean initFactoryByClassName(java.lang.String) -> a
-    com.billy.android.swipe.SmartSwipeWrapper peekWrapperFor(android.app.Activity) -> a
-    com.billy.android.swipe.SmartSwipeWrapper peekWrapperFor(android.view.View) -> a
     void setFactory(com.billy.android.swipe.SmartSwipe$IWrapperFactory) -> a
-    com.billy.android.swipe.SmartSwipeWrapper wrap(android.app.Activity) -> b
-    com.billy.android.swipe.SmartSwipeWrapper wrap(android.view.View) -> b
 com.billy.android.swipe.SmartSwipe$IWrapperFactory -> com.billy.android.swipe.a$a:
-    com.billy.android.swipe.SmartSwipeWrapper createWrapper(android.content.Context) -> a
-com.billy.android.swipe.SmartSwipeBack -> com.billy.android.swipe.b:
-    com.billy.android.swipe.SmartSwipeBack$IPreviousFinder mPreviousFinder -> b
-    java.util.ArrayList ACTIVITIES -> a
-    com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackListener activitySwipeBackListener -> c
-    void activityBack(android.app.Application,com.billy.android.swipe.SmartSwipeBack$SwipeBackConsumerFactory,com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackFilter) -> a
-    android.app.Activity findPreviousActivity(android.app.Activity) -> a
-com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackFilter -> com.billy.android.swipe.b$a:
-    boolean onFilter(android.app.Activity) -> a
-com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackListener -> com.billy.android.swipe.b$b:
-    com.billy.android.swipe.SmartSwipeBack$SwipeBackConsumerFactory mFactory -> a
-    com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackFilter mFilter -> b
-    com.billy.android.swipe.SmartSwipeBack$SwipeBackConsumerFactory access$002(com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackListener,com.billy.android.swipe.SmartSwipeBack$SwipeBackConsumerFactory) -> a
-    com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackFilter access$102(com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackListener,com.billy.android.swipe.SmartSwipeBack$ActivitySwipeBackFilter) -> a
-com.billy.android.swipe.SmartSwipeBack$IPreviousFinder -> com.billy.android.swipe.b$c:
-    android.app.Activity findPreviousActivity(android.app.Activity) -> a
-com.billy.android.swipe.SmartSwipeBack$SwipeBackConsumerFactory -> com.billy.android.swipe.b$d:
-    com.billy.android.swipe.SwipeConsumer createSwipeBackConsumer(android.app.Activity) -> a
-com.billy.android.swipe.SmartSwipeRefresh$RefreshView -> com.billy.android.swipe.c:
-com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshFooter -> com.billy.android.swipe.d:
-com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshHeader -> com.billy.android.swipe.e:
+com.billy.android.swipe.SmartSwipeRefresh$RefreshView -> com.billy.android.swipe.b:
+com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshFooter -> com.billy.android.swipe.c:
+com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshHeader -> com.billy.android.swipe.d:
 com.billy.android.swipe.SmartSwipeWrapper$LayoutParams -> com.billy.android.swipe.SmartSwipeWrapper$a:
     int gravity -> a
-com.billy.android.swipe.SwipeConsumer -> com.billy.android.swipe.g:
-    int mCurDisplayDistanceY -> l
-    boolean mOpenDistanceSpecified -> i
-    int mSwipeMaxDistance -> j
-    java.util.List mListeners -> v
+com.billy.android.swipe.SwipeConsumer -> com.billy.android.swipe.f:
+    boolean mSwiping -> m
+    com.billy.android.swipe.internal.SwipeHelper mSwipeHelper -> n
+    int mCurDisplayDistanceX -> j
     int mSwipeOpenDistance -> h
     int mCurSwipeDistanceX -> f
     int mCachedSwipeDistanceX -> d
-    int mHeight -> E
+    int mWidth -> C
     com.billy.android.swipe.SmartSwipeWrapper mWrapper -> b
-    android.view.animation.Interpolator mInterpolator -> r
-    com.billy.android.swipe.calculator.SwipeDistanceCalculator mSwipeDistanceCalculator -> y
-    int mOpenDistance -> w
-    int mReleaseMode -> u
-    int mEdgeSize -> s
-    boolean mDisableNestedFly -> C
-    float mProgress -> m
-    int mLockDirection -> q
-    boolean mSwiping -> n
-    com.billy.android.swipe.internal.SwipeHelper mSwipeHelper -> o
-    int mCurDisplayDistanceX -> k
+    boolean mDisableSwipeOnSettling -> y
+    float mOverSwipeFactor -> w
+    java.lang.Integer mMaxSettleDuration -> z
+    float mSensitivity -> s
+    boolean mDisableNestedScroll -> A
+    float mProgress -> l
+    int mEnableDirection -> o
+    int mCurDisplayDistanceY -> k
+    java.util.List mListeners -> u
+    int mSwipeMaxDistance -> i
     int mCurSwipeDistanceY -> g
-    int mWidth -> D
+    int mHeight -> D
     int mCachedSwipeDistanceY -> e
     int mDirection -> c
-    java.lang.Integer mMaxSettleDuration -> A
     int DEFAULT_OPEN_DISTANCE_IN_DP -> a
-    float mOverSwipeFactor -> x
-    boolean mDisableSwipeOnSettling -> z
-    float mSensitivity -> t
-    boolean mDisableNestedScroll -> B
-    int mEnableDirection -> p
+    android.view.animation.Interpolator mInterpolator -> q
+    com.billy.android.swipe.calculator.SwipeDistanceCalculator mSwipeDistanceCalculator -> x
+    int mOpenDistance -> v
+    int mReleaseMode -> t
+    int mEdgeSize -> r
+    boolean mDisableNestedFly -> B
+    int mLockDirection -> p
     void reset() -> A
-    com.billy.android.swipe.SwipeConsumer smoothClose() -> B
     com.billy.android.swipe.SwipeConsumer addListener(com.billy.android.swipe.listener.SwipeListener) -> a
     boolean canChildScroll(android.view.ViewGroup,int,int,int,float,float) -> a
     int clampDistanceHorizontal(int,int) -> a
@@ -1413,11 +1524,9 @@ com.billy.android.swipe.SwipeConsumer -> com.billy.android.swipe.g:
     com.billy.android.swipe.internal.SwipeHelper getSwipeHelper() -> h
     void onStateChanged(int) -> h
     int getSwipeOpenDistance() -> i
-    com.billy.android.swipe.SwipeConsumer setEdgeSize(int) -> i
+    com.billy.android.swipe.SwipeConsumer unlockDirection(int) -> i
     void initChildrenFormXml() -> j
-    com.billy.android.swipe.SwipeConsumer setReleaseMode(int) -> j
     boolean isBottomEnable() -> k
-    com.billy.android.swipe.SwipeConsumer unlockDirection(int) -> k
     boolean isBottomLocked() -> l
     boolean isLeftEnable() -> m
     boolean isLeftLocked() -> n
@@ -1433,119 +1542,12 @@ com.billy.android.swipe.SwipeConsumer -> com.billy.android.swipe.g:
     void onClosed() -> x
     void onDetachFromWrapper() -> y
     void onOpened() -> z
-com.billy.android.swipe.SwipeConsumer$2 -> com.billy.android.swipe.f:
+com.billy.android.swipe.SwipeConsumer$2 -> com.billy.android.swipe.e:
     com.billy.android.swipe.SwipeConsumer this$0 -> a
     void onSwipeClosed(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> a
 com.billy.android.swipe.calculator.SwipeDistanceCalculator -> com.billy.android.swipe.a.a:
     int calculateSwipeDistance(int,float) -> a
     int calculateSwipeOpenDistance(int) -> a
-com.billy.android.swipe.consumer.ActivitySlidingBackConsumer -> com.billy.android.swipe.b.a:
-    android.view.View mPreviousActivityContentView -> Y
-    android.app.Activity mActivity -> W
-    boolean mHorizontalSwiping -> Z
-    int initTranslation -> X
-    com.billy.android.swipe.internal.ActivityTranslucentUtil mActivityTranslucentUtil -> V
-    void resetPreviousActivityContentView() -> I
-    int clampDistanceHorizontal(int,int) -> a
-    void layoutContentView(android.view.View) -> a
-    void onAttachToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.internal.SwipeHelper) -> a
-    void onDisplayDistanceChanged(int,int,int,int) -> a
-    void onSwipeAccepted(int,boolean,float,float) -> a
-    boolean tryAcceptMoving(int,float,float,float,float) -> a
-    boolean tryAcceptSettling(int,float,float) -> a
-    int clampDistanceVertical(int,int) -> b
-    void initChildrenFormXml() -> j
-    void movePreviousActivityContentView(int) -> r
-    void onClosed() -> x
-    void onDetachFromWrapper() -> y
-    void onOpened() -> z
-com.billy.android.swipe.consumer.DrawerConsumer -> com.billy.android.swipe.b.b:
-    int mShadowSize -> O
-    int mScrimColor -> L
-    int mShadowColor -> M
-    boolean mDrawerViewRequired -> P
-    int r -> J
-    android.view.View[] mDrawerViews -> F
-    int b -> K
-    com.billy.android.swipe.internal.ScrimView mScrimView -> N
-    int l -> H
-    int t -> I
-    boolean mShowScrimAndShadowOutsideContentView -> Q
-    android.view.View mCurDrawerView -> G
-    void initScrimView() -> C
-    void layoutChildren() -> D
-    void layoutDrawerView() -> E
-    void layoutScrimView() -> F
-    void orderChildren() -> G
-    com.billy.android.swipe.consumer.DrawerConsumer showScrimAndShadowOutsideContentView() -> H
-    void calculateDrawerDirectionInitPosition(int,int,int) -> a
-    void layoutContentView(android.view.View) -> a
-    void onAttachToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.internal.SwipeHelper) -> a
-    boolean onLayout(boolean,int,int,int,int) -> a
-    void onSwipeAccepted(int,boolean,float,float) -> a
-    boolean tryAcceptMoving(int,float,float,float,float) -> a
-    void notifySwipeProgress(boolean) -> b
-    void notifySwipeRelease(float,float) -> c
-    com.billy.android.swipe.consumer.DrawerConsumer setDrawerViewRequired(boolean) -> c
-    int getOpenDistance() -> e
-    void changeDrawerViewVisibility(int) -> l
-    android.view.View getDrawerView(int) -> m
-    com.billy.android.swipe.consumer.DrawerConsumer setScrimColor(int) -> n
-    com.billy.android.swipe.consumer.DrawerConsumer setShadowColor(int) -> o
-    com.billy.android.swipe.consumer.DrawerConsumer setShadowSize(int) -> p
-    void attachDrawerView(int) -> q
-    void notifySwipeStart() -> w
-    void onClosed() -> x
-    void onDetachFromWrapper() -> y
-    void onOpened() -> z
-com.billy.android.swipe.consumer.SlidingConsumer -> com.billy.android.swipe.b.c:
-    float mRelativeMoveFactor -> R
-    int mDrawerW -> T
-    int mDrawerH -> U
-    boolean mEdgeAffinity -> S
-    void orderChildren() -> G
-    void calculateDrawerDirectionInitPosition(int,int,int) -> a
-    com.billy.android.swipe.consumer.SlidingConsumer setRelativeMoveFactor(float) -> b
-    void onDetachFromWrapper() -> y
-com.billy.android.swipe.consumer.TranslucentSlidingConsumer -> com.billy.android.swipe.b.d:
-    void layoutDrawerView() -> E
-    void changeDrawerViewVisibility(int) -> l
-    android.view.View getDrawerView(int) -> m
-com.billy.android.swipe.internal.ActivityTranslucentUtil -> com.billy.android.swipe.internal.d:
-    long convertTranslucentTimeStamp -> k
-    boolean mIsTranslucent -> i
-    java.lang.ref.WeakReference convertingActivity -> g
-    android.app.Activity mActivity -> h
-    android.os.MessageQueue$IdleHandler convertActivityToTranslucentIdleHandler -> j
-    java.lang.reflect.Method mMethodConvertToTranslucent -> c
-    boolean mInitialedConvertToTranslucent -> e
-    java.lang.reflect.Method mMethodGetActivityOptions -> d
-    boolean mInitialedConvertFromTranslucent -> f
-    java.lang.Class mTranslucentConversionListenerClass -> a
-    java.lang.reflect.Method mMethodConvertFromTranslucent -> b
-    long access$000(com.billy.android.swipe.internal.ActivityTranslucentUtil) -> a
-    void access$100(com.billy.android.swipe.internal.ActivityTranslucentUtil,boolean) -> a
-    void access$200(com.billy.android.swipe.internal.ActivityTranslucentUtil$TranslucentCallback,boolean) -> a
-    void convertActivityFromTranslucent() -> a
-    void convertActivityFromTranslucent(android.app.Activity) -> a
-    void convertActivityToTranslucent(android.app.Activity,com.billy.android.swipe.internal.ActivityTranslucentUtil$TranslucentCallback) -> a
-    void convertActivityToTranslucent(boolean) -> a
-    void convertActivityToTranslucent() -> b
-    void convertCallback(com.billy.android.swipe.internal.ActivityTranslucentUtil$TranslucentCallback,boolean) -> b
-    void convertWindowToTranslucent(android.app.Activity) -> b
-    void setTranslucent(boolean) -> b
-    boolean isTranslucent() -> c
-com.billy.android.swipe.internal.ActivityTranslucentUtil$1 -> com.billy.android.swipe.internal.a:
-    com.billy.android.swipe.internal.ActivityTranslucentUtil this$0 -> a
-com.billy.android.swipe.internal.ActivityTranslucentUtil$2 -> com.billy.android.swipe.internal.b:
-    long val$callbackTimeStamp -> a
-    com.billy.android.swipe.internal.ActivityTranslucentUtil this$0 -> c
-    boolean val$retry -> b
-    void onTranslucentCallback(boolean) -> a
-com.billy.android.swipe.internal.ActivityTranslucentUtil$3 -> com.billy.android.swipe.internal.c:
-    com.billy.android.swipe.internal.ActivityTranslucentUtil$TranslucentCallback val$callback -> a
-com.billy.android.swipe.internal.ActivityTranslucentUtil$TranslucentCallback -> com.billy.android.swipe.internal.d$a:
-    void onTranslucentCallback(boolean) -> a
 com.billy.android.swipe.internal.ScrimView -> com.billy.android.swipe.internal.ScrimView:
     android.graphics.Paint mShadowPaint -> i
     int mShadowDirection -> l
@@ -1559,8 +1561,7 @@ com.billy.android.swipe.internal.ScrimView -> com.billy.android.swipe.internal.S
     android.graphics.Rect mBounds -> e
     float MAX_PROGRESS -> a
     int mSize -> c
-    void setDirection(int,int,int,int,int,int) -> a
-com.billy.android.swipe.internal.SwipeHelper -> com.billy.android.swipe.internal.f:
+com.billy.android.swipe.internal.SwipeHelper -> com.billy.android.swipe.internal.b:
     android.view.ViewGroup mParentView -> r
     android.view.animation.Interpolator sInterpolator -> a
     float[] mLastMotionX -> i
@@ -1616,30 +1617,19 @@ com.billy.android.swipe.internal.SwipeHelper -> com.billy.android.swipe.internal
     void nestedScrollingRelease() -> f
     void clearMotionHistory() -> g
     void releaseViewForPointerUp() -> h
-com.billy.android.swipe.internal.SwipeHelper$1 -> com.billy.android.swipe.internal.e:
-com.billy.android.swipe.internal.SwipeUtil -> com.billy.android.swipe.internal.h:
-    java.util.concurrent.ThreadFactory sThreadFactory -> d
-    java.util.concurrent.Executor THREAD_POOL_EXECUTOR -> f
-    int CORE_POOL_SIZE -> b
-    int MAXIMUM_POOL_SIZE -> c
-    int CPU_COUNT -> a
-    java.util.concurrent.BlockingQueue sPoolWorkQueue -> e
-    int getReverseDirection(int) -> a
-com.billy.android.swipe.internal.SwipeUtil$1 -> com.billy.android.swipe.internal.g:
-    java.util.concurrent.atomic.AtomicInteger mCount -> a
-com.billy.android.swipe.internal.ViewCompat -> com.billy.android.swipe.internal.i:
+com.billy.android.swipe.internal.SwipeHelper$1 -> com.billy.android.swipe.internal.a:
+com.billy.android.swipe.internal.ViewCompat -> com.billy.android.swipe.internal.c:
     boolean canListViewScrollVertical(android.widget.AbsListView,int) -> a
     void postInvalidateOnAnimation(android.view.View) -> a
-com.billy.android.swipe.listener.SimpleSwipeListener -> com.billy.android.swipe.c.a:
+com.billy.android.swipe.listener.SimpleSwipeListener -> com.billy.android.swipe.b.a:
     void onConsumerDetachedFromWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> a
-    void onSwipeClosed(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> a
     void onSwipeProcess(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,boolean,float) -> a
     void onSwipeRelease(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,float,float,float) -> a
     void onSwipeStateChanged(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,int,float) -> a
     void onConsumerAttachedToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> b
     void onSwipeStart(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> b
     void onSwipeOpened(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> c
-com.billy.android.swipe.listener.SwipeListener -> com.billy.android.swipe.c.b:
+com.billy.android.swipe.listener.SwipeListener -> com.billy.android.swipe.b.b:
     void onConsumerDetachedFromWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> a
     void onSwipeClosed(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> a
     void onSwipeProcess(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,boolean,float) -> a
@@ -4231,8 +4221,8 @@ kotlin.Pair -> kotlin.Pair:
     java.lang.Object first -> a
     java.lang.Object component1() -> a
     java.lang.Object component2() -> b
-    java.lang.Object getFirst() -> c
-    java.lang.Object getSecond() -> d
+    java.lang.Object getFirst() -> f
+    java.lang.Object getSecond() -> g
 kotlin.Result -> kotlin.Result:
     kotlin.Result$Companion Companion -> a
     java.lang.Object constructor-impl(java.lang.Object) -> a
@@ -4444,8 +4434,8 @@ kotlin.coroutines.jvm.internal.BaseContinuationImpl -> kotlin.coroutines.jvm.int
     void resumeWith(java.lang.Object) -> a
     java.lang.StackTraceElement getStackTraceElement() -> b
     java.lang.Object invokeSuspend(java.lang.Object) -> b
-    kotlin.coroutines.Continuation getCompletion() -> c
-    void releaseIntercepted() -> d
+    kotlin.coroutines.Continuation getCompletion() -> f
+    void releaseIntercepted() -> g
 kotlin.coroutines.jvm.internal.Boxing -> kotlin.coroutines.jvm.internal.a:
     java.lang.Integer boxInt(int) -> a
 kotlin.coroutines.jvm.internal.CompletedContinuation -> kotlin.coroutines.jvm.internal.b:
@@ -4454,8 +4444,8 @@ kotlin.coroutines.jvm.internal.CompletedContinuation -> kotlin.coroutines.jvm.in
 kotlin.coroutines.jvm.internal.ContinuationImpl -> kotlin.coroutines.jvm.internal.ContinuationImpl:
     kotlin.coroutines.Continuation intercepted -> b
     kotlin.coroutines.CoroutineContext _context -> c
-    void releaseIntercepted() -> d
-    kotlin.coroutines.Continuation intercepted() -> e
+    void releaseIntercepted() -> g
+    kotlin.coroutines.Continuation intercepted() -> h
 kotlin.coroutines.jvm.internal.CoroutineStackFrame -> kotlin.coroutines.jvm.internal.c:
     kotlin.coroutines.jvm.internal.CoroutineStackFrame getCallerFrame() -> a
     java.lang.StackTraceElement getStackTraceElement() -> b
@@ -4516,12 +4506,12 @@ kotlin.jvm.internal.CallableReference -> kotlin.jvm.internal.CallableReference:
     java.lang.Object receiver -> c
     java.lang.Object NO_RECEIVER -> a
     kotlin.reflect.KCallable reflected -> b
-    kotlin.reflect.KCallable compute() -> c
-    kotlin.reflect.KCallable computeReflected() -> d
-    java.lang.Object getBoundReceiver() -> e
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    kotlin.reflect.KCallable getReflected() -> g
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KCallable compute() -> f
+    kotlin.reflect.KCallable computeReflected() -> g
+    java.lang.Object getBoundReceiver() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    kotlin.reflect.KCallable getReflected() -> j
+    java.lang.String getSignature() -> k
 kotlin.jvm.internal.CallableReference$NoReceiver -> kotlin.jvm.internal.CallableReference$NoReceiver:
     kotlin.jvm.internal.CallableReference$NoReceiver INSTANCE -> a
     kotlin.jvm.internal.CallableReference$NoReceiver access$000() -> a
@@ -4538,7 +4528,7 @@ kotlin.jvm.internal.DefaultConstructorMarker -> kotlin.jvm.internal.f:
 kotlin.jvm.internal.FunctionBase -> kotlin.jvm.internal.g:
 kotlin.jvm.internal.FunctionReference -> kotlin.jvm.internal.FunctionReference:
     int arity -> d
-    kotlin.reflect.KCallable computeReflected() -> d
+    kotlin.reflect.KCallable computeReflected() -> g
 kotlin.jvm.internal.InlineMarker -> kotlin.jvm.internal.h:
     void mark(int) -> a
 kotlin.jvm.internal.Intrinsics -> kotlin.jvm.internal.i:
@@ -4556,28 +4546,28 @@ kotlin.jvm.internal.Intrinsics -> kotlin.jvm.internal.i:
     void throwParameterIsNullException(java.lang.String) -> d
 kotlin.jvm.internal.MutablePropertyReference1 -> kotlin.jvm.internal.MutablePropertyReference1:
     kotlin.reflect.KProperty1$Getter getGetter() -> a
-    kotlin.reflect.KCallable computeReflected() -> d
+    kotlin.reflect.KCallable computeReflected() -> g
 kotlin.jvm.internal.MutablePropertyReference1Impl -> kotlin.jvm.internal.MutablePropertyReference1Impl:
     java.lang.String signature -> f
     kotlin.reflect.KDeclarationContainer owner -> d
     java.lang.String name -> e
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 kotlin.jvm.internal.PackageReference -> kotlin.jvm.internal.j:
     java.lang.Class jClass -> a
     java.lang.String moduleName -> b
     java.lang.Class getJClass() -> a
 kotlin.jvm.internal.PropertyReference -> kotlin.jvm.internal.PropertyReference:
-    kotlin.reflect.KProperty getReflected() -> g
+    kotlin.reflect.KProperty getReflected() -> j
 kotlin.jvm.internal.PropertyReference1 -> kotlin.jvm.internal.PropertyReference1:
     kotlin.reflect.KProperty1$Getter getGetter() -> a
-    kotlin.reflect.KCallable computeReflected() -> d
+    kotlin.reflect.KCallable computeReflected() -> g
 kotlin.jvm.internal.PropertyReference1Impl -> kotlin.jvm.internal.PropertyReference1Impl:
     java.lang.String signature -> f
     kotlin.reflect.KDeclarationContainer owner -> d
     java.lang.String name -> e
-    kotlin.reflect.KDeclarationContainer getOwner() -> f
-    java.lang.String getSignature() -> h
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
 kotlin.jvm.internal.Ref$IntRef -> kotlin.jvm.internal.Ref$IntRef:
     int element -> a
 kotlin.jvm.internal.Ref$ObjectRef -> kotlin.jvm.internal.Ref$ObjectRef:
@@ -5662,42 +5652,33 @@ kotlinx.coroutines.scheduling.WorkQueue -> kotlinx.coroutines.scheduling.m:
 kotlinx.coroutines.selects.SelectClause0 -> kotlinx.coroutines.b.a:
 kotlinx.coroutines.selects.SelectClause1 -> kotlinx.coroutines.b.b:
 me.hegj.wandroid.app.ActivityLifecycleCallbacksImpl -> me.hegj.wandroid.app.a:
-me.hegj.wandroid.app.AppLifecyclesImpl -> me.hegj.wandroid.app.e:
+me.hegj.wandroid.app.AppLifecyclesImpl -> me.hegj.wandroid.app.b:
     void attachBaseContext(android.content.Context) -> a
     void onCreate(android.app.Application) -> a
     void onTerminate(android.app.Application) -> b
-me.hegj.wandroid.app.AppLifecyclesImpl$onCreate$1 -> me.hegj.wandroid.app.c:
-    android.app.Application $application -> a
-    com.billy.android.swipe.SwipeConsumer createSwipeBackConsumer(android.app.Activity) -> a
-me.hegj.wandroid.app.AppLifecyclesImpl$onCreate$1$1 -> me.hegj.wandroid.app.b:
-    android.app.Activity $activity -> a
-    void onSwipeOpened(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> c
-me.hegj.wandroid.app.AppLifecyclesImpl$onCreate$2 -> me.hegj.wandroid.app.d:
-    me.hegj.wandroid.app.AppLifecyclesImpl$onCreate$2 INSTANCE -> a
-    boolean onFilter(android.app.Activity) -> a
 me.hegj.wandroid.app.GlobalConfiguration -> me.hegj.wandroid.app.GlobalConfiguration:
     void applyOptions(android.content.Context,com.jess.arms.di.module.GlobalConfigModule$Builder) -> a
     void injectFragmentLifecycle(android.content.Context,java.util.List) -> a
     void injectAppLifecycle(android.content.Context,java.util.List) -> b
     void injectActivityLifecycle(android.content.Context,java.util.List) -> c
-me.hegj.wandroid.app.GlobalConfiguration$applyOptions$1 -> me.hegj.wandroid.app.f:
+me.hegj.wandroid.app.GlobalConfiguration$applyOptions$1 -> me.hegj.wandroid.app.c:
     me.hegj.wandroid.app.GlobalConfiguration$applyOptions$1 INSTANCE -> a
     void configGson(android.content.Context,com.google.gson.GsonBuilder) -> a
-me.hegj.wandroid.app.GlobalConfiguration$applyOptions$2 -> me.hegj.wandroid.app.g:
+me.hegj.wandroid.app.GlobalConfiguration$applyOptions$2 -> me.hegj.wandroid.app.d:
     me.hegj.wandroid.app.GlobalConfiguration$applyOptions$2 INSTANCE -> a
     void configRetrofit(android.content.Context,retrofit2.Retrofit$Builder) -> a
-me.hegj.wandroid.app.GlobalConfiguration$applyOptions$3 -> me.hegj.wandroid.app.h:
+me.hegj.wandroid.app.GlobalConfiguration$applyOptions$3 -> me.hegj.wandroid.app.e:
     me.hegj.wandroid.app.GlobalConfiguration$applyOptions$3 INSTANCE -> a
     void configOkhttp(android.content.Context,okhttp3.OkHttpClient$Builder) -> a
-me.hegj.wandroid.app.GlobalConfiguration$applyOptions$4 -> me.hegj.wandroid.app.i:
+me.hegj.wandroid.app.GlobalConfiguration$applyOptions$4 -> me.hegj.wandroid.app.f:
     me.hegj.wandroid.app.GlobalConfiguration$applyOptions$4 INSTANCE -> a
     io.rx_cache2.internal.RxCache configRxCache(android.content.Context,io.rx_cache2.internal.RxCache$Builder) -> a
     java.lang.Void configRxCache(android.content.Context,io.rx_cache2.internal.RxCache$Builder) -> a
-me.hegj.wandroid.app.GlobalHttpHandlerImpl -> me.hegj.wandroid.app.j:
+me.hegj.wandroid.app.GlobalHttpHandlerImpl -> me.hegj.wandroid.app.g:
     android.content.Context context -> a
     okhttp3.Request onHttpRequestBefore(okhttp3.Interceptor$Chain,okhttp3.Request) -> a
     okhttp3.Response onHttpResultResponse(java.lang.String,okhttp3.Interceptor$Chain,okhttp3.Response) -> a
-me.hegj.wandroid.app.ResponseErrorListenerImpl -> me.hegj.wandroid.app.k:
+me.hegj.wandroid.app.ResponseErrorListenerImpl -> me.hegj.wandroid.app.h:
 me.hegj.wandroid.app.utils.CacheDataManager -> me.hegj.wandroid.app.utils.a:
     me.hegj.wandroid.app.utils.CacheDataManager INSTANCE -> a
     void clearAllCache(android.content.Context) -> a
@@ -5813,8 +5794,6 @@ me.hegj.wandroid.app.utils.StatusBarUtil -> me.hegj.wandroid.app.utils.q:
     void setColor(android.app.Activity,int,int) -> a
     void setRootView(android.app.Activity) -> a
     android.view.View createStatusBarView(android.app.Activity,int,int) -> b
-me.hegj.wandroid.app.utils.sliding.MyActivitySlidingBackConsumer -> me.hegj.wandroid.app.utils.a.a:
-    boolean tryAcceptMoving(int,float,float,float,float) -> a
 me.hegj.wandroid.di.component.DaggerMainComponent -> me.hegj.wandroid.a.a.b:
     javax.inject.Provider mainModelProvider -> d
     javax.inject.Provider applicationProvider -> c
@@ -8001,6 +7980,17 @@ me.hegj.wandroid.mvp.ui.activity.collect.CollectUrlFragment$initView$1 -> me.heg
 me.hegj.wandroid.mvp.ui.activity.collect.CollectUrlFragment$requestDataFaild$1 -> me.hegj.wandroid.mvp.ui.activity.collect.o:
     me.hegj.wandroid.mvp.ui.activity.collect.CollectUrlFragment this$0 -> a
     java.lang.String $errorMsg -> b
+me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity -> me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity:
+    java.util.HashMap _$_findViewCache -> e
+    void initData(android.os.Bundle) -> a
+    void setupActivityComponent(com.jess.arms.di.component.AppComponent) -> a
+    int initView(android.os.Bundle) -> b
+    android.view.View _$_findCachedViewById(int) -> e
+me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity$initData$2 -> me.hegj.wandroid.mvp.ui.activity.error.a:
+    cat.ereza.customactivityoncrash.config.CaocConfig $config -> b
+    me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity this$0 -> a
+me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity$initData$3 -> me.hegj.wandroid.mvp.ui.activity.error.b:
+    me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.integral.IntegralActivity -> me.hegj.wandroid.mvp.ui.activity.integral.IntegralActivity:
     com.kingja.loadsir.core.LoadService loadsir -> e
     int myRank -> k
@@ -8142,21 +8132,6 @@ me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$collectChange$1$1 -> me.
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> g
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$freshLogin$1 this$0 -> g
-    int label -> f
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.a:
     me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter $this_apply -> a
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> b
@@ -8264,21 +8239,6 @@ me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$collectCh
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$freshLogin$1 this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity$initData$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.search.g:
     me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter $this_apply -> a
     me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchResultActivity this$0 -> b
@@ -8323,11 +8283,11 @@ me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$initData$$inlined$run$lambda
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment target -> a
-    android.view.View view7f090129 -> c
-    android.view.View view7f09012e -> b
-    android.view.View view7f090130 -> e
-    android.view.View view7f09012c -> d
-    android.view.View view7f09012b -> f
+    android.view.View view7f09012e -> c
+    android.view.View view7f090133 -> b
+    android.view.View view7f090135 -> e
+    android.view.View view7f090131 -> d
+    android.view.View view7f090130 -> f
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.main.me.b:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding this$0 -> b
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment val$target -> a
@@ -8387,21 +8347,6 @@ me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$collectChange
     kotlinx.coroutines.CoroutineScope p$ -> e
     int label -> f
     me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$collectChange$1 this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment this$0 -> g
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.main.project.ProjectChildFragment$freshLogin$1 this$0 -> g
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     java.lang.Object invokeSuspend(java.lang.Object) -> b
@@ -8498,21 +8443,6 @@ me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$collectCh
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment this$0 -> g
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$freshLogin$1 this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment$initData$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.publicNumber.a:
     me.hegj.wandroid.mvp.ui.activity.main.publicNumber.PublicChildFragment this$0 -> a
     void onClick(com.chad.library.adapter.base.BaseViewHolder,me.hegj.wandroid.app.weight.CollectView,int) -> a
@@ -8589,21 +8519,6 @@ me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$collectChange$1 ->
     java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$collectChange$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$collectChange$1$1:
     me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$collectChange$1 this$0 -> g
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$freshLogin$1$1:
-    me.hegj.wandroid.mvp.ui.activity.main.tree.NavigationFragment$freshLogin$1 this$0 -> g
     kotlinx.coroutines.CoroutineScope p$ -> e
     int label -> f
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
@@ -8740,21 +8655,6 @@ me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$collectChan
     kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$freshLogin$1:
-    me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment this$0 -> g
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$freshLogin$1 this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment$initData$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.d:
     me.hegj.wandroid.mvp.ui.activity.main.tree.treeinfo.TreeinfoFragment this$0 -> a
     void onClick(com.chad.library.adapter.base.BaseViewHolder,me.hegj.wandroid.app.weight.CollectView,int) -> a
@@ -8856,9 +8756,9 @@ me.hegj.wandroid.mvp.ui.activity.start.LoginActivity$initData$4 -> me.hegj.wandr
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity target -> a
-    android.view.View view7f090110 -> c
-    android.view.View view7f09010c -> b
-    android.view.View view7f09010d -> d
+    android.view.View view7f090115 -> c
+    android.view.View view7f090111 -> b
+    android.view.View view7f090112 -> d
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.e:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding this$0 -> b
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity val$target -> a
@@ -8888,9 +8788,9 @@ me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$5 -> me.hegj.wa
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$6 -> me.hegj.wandroid.mvp.ui.activity.start.m:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding:
-    android.view.View view7f090178 -> c
+    android.view.View view7f09017d -> c
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity target -> a
-    android.view.View view7f090173 -> b
+    android.view.View view7f090178 -> b
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.n:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding this$0 -> b
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity val$target -> a
@@ -9006,25 +8906,8 @@ me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity -> me.hegj.wandroid.mvp.ui.
     void collectUrlSucc(boolean,me.hegj.wandroid.mvp.model.entity.CollectUrlResponse) -> a
     void initData(android.os.Bundle) -> a
     void setupActivityComponent(com.jess.arms.di.component.AppComponent) -> a
-    int getId() -> b
     int initView(android.os.Bundle) -> b
-    void setCollect(boolean) -> b
     android.view.View _$_findCachedViewById(int) -> e
-me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$freshLogin$1 -> me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$freshLogin$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity this$0 -> g
-    int label -> f
-    me.hegj.wandroid.app.event.LoginFreshEvent $event -> h
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
-me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$freshLogin$1$1 -> me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$freshLogin$1$1:
-    kotlinx.coroutines.CoroutineScope p$ -> e
-    int label -> f
-    me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$freshLogin$1 this$0 -> g
-    kotlin.coroutines.Continuation create(java.lang.Object,kotlin.coroutines.Continuation) -> a
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    java.lang.Object invokeSuspend(java.lang.Object) -> b
 me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity$initData$$inlined$run$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.web.a:
     me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter -> me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter:
@@ -9965,15 +9848,15 @@ okio.ByteString -> okio.ByteString:
     java.lang.String hex() -> b
     boolean startsWith(okio.ByteString) -> b
     okio.ByteString encodeUtf8(java.lang.String) -> c
-    byte[] internalArray() -> c
     okio.ByteString digest(java.lang.String) -> d
-    okio.ByteString md5() -> d
-    okio.ByteString sha1() -> e
-    okio.ByteString sha256() -> f
-    int size() -> g
-    okio.ByteString toAsciiLowercase() -> h
-    byte[] toByteArray() -> i
-    java.lang.String utf8() -> j
+    byte[] internalArray() -> f
+    okio.ByteString md5() -> g
+    okio.ByteString sha1() -> h
+    okio.ByteString sha256() -> i
+    int size() -> j
+    okio.ByteString toAsciiLowercase() -> k
+    byte[] toByteArray() -> l
+    java.lang.String utf8() -> m
 okio.ForwardingSink -> okio.j:
 okio.ForwardingSource -> okio.k:
 okio.ForwardingTimeout -> okio.l:
@@ -10091,15 +9974,15 @@ okio.SegmentedByteString -> okio.SegmentedByteString:
     void write(okio.Buffer) -> a
     java.lang.String hex() -> b
     int segment(int) -> b
-    byte[] internalArray() -> c
-    okio.ByteString md5() -> d
-    okio.ByteString sha1() -> e
-    okio.ByteString sha256() -> f
-    int size() -> g
-    okio.ByteString toAsciiLowercase() -> h
-    byte[] toByteArray() -> i
-    java.lang.String utf8() -> j
-    okio.ByteString toByteString() -> k
+    byte[] internalArray() -> f
+    okio.ByteString md5() -> g
+    okio.ByteString sha1() -> h
+    okio.ByteString sha256() -> i
+    int size() -> j
+    okio.ByteString toAsciiLowercase() -> k
+    byte[] toByteArray() -> l
+    java.lang.String utf8() -> m
+    okio.ByteString toByteString() -> n
 okio.Sink -> okio.y:
 okio.Source -> okio.z:
 okio.Timeout -> okio.B:

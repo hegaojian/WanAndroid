@@ -19,9 +19,7 @@ import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import butterknife.ButterKnife
-import com.billy.android.swipe.*
-import com.billy.android.swipe.SwipeConsumer.DIRECTION_LEFT
-import com.billy.android.swipe.listener.SimpleSwipeListener
+import cat.ereza.customactivityoncrash.config.CaocConfig
 import com.jess.arms.base.delegate.AppLifecycles
 import com.jess.arms.integration.cache.IntelligentCache
 import com.jess.arms.utils.ArmsUtils
@@ -33,12 +31,12 @@ import com.tencent.bugly.Bugly
 import com.tencent.bugly.crashreport.CrashReport.UserStrategy
 import com.tencent.mmkv.MMKV
 import me.hegj.wandroid.BuildConfig
+import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.HttpUtils
-import me.hegj.wandroid.app.utils.sliding.MyActivitySlidingBackConsumer
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
 import me.hegj.wandroid.app.weight.loadCallBack.LoadingCallback
-import me.hegj.wandroid.mvp.ui.activity.MainActivity
+import me.hegj.wandroid.mvp.ui.activity.error.ErrorActivity
 import me.hegj.wandroid.mvp.ui.activity.start.SplashActivity
 
 
@@ -58,7 +56,7 @@ class AppLifecyclesImpl : AppLifecycles {
 
     override fun onCreate(application: Application) {
         //初始化 SmartSwipeBack
-        SmartSwipeBack.activityBack(application, { activity ->
+      /*  SmartSwipeBack.activityBack(application, { activity ->
             MyActivitySlidingBackConsumer(activity)
                     .setRelativeMoveFactor(0.5f)
                     .setScrimColor(-0x80000000)
@@ -74,7 +72,7 @@ class AppLifecyclesImpl : AppLifecycles {
                     })
         }, {
             it !is MainActivity || it is SplashActivity//禁止主Activity滑动返回
-        })
+        })*/
 
         //初始化MMKV
         MMKV.initialize(application.filesDir.absolutePath + "/mmkv")
@@ -93,7 +91,6 @@ class AppLifecyclesImpl : AppLifecycles {
                 .addCallback(EmptyCallback())//空
                 .setDefaultCallback(SuccessCallback::class.java)//设置默认加载状态页
                 .commit()
-
         //初始化Bugly
         val context = application.applicationContext
         // 获取当前包名
@@ -105,6 +102,19 @@ class AppLifecyclesImpl : AppLifecycles {
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
         Bugly.init(context, "5a5f6366fc", BuildConfig.DEBUG)
+
+        CaocConfig.Builder.create()
+                .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM
+                .enabled(true)//是否启用CustomActivityOnCrash崩溃拦截机制 必须启用！不然集成这个库干啥？？？
+                .showErrorDetails(false) //是否必须显示包含错误详细信息的按钮 default: true
+                .showRestartButton(false) //是否必须显示“重新启动应用程序”按钮或“关闭应用程序”按钮default: true
+                .logErrorOnRestart(false) //是否必须重新堆栈堆栈跟踪 default: true
+                .trackActivities(true) //是否必须跟踪用户访问的活动及其生命周期调用 default: false
+                .minTimeBetweenCrashesMs(2000) //应用程序崩溃之间必须经过的时间 default: 3000
+                .restartActivity(SplashActivity::class.java) // 重启的activity
+                .errorActivity(ErrorActivity::class.java) //发生错误跳转的activity
+                .eventListener(null) //允许你指定事件侦听器，以便在库显示错误活动 default: null
+                .apply()
     }
 
     override fun onTerminate(application: Application) {

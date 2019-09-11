@@ -123,9 +123,11 @@ class PublicFragment : BaseFragment<PublicPresenter>(), PublicContract.View {
         } else {
             loadsir.showSuccess()
             this.mDataList = titles
-            //根据头部集合循环添加对应的Fragment
-            for (i in titles.indices) {
-                fragments.add(PublicChildFragment.newInstance(titles[i].id))
+            if (fragments.size == 0) {
+                //根据头部集合循环添加对应的Fragment
+                for (i in titles.indices) {
+                    fragments.add(PublicChildFragment.newInstance(titles[i].id))
+                }
             }
             //如果viewpager和 magicindicator 不为空的话，刷新他们 为空的话说明 用户还没有进来 这个Fragment
             pagerAdapter?.notifyDataSetChanged()
@@ -133,6 +135,7 @@ class PublicFragment : BaseFragment<PublicPresenter>(), PublicContract.View {
             view_pager?.offscreenPageLimit = fragments.size
         }
     }
+
     /**
      * 接收到event时，重新设置当前界面控件的主题颜色和一些其他配置
      */

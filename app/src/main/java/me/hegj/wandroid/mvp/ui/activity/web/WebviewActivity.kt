@@ -213,21 +213,16 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
     @Subscribe
     fun freshLogin(event: LoginFreshEvent) {
         //如果是登录了， 当前界面的id与账户收藏集合id匹配的值需要设置已经收藏 并刷新menu
-        GlobalScope.launch{
-            async{
-                if (event.login) {
-                    event.collectIds.forEach {
-                        if (it.toInt() == id) {
-                            collect = true
-                            window.invalidatePanelMenu(Window.FEATURE_OPTIONS_PANEL)
-                            invalidateOptionsMenu()
-                            return@forEach
-                        }
-                    }
+        if (event.login) {
+            event.collectIds.forEach {
+                if (it.toInt() == id) {
+                    collect = true
+                    window.invalidatePanelMenu(Window.FEATURE_OPTIONS_PANEL)
+                    invalidateOptionsMenu()
+                    return@forEach
                 }
             }
         }
-
     }
 
     override fun onPause() {

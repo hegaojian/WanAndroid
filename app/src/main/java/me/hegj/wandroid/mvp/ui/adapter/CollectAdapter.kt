@@ -71,7 +71,7 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
                         helper.setGone(R.id.item_project_type1, false)
                         helper.setGone(R.id.item_project_new, false)
                         helper.getView<CollectView>(R.id.item_project_collect).isChecked = true
-                        ArmsUtils.obtainAppComponentFromContext(mContext).imageLoader().loadImage(mContext,
+                        ArmsUtils.obtainAppComponentFromContext(mContext).imageLoader().loadImage(mContext.applicationContext,
                                 ImageConfigImpl
                                         .builder()
                                         .url(envelopePic)

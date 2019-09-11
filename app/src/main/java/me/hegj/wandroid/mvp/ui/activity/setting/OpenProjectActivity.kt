@@ -83,5 +83,6 @@ class OpenProjectActivity : BaseActivity<IPresenter>() {
         openData.add(OpenProject("FlowLayout", "Android流式布局，支持单选、多选等，适合用于产品标签等。", "https://github.com/hongyangAndroid/FlowLayout"))
         openData.add(OpenProject("MMKV", "An efficient, small mobile key-value storage framework developed by WeChat. Works on iOS, Android, macOS and Windows.", "https://github.com/Tencent/MMKV"))
         openData.add(OpenProject("SmartSwipe", "An android library to make swipe more easier and more powerful. 关于侧滑，有这一个就够了", "https://github.com/luckybilly/SmartSwipe"))
+        openData.add(OpenProject("CustomActivityOnCrash", "Android库允许在应用崩溃时启动自定义活动，而不是显示讨厌的“不幸的是，X已经停止”对话框。", "https://github.com/Ereza/CustomActivityOnCrash"))
     }
 }

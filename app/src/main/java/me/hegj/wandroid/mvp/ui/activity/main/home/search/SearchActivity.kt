@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.afollestad.materialdialogs.MaterialDialog
 import com.google.gson.Gson
@@ -70,7 +71,7 @@ class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
             MaterialDialog(this).show {
                 title(text = "温馨提示")
                 message(text = "确定清空搜索历史吗？")
-                positiveButton(text = "清空"){
+                positiveButton(text = "清空") {
                     historyData.clear()
                     adapter.setNewData(historyData)
                     CacheUtil.setSearchHistoryData(Gson().toJson(historyData))
@@ -84,14 +85,14 @@ class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
                 if (historyData.contains(name)) {
                     //当搜索历史中包含该数据时 删除添加
                     historyData.remove(name)
-                }else if(historyData.size>=10){
-                    historyData.removeAt(historyData.size-1)
+                } else if (historyData.size >= 10) {
+                    historyData.removeAt(historyData.size - 1)
                 }
-                historyData.add(0,name)
+                historyData.add(0, name)
                 this@SearchActivity.adapter.setNewData(historyData)
                 CacheUtil.setSearchHistoryData(Gson().toJson(historyData))
-                launchActivity(Intent(this@SearchActivity,SearchResultActivity::class.java).apply {
-                    putExtra("searchKey",name)
+                launchActivity(Intent(this@SearchActivity, SearchResultActivity::class.java).apply {
+                    putExtra("searchKey", name)
                 })
                 false
             }
@@ -107,8 +108,8 @@ class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
             }
             //点击了搜索历史的某一个
             setOnItemClickListener { adapter, view, position ->
-                launchActivity(Intent(this@SearchActivity,SearchResultActivity::class.java).apply {
-                    putExtra("searchKey",historyData[position])
+                launchActivity(Intent(this@SearchActivity, SearchResultActivity::class.java).apply {
+                    putExtra("searchKey", historyData[position])
                 })
             }
         }
@@ -136,14 +137,14 @@ class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
                         if (historyData.contains(it)) {
                             //当搜索历史中包含该数据时 删除
                             historyData.remove(it)
-                        }else if(historyData.size>=10){
+                        } else if (historyData.size >= 10) {
                             //如果集合的size 有10个以上了，删除最后一个
-                            historyData.removeAt(historyData.size-1)
+                            historyData.removeAt(historyData.size - 1)
                         }
-                        launchActivity(Intent(this@SearchActivity,SearchResultActivity::class.java).apply {
-                            putExtra("searchKey",it)
+                        launchActivity(Intent(this@SearchActivity, SearchResultActivity::class.java).apply {
+                            putExtra("searchKey", it)
                         })
-                        historyData.add(0,it)//添加新数据到第一条
+                        historyData.add(0, it)//添加新数据到第一条
                         this@SearchActivity.adapter.setNewData(historyData)//刷新适配器
                         CacheUtil.setSearchHistoryData(Gson().toJson(historyData))//保存到本地
                     }
