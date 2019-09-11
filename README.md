@@ -35,7 +35,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.2/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.3/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -74,7 +74,7 @@
 - [Android流式布局-FlowLayout](https://github.com/hongyangAndroid/FlowLayout)
 - [基于mmap内存映射的移动端通用 key-value 组件-MMKV](https://github.com/Tencent/MMKV)
 - [侧滑返回-SmartSwipe](https://github.com/luckybilly/SmartSwipe)
-
+- [全局捕捉异常防止崩溃-CustomActivityOnCrash](https://github.com/Ereza/CustomActivityOnCrash)
 ## 素材来源
 - [阿里巴巴矢量图标库](http://www.iconfont.cn/)
 - 借鉴了[花瓣](https://huaban.com/)的登录页
@@ -84,6 +84,12 @@
 - 感谢[鸿神](https://github.com/hongyangAndroid)的[WanAndroid网站提供的开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## 1.0.3
+- 1.修复部分手机登录注册返回主页后闪退的bug
+- 2.暂时去掉侧滑功能，现在输入法出现的黑屏不好看，后面解决后再加上侧滑功能
+- 3.添加全局捕捉异常库，防止崩溃
+- 4.修复Bugly上的bug
 
 ## 1.0.2
 - 菜鸡太粗心大意了，修复添加任务清单界面点击返回键无响应bug
