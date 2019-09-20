@@ -6,7 +6,9 @@ import dagger.Module
 import dagger.Provides
 
 import me.hegj.wandroid.mvp.contract.main.home.HomeContract
+import me.hegj.wandroid.mvp.model.entity.AriticleResponse
 import me.hegj.wandroid.mvp.model.main.home.HomeModel
+import me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter
 
 
 /**
@@ -34,5 +36,17 @@ class HomeModule(private val view: HomeContract.View) {
     @Provides
     fun provideHomeModel(model: HomeModel): HomeContract.Model {
         return model
+    }
+
+    @FragmentScope
+    @Provides
+    fun getData():ArrayList<AriticleResponse>{
+        return arrayListOf()
+    }
+
+    @FragmentScope
+    @Provides
+    fun getAdapter(data:ArrayList<AriticleResponse>):AriticleAdapter{
+        return AriticleAdapter(data,true)
     }
 }

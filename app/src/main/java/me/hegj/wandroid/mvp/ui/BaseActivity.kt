@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.AttributeSet
 import android.view.InflateException
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import butterknife.ButterKnife
 import butterknife.Unbinder
@@ -23,10 +24,11 @@ import io.reactivex.subjects.Subject
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.utils.ShowUtils
 import me.hegj.wandroid.app.utils.StatusBarUtil
+import me.hegj.wandroid.mvp.ui.base.BaseIView
 import me.yokeyword.fragmentation.SupportActivity
 import javax.inject.Inject
 
-abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, ActivityLifecycleable, IView {
+abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, ActivityLifecycleable, BaseIView {
     protected val TAG = this.javaClass.simpleName
     private val mLifecycleSubject = BehaviorSubject.create<ActivityEvent>()
     private var mCache: Cache<*, *>? = null
@@ -129,5 +131,8 @@ abstract class BaseActivity<P : IPresenter> : SupportActivity(), IActivity, Acti
         ShowUtils.showDialog(this, message)
     }
 
+    override fun getActivityContext(): AppCompatActivity {
+        return this
+    }
 
 }

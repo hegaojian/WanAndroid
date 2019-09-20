@@ -48,6 +48,7 @@ import me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchActivity
 import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter
 import org.greenrobot.eventbus.Subscribe
+import javax.inject.Inject
 
 
 /**
@@ -56,7 +57,10 @@ import org.greenrobot.eventbus.Subscribe
 class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
     private var initPageNo = 0 //注意，主页的页码是从0开始的！！！！！
     var pageNo = initPageNo
+
+    @Inject
     lateinit var adapter: AriticleAdapter
+
     lateinit var loadsir: LoadService<Any>
     private var footView: DefineLoadMoreView? = null
 
@@ -111,7 +115,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
                 true
             }
         }
-        adapter = AriticleAdapter(arrayListOf(), true).apply {
+        adapter.apply {
             if (SettingUtil.getListMode(_mActivity) != 0) {
                 openLoadAnimation(SettingUtil.getListMode(_mActivity))
             } else {

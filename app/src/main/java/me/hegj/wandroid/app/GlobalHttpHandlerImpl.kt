@@ -33,7 +33,7 @@ import okhttp3.Response
  * [Follow me](https://github.com/JessYanCoding)
  * ================================================
  */
-class GlobalHttpHandlerImpl(private val context: Context) : GlobalHttpHandler {
+class GlobalHttpHandlerImpl(val context: Context) : GlobalHttpHandler {
 
     /**
      * 这里可以先客户端一步拿到每一次 Http 请求的结果, 可以先解析成 Json, 再做一些操作, 如检测到 token 过期后
@@ -68,10 +68,12 @@ class GlobalHttpHandlerImpl(private val context: Context) : GlobalHttpHandler {
         /* 如果需要在请求服务器之前做一些操作, 则重新构建一个做过操作的 Request 并 return, 如增加 Header、Params 等请求信息, 不做操作则直接返回参数 request*/
         if (CacheUtil.isLogin()) {
             val cookies = CacheUtil.getCookie()
-            //如果已经登录过了，那么请求的时候可以带上cookie 参数，即 姓名 密码
-            return chain.request().newBuilder()
-                    .addHeader("Cookie", cookies)
-                    .build()
+            //如果已经登录过了，那么请求的时候可以带上cookie 参数
+            cookies?.run {
+                return chain.request().newBuilder()
+                        .addHeader("Cookie", this)
+                        .build()
+            }
         }
 
         return request

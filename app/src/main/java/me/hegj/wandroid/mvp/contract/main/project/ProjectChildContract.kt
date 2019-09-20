@@ -1,11 +1,11 @@
 package me.hegj.wandroid.mvp.contract.main.project
 
-import com.jess.arms.mvp.IView
 import com.jess.arms.mvp.IModel
 import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.ApiPagerResponse
 import me.hegj.wandroid.mvp.model.entity.ApiResponse
 import me.hegj.wandroid.mvp.model.entity.AriticleResponse
+import me.hegj.wandroid.mvp.ui.base.BaseIView
 
 
 /**
@@ -22,7 +22,7 @@ import me.hegj.wandroid.mvp.model.entity.AriticleResponse
  */
 interface ProjectChildContract {
     //对于经常使用的关于UI的方法可以定义到IView中,如显示隐藏进度条,和显示文字消息
-    interface View : IView{
+    interface View : BaseIView {
         fun requestDataSucc(apiPagerResponse: ApiPagerResponse<MutableList<AriticleResponse>>)
         fun requestDataFaild(errorMsg: String)
         fun  collect(collected:Boolean,position:Int)

@@ -31,6 +31,7 @@ import com.tencent.bugly.Bugly
 import com.tencent.bugly.crashreport.CrashReport.UserStrategy
 import com.tencent.mmkv.MMKV
 import me.hegj.wandroid.BuildConfig
+import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.HttpUtils
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
@@ -100,7 +101,7 @@ class AppLifecyclesImpl : AppLifecycles {
         val strategy = UserStrategy(context)
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
-        Bugly.init(context, "xxxxx", BuildConfig.DEBUG)
+        Bugly.init(context, "5a5f6366fc", BuildConfig.DEBUG)
 
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM

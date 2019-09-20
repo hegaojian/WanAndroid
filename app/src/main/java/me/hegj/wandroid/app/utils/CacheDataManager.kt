@@ -2,6 +2,10 @@ package me.hegj.wandroid.app.utils
 
 import android.content.Context
 import android.os.Environment
+import com.jess.arms.base.App
+import com.jess.arms.di.component.AppComponent
+import com.jess.arms.integration.AppManager
+import com.jess.arms.utils.ArmsUtils
 
 import java.io.File
 import java.math.BigDecimal
@@ -19,10 +23,17 @@ object CacheDataManager {
     }
 
     fun clearAllCache(context: Context) {
-
         deleteDir(context.cacheDir)
         if (Environment.getExternalStorageState() == Environment.MEDIA_MOUNTED) {
-            deleteDir(context.externalCacheDir)
+            if(context.externalCacheDir==null){
+                AppManager.getAppManager().currentActivity?.let {
+                    ShowUtils.showDialog(it,"清理缓存失败")
+                }
+                return
+            }
+            context.externalCacheDir?.let {
+                deleteDir(it)
+            }
         }
     }
 

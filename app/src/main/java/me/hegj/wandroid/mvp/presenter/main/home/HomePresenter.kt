@@ -1,6 +1,7 @@
 package me.hegj.wandroid.mvp.presenter.main.home
 
 import android.app.Application
+import android.content.Intent
 import android.util.Log
 import androidx.lifecycle.LifecycleOwner
 
@@ -19,6 +20,7 @@ import javax.inject.Inject
 
 import me.hegj.wandroid.mvp.contract.main.home.HomeContract
 import me.hegj.wandroid.mvp.model.entity.*
+import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber
 import me.jessyan.rxerrorhandler.handler.RetryWithDelay
 
