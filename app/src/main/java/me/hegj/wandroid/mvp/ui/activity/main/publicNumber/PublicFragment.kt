@@ -3,6 +3,7 @@ package me.hegj.wandroid.mvp.ui.activity.main.publicNumber
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -91,7 +92,7 @@ class PublicFragment : BaseFragment<PublicPresenter>(), PublicContract.View {
 
             override fun getTitleView(context: Context, index: Int): IPagerTitleView {
                 return ScaleTransitionPagerTitleView(context).apply {
-                    text = mDataList[index].name
+                    text = Html.fromHtml(mDataList[index].name)
                     textSize = 17f
                     normalColor = Color.WHITE
                     selectedColor = Color.WHITE

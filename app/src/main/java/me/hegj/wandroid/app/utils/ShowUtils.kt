@@ -11,8 +11,6 @@ import android.view.Window
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.afollestad.materialdialogs.MaterialDialog
-import com.afollestad.materialdialogs.WhichButton
-import com.afollestad.materialdialogs.actions.getActionButton
 import me.hegj.wandroid.R
 
 object ShowUtils {
@@ -28,7 +26,7 @@ object ShowUtils {
             setCanceledOnTouchOutside(false)
             setProgressStyle(ProgressDialog.STYLE_SPINNER)
             setMessage("请求网络中...")
-            val d = ClipDrawable(ColorDrawable(SettingUtil.getColor(context)), Gravity.LEFT, ClipDrawable.HORIZONTAL)
+            val d = ClipDrawable(ColorDrawable(SettingUtil.getColor(context)), Gravity.START, ClipDrawable.HORIZONTAL)
             setProgressDrawable(d)
             show()
         }
@@ -109,9 +107,7 @@ object ShowUtils {
      * 隐藏toast
      */
     fun hide() {
-        toast?.let {
-            it.cancel()
-        }
+        toast?.cancel()
     }
 
 

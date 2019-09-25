@@ -2,6 +2,7 @@ package me.hegj.wandroid.mvp.ui.activity.main.home.search
 
 import android.content.Intent
 import android.os.Bundle
+import android.text.Html
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
@@ -175,7 +176,7 @@ class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
             override fun getView(parent: FlowLayout?, position: Int, hotSearchBean: SearchResponse?): View {
                 return LayoutInflater.from(parent?.context).inflate(R.layout.flow_layout, search_flowlayout, false)
                         .apply {
-                            flow_tag.text = hotSearchBean?.name
+                            flow_tag.text = Html.fromHtml(hotSearchBean?.name)
                             flow_tag.setTextColor(ColorUtil.randomColor())
                         }
             }

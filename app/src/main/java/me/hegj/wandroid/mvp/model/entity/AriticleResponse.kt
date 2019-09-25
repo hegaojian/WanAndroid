@@ -24,6 +24,7 @@ data class AriticleResponse(
         var publishTime: Long,
         var superChapterId: Int,
         var superChapterName: String,
+        var shareUser: String,
         var tags: List<TagsResponse>,
         var title: String,
         var type: Int,

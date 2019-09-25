@@ -4,12 +4,13 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
 import kotlinx.android.synthetic.main.include_toolbar.*
-import kotlinx.android.synthetic.main.include_viewpager.*
+import kotlinx.android.synthetic.main.include_viewpagerleft.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.weight.ScaleTransitionPagerTitleView
@@ -72,7 +73,7 @@ class TreeInfoActivity : BaseActivity<IPresenter>() {
 
             override fun getTitleView(context: Context, index: Int): IPagerTitleView {
                 return ScaleTransitionPagerTitleView(context).apply {
-                    text = systemResponse.children[index].name
+                    text = Html.fromHtml(systemResponse.children[index].name)
                     textSize = 17f
                     normalColor = Color.WHITE
                     selectedColor = Color.WHITE

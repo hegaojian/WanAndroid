@@ -47,7 +47,6 @@ class SplashActivity : BaseActivity<IPresenter>() {
                 override fun onAnimationEnd(p0: Animation?) {
                     goToMainActivity()
                 }
-
                 override fun onAnimationStart(p0: Animation?) {}
             })
         }

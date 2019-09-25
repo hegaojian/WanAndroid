@@ -21,6 +21,7 @@ import javax.inject.Inject
 import me.hegj.wandroid.mvp.contract.main.home.HomeContract
 import me.hegj.wandroid.mvp.model.entity.*
 import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
+import me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter
 import me.jessyan.rxerrorhandler.handler.ErrorHandleSubscriber
 import me.jessyan.rxerrorhandler.handler.RetryWithDelay
 
@@ -50,6 +51,9 @@ constructor(model: HomeContract.Model, rootView: HomeContract.View) :
     lateinit var mImageLoader: ImageLoader
     @Inject
     lateinit var mAppManager: AppManager
+
+    @Inject
+    lateinit var adapter: AriticleAdapter
 
     /**
      * 获取首页banner数据

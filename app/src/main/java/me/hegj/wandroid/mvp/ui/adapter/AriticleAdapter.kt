@@ -42,9 +42,9 @@ class AriticleAdapter(data: ArrayList<AriticleResponse>?) : BaseQuickAdapter<Ari
                 Ariticle -> {
                     //文章布局的赋值
                     item.run{
-                        helper.setText(R.id.item_home_author, author)
+                        helper.setText(R.id.item_home_author, if(author.isNotEmpty()) author else shareUser)
                         helper.setText(R.id.item_home_content, Html.fromHtml(title))
-                        helper.setText(R.id.item_home_type2, "$superChapterName·$chapterName")
+                        helper.setText(R.id.item_home_type2, Html.fromHtml("$superChapterName·$chapterName"))
                         helper.setText(R.id.item_home_date, niceDate)
                         helper.getView<CollectView>(R.id.item_home_collect).isChecked = collect
                         if (showTag) {
@@ -73,10 +73,10 @@ class AriticleAdapter(data: ArrayList<AriticleResponse>?) : BaseQuickAdapter<Ari
                 Project -> {
                     //项目布局的赋值
                     item.run{
-                        helper.setText(R.id.item_project_author, author)
+                        helper.setText(R.id.item_project_author, if(author.isNotEmpty()) author else shareUser)
                         helper.setText(R.id.item_project_title, Html.fromHtml(title))
                         helper.setText(R.id.item_project_content, Html.fromHtml(desc))
-                        helper.setText(R.id.item_project_type, "$superChapterName·$chapterName")
+                        helper.setText(R.id.item_project_type, Html.fromHtml("$superChapterName·$chapterName"))
                         helper.setText(R.id.item_project_date, niceDate)
                         if (showTag) {
                             //展示标签

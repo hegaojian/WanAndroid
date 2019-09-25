@@ -3,6 +3,7 @@ package me.hegj.wandroid.mvp.ui.activity.web
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.text.Html
 import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
@@ -66,8 +67,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         intent.getSerializableExtra("data")?.let {
             it as AriticleResponse
             id = it.id
-            //替换掉部分数据可能包含的网页标签
-            showTitle = it.title.replace("<em class='highlight'>","").replace("</em>","")
+            showTitle = it.title
             collect = it.collect
             url = it.link
             collectTYpe = CollectType.Ariticle.type
@@ -76,7 +76,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         intent.getSerializableExtra("bannerdata")?.let {
             it as BannerResponse
             id = it.id
-            showTitle = it.title.replace("<em class='highlight'>","").replace("</em>","")
+            showTitle = it.title
             collect = false //从首页轮播图 没法判断是否已经收藏过，所以直接默认没有收藏
             url = it.url
             collectTYpe = CollectType.Url.type
@@ -85,8 +85,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         intent.getSerializableExtra("collect")?.let {
             it as CollectResponse
             id = it.originId
-            //替换掉部分数据可能包含的网页标签
-            showTitle = it.title.replace("<em class='highlight'>","").replace("</em>","")
+            showTitle = it.title
             collect = true //从收藏列表过来的，肯定 是 true 了
             url = it.link
             collectTYpe = CollectType.Ariticle.type
@@ -95,8 +94,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         intent.getSerializableExtra("collectUrl")?.let {
             it as CollectUrlResponse
             id = it.id
-            //替换掉部分数据可能包含的网页标签
-            showTitle = it.name.replace("<em class='highlight'>","").replace("</em>","")
+            showTitle = it.name
             collect = true//从收藏列表过来的，肯定 是 true 了
             url = it.link
             collectTYpe = CollectType.Url.type
@@ -104,7 +102,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
 
         toolbar.run {
             setSupportActionBar(this)
-            title = showTitle
+            title = Html.fromHtml(showTitle)
             setNavigationIcon(R.drawable.ic_back)
             setNavigationOnClickListener { finish() }
         }

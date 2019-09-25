@@ -16,12 +16,6 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
     private var mOnCollectViewClickListener: OnCollectViewClickListener? = null
     private val Ariticle = 1//文章类型
     private val Project = 2//项目类型 本来打算不区分文章和项目布局用统一布局的，但是布局完以后发现差异化蛮大的，所以还是分开吧
-    private var showTag = false//是否展示标签 tag 一般主页才用的到
-
-    constructor(data: ArrayList<CollectResponse>?, showTag: Boolean) : this(data) {
-        this.showTag = showTag
-    }
-
     init {
         //初始化
         multiTypeDelegate = object : MultiTypeDelegate<CollectResponse>() {
@@ -44,7 +38,7 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
                     item.run{
                         helper.setText(R.id.item_home_author, author)
                         helper.setText(R.id.item_home_content, Html.fromHtml(title))
-                        helper.setText(R.id.item_home_type2, chapterName)
+                        helper.setText(R.id.item_home_type2, Html.fromHtml(chapterName))
                         helper.setText(R.id.item_home_date, niceDate)
                         helper.getView<CollectView>(R.id.item_home_collect).isChecked = true
                         //隐藏所有标签
@@ -64,7 +58,7 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
                         helper.setText(R.id.item_project_author, author)
                         helper.setText(R.id.item_project_title, Html.fromHtml(title))
                         helper.setText(R.id.item_project_content, Html.fromHtml(desc))
-                        helper.setText(R.id.item_project_type, chapterName)
+                        helper.setText(R.id.item_project_type, Html.fromHtml(chapterName))
                         helper.setText(R.id.item_project_date, niceDate)
                         //隐藏所有标签
                         helper.setGone(R.id.item_project_top, false)

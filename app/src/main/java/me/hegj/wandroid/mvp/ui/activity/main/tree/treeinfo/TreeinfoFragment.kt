@@ -100,7 +100,7 @@ class TreeinfoFragment : BaseFragment<TreeinfoPresenter>(), TreeinfoContract.Vie
         }
 
         //初始化adapter
-        adapter = AriticleAdapter(arrayListOf()).apply {
+        adapter = AriticleAdapter(arrayListOf(),true).apply {
             if (SettingUtil.getListMode(_mActivity) != 0) {
                 openLoadAnimation(SettingUtil.getListMode(_mActivity))
             } else {
