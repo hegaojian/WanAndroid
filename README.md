@@ -35,7 +35,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.4/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.5/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -73,7 +73,6 @@
 - [基于Android WebView的一个强大的库-Agentweb](https://github.com/Justson/AgentWeb)
 - [Android流式布局-FlowLayout](https://github.com/hongyangAndroid/FlowLayout)
 - [基于mmap内存映射的移动端通用 key-value 组件-MMKV](https://github.com/Tencent/MMKV)
-- [侧滑返回-SmartSwipe](https://github.com/luckybilly/SmartSwipe)
 - [全局捕捉异常防止崩溃-CustomActivityOnCrash](https://github.com/Ereza/CustomActivityOnCrash)
 ## 素材来源
 - [阿里巴巴矢量图标库](http://www.iconfont.cn/)
@@ -84,6 +83,9 @@
 - 感谢[鸿神](https://github.com/hongyangAndroid)的[WanAndroid网站提供的开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## v 1.0.5(2019-9-28)
+- 1.😍😍😍为祖国母亲庆生，添加国庆主题
 
 ## v 1.0.4 (2019-9-25)
 - 1.修复bug体系-广场中的列表数据没有显示作者
