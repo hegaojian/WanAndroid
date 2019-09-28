@@ -31,7 +31,6 @@ import com.tencent.bugly.Bugly
 import com.tencent.bugly.crashreport.CrashReport.UserStrategy
 import com.tencent.mmkv.MMKV
 import me.hegj.wandroid.BuildConfig
-import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.HttpUtils
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
@@ -55,25 +54,6 @@ class AppLifecyclesImpl : AppLifecycles {
     }
 
     override fun onCreate(application: Application) {
-        //初始化 SmartSwipeBack
-      /*  SmartSwipeBack.activityBack(application, { activity ->
-            MyActivitySlidingBackConsumer(activity)
-                    .setRelativeMoveFactor(0.5f)
-                    .setScrimColor(-0x80000000)
-                    .setShadowColor(-0x80000000)
-                    .setShadowSize(SmartSwipe.dp2px(20, application))
-                    .setEdgeSize(SmartSwipe.dp2px(20, application))
-                    .enableDirection(DIRECTION_LEFT)
-                    .addListener(object : SimpleSwipeListener() {
-                        override fun onSwipeOpened(wrapper: SmartSwipeWrapper?, consumer: SwipeConsumer?, direction: Int) {
-                            activity.finish()
-                            activity.overridePendingTransition(R.anim.anim_none, R.anim.anim_none)
-                        }
-                    })
-        }, {
-            it !is MainActivity || it is SplashActivity//禁止主Activity滑动返回
-        })*/
-
         //初始化MMKV
         MMKV.initialize(application.filesDir.absolutePath + "/mmkv")
 
@@ -101,7 +81,7 @@ class AppLifecyclesImpl : AppLifecycles {
         val strategy = UserStrategy(context)
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
-        Bugly.init(context, "xxxx", BuildConfig.DEBUG)
+        Bugly.init(context, "xxx", BuildConfig.DEBUG)
 
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM

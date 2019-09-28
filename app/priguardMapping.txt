@@ -332,17 +332,6 @@ cn.bingoogolapple.bgabanner.transformer.ZoomStackPageTransformer -> cn.bingoogol
     void handleInvisiblePage(android.view.View,float) -> a
     void handleLeftPage(android.view.View,float) -> b
     void handleRightPage(android.view.View,float) -> c
-cn.simonlee.widget.swipeback.ShadowView -> cn.simonlee.widget.swipeback.ShadowView:
-    int[] colors -> f
-    float[] positions -> g
-    android.graphics.Paint mShadowBarPaint -> b
-    boolean isShowShadowBar -> e
-    int mShadowColor -> d
-    float density -> a
-    int mLinearShaderWidth -> c
-    int getShadowAlpha(float) -> a
-    float getShadowPosition(int) -> a
-    void setShowColor(int,boolean,boolean) -> a
 com.afollestad.date.CalendarsKt -> com.afollestad.date.a:
     java.util.Calendar decrementMonth(java.util.Calendar) -> a
     void setDayOfMonth(java.util.Calendar,int) -> a
@@ -1434,218 +1423,6 @@ com.afollestad.viewpagerdots.DotsIndicator$internalPageChangeListener$1 -> com.a
     com.afollestad.viewpagerdots.DotsIndicator this$0 -> a
 com.afollestad.viewpagerdots.UtilKt -> com.afollestad.viewpagerdots.a:
     android.graphics.drawable.Drawable tint(android.graphics.drawable.Drawable,int) -> a
-com.billy.android.swipe.SmartSwipe -> com.billy.android.swipe.a:
-    com.billy.android.swipe.SmartSwipe$IWrapperFactory factory -> a
-    int dp2px(int,android.content.Context) -> a
-    float ensureBetween(float,float,float) -> a
-    int ensureBetween(int,int,int) -> a
-    boolean initFactoryByClassName(java.lang.String) -> a
-    void setFactory(com.billy.android.swipe.SmartSwipe$IWrapperFactory) -> a
-com.billy.android.swipe.SmartSwipe$IWrapperFactory -> com.billy.android.swipe.a$a:
-com.billy.android.swipe.SmartSwipeRefresh$RefreshView -> com.billy.android.swipe.b:
-com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshFooter -> com.billy.android.swipe.c:
-com.billy.android.swipe.SmartSwipeRefresh$SmartSwipeRefreshHeader -> com.billy.android.swipe.d:
-com.billy.android.swipe.SmartSwipeWrapper$LayoutParams -> com.billy.android.swipe.SmartSwipeWrapper$a:
-    int gravity -> a
-com.billy.android.swipe.SwipeConsumer -> com.billy.android.swipe.f:
-    boolean mSwiping -> m
-    com.billy.android.swipe.internal.SwipeHelper mSwipeHelper -> n
-    int mCurDisplayDistanceX -> j
-    int mSwipeOpenDistance -> h
-    int mCurSwipeDistanceX -> f
-    int mCachedSwipeDistanceX -> d
-    int mWidth -> C
-    com.billy.android.swipe.SmartSwipeWrapper mWrapper -> b
-    boolean mDisableSwipeOnSettling -> y
-    float mOverSwipeFactor -> w
-    java.lang.Integer mMaxSettleDuration -> z
-    float mSensitivity -> s
-    boolean mDisableNestedScroll -> A
-    float mProgress -> l
-    int mEnableDirection -> o
-    int mCurDisplayDistanceY -> k
-    java.util.List mListeners -> u
-    int mSwipeMaxDistance -> i
-    int mCurSwipeDistanceY -> g
-    int mHeight -> D
-    int mCachedSwipeDistanceY -> e
-    int mDirection -> c
-    int DEFAULT_OPEN_DISTANCE_IN_DP -> a
-    android.view.animation.Interpolator mInterpolator -> q
-    com.billy.android.swipe.calculator.SwipeDistanceCalculator mSwipeDistanceCalculator -> x
-    int mOpenDistance -> v
-    int mReleaseMode -> t
-    int mEdgeSize -> r
-    boolean mDisableNestedFly -> B
-    int mLockDirection -> p
-    void reset() -> A
-    com.billy.android.swipe.SwipeConsumer addListener(com.billy.android.swipe.listener.SwipeListener) -> a
-    boolean canChildScroll(android.view.ViewGroup,int,int,int,float,float) -> a
-    int clampDistanceHorizontal(int,int) -> a
-    com.billy.android.swipe.SwipeConsumer close() -> a
-    com.billy.android.swipe.SwipeConsumer close(boolean) -> a
-    com.billy.android.swipe.SwipeConsumer disableDirection(int) -> a
-    void dispatchDraw(android.graphics.Canvas) -> a
-    com.billy.android.swipe.SwipeConsumer enableDirection(int,boolean) -> a
-    android.view.View findTopChildUnder(android.view.ViewGroup,int,int) -> a
-    int getHorizontalRange(float,float) -> a
-    void onAttachToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.internal.SwipeHelper) -> a
-    void onDisplayDistanceChanged(int,int,int,int) -> a
-    boolean onLayout(boolean,int,int,int,int) -> a
-    void onSwipeAccepted(int,boolean,float,float) -> a
-    com.billy.android.swipe.SwipeConsumer slideTo(boolean,float) -> a
-    com.billy.android.swipe.SwipeConsumer smoothSlideTo(float) -> a
-    boolean tryAcceptMoving(int,float,float,float,float) -> a
-    boolean tryAcceptSettling(int,float,float) -> a
-    int clampDistanceVertical(int,int) -> b
-    com.billy.android.swipe.SwipeConsumer enableDirection(int) -> b
-    int getDirection() -> b
-    int getVerticalRange(float,float) -> b
-    void notifySwipeProgress(boolean) -> b
-    void onDraw(android.graphics.Canvas) -> b
-    void onSwipeDistanceChanged(int,int,int,int) -> b
-    com.billy.android.swipe.SwipeConsumer removeListener(com.billy.android.swipe.listener.SwipeListener) -> b
-    int getDragState() -> c
-    boolean isDirectionEnable(int) -> c
-    void notifySwipeRelease(float,float) -> c
-    void onMeasure(int,int) -> c
-    void smoothSlideTo(int,int,int,int) -> c
-    android.view.animation.Interpolator getInterpolator() -> d
-    boolean isDirectionLocked(int) -> d
-    void onSwipeReleased(float,float) -> d
-    void smoothSlideTo(int,int) -> d
-    int getOpenDistance() -> e
-    boolean isNestedAndDisabled(int) -> e
-    void smoothOpenOrClose(float,float) -> e
-    float getProgress() -> f
-    com.billy.android.swipe.SwipeConsumer lockDirection(int) -> f
-    float getSensitivity() -> g
-    void notifySwipeStateChanged(int) -> g
-    com.billy.android.swipe.internal.SwipeHelper getSwipeHelper() -> h
-    void onStateChanged(int) -> h
-    int getSwipeOpenDistance() -> i
-    com.billy.android.swipe.SwipeConsumer unlockDirection(int) -> i
-    void initChildrenFormXml() -> j
-    boolean isBottomEnable() -> k
-    boolean isBottomLocked() -> l
-    boolean isLeftEnable() -> m
-    boolean isLeftLocked() -> n
-    boolean isRightEnable() -> o
-    boolean isRightLocked() -> p
-    boolean isTopEnable() -> q
-    boolean isTopLocked() -> r
-    void notifyAttachToWrapper() -> s
-    void notifyDetachFromWrapper() -> t
-    void notifySwipeClosed() -> u
-    void notifySwipeOpened() -> v
-    void notifySwipeStart() -> w
-    void onClosed() -> x
-    void onDetachFromWrapper() -> y
-    void onOpened() -> z
-com.billy.android.swipe.SwipeConsumer$2 -> com.billy.android.swipe.e:
-    com.billy.android.swipe.SwipeConsumer this$0 -> a
-    void onSwipeClosed(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> a
-com.billy.android.swipe.calculator.SwipeDistanceCalculator -> com.billy.android.swipe.a.a:
-    int calculateSwipeDistance(int,float) -> a
-    int calculateSwipeOpenDistance(int) -> a
-com.billy.android.swipe.internal.ScrimView -> com.billy.android.swipe.internal.ScrimView:
-    android.graphics.Paint mShadowPaint -> i
-    int mShadowDirection -> l
-    int mShadowColor -> k
-    android.graphics.Paint mPaint -> d
-    int mDirection -> h
-    android.graphics.Rect mShadowRect -> j
-    int mScrimColor -> f
-    int mBaseAlpha -> g
-    float MIN_PROGRESS -> b
-    android.graphics.Rect mBounds -> e
-    float MAX_PROGRESS -> a
-    int mSize -> c
-com.billy.android.swipe.internal.SwipeHelper -> com.billy.android.swipe.internal.b:
-    android.view.ViewGroup mParentView -> r
-    android.view.animation.Interpolator sInterpolator -> a
-    float[] mLastMotionX -> i
-    float[] mLastMotionY -> j
-    int mPointersDown -> k
-    android.view.VelocityTracker mVelocityTracker -> l
-    float[] mInitialMotionX -> g
-    float[] mInitialMotionY -> h
-    int mActivePointerId -> f
-    int mDragState -> d
-    int mTouchSlop -> e
-    boolean mReleaseInProgress -> q
-    int maxSettleDuration -> c
-    com.billy.android.swipe.SwipeConsumer mSwipeConsumer -> p
-    android.view.ViewConfiguration viewConfiguration -> b
-    android.widget.OverScroller mScroller -> o
-    int mClampedDistanceY -> t
-    int mClampedDistanceX -> s
-    float mMinVelocity -> n
-    float mMaxVelocity -> m
-    void abort() -> a
-    float clampMag(float,float,float) -> a
-    int clampMag(int,int,int) -> a
-    com.billy.android.swipe.internal.SwipeHelper create(android.view.ViewGroup,float,com.billy.android.swipe.SwipeConsumer,android.view.animation.Interpolator) -> a
-    com.billy.android.swipe.internal.SwipeHelper create(android.view.ViewGroup,com.billy.android.swipe.SwipeConsumer,android.view.animation.Interpolator) -> a
-    void dispatchViewReleased(float,float) -> a
-    float distanceInfluenceForSnapDuration(float) -> a
-    boolean isPointerDown(int) -> a
-    boolean nestedScrollingDrag(int,int,int[],boolean) -> a
-    void processTouchEvent(android.view.MotionEvent) -> a
-    void saveInitialMotion(float,float,int) -> a
-    void setInterpolator(android.content.Context,android.view.animation.Interpolator) -> a
-    boolean smoothSlideTo(int,int) -> a
-    boolean smoothSlideTo(int,int,int,int) -> a
-    boolean trySwipe(int,boolean,float,float,float,float) -> a
-    boolean trySwipe(int,boolean,float,float,float,float,boolean) -> a
-    void cancel() -> b
-    boolean checkTouchSlop(float,float) -> b
-    int computeAxisDuration(int,int,int) -> b
-    int computeSettleDuration(int,int,int,int) -> b
-    void setDragState(int) -> b
-    boolean shouldInterceptTouchEvent(android.view.MotionEvent) -> b
-    boolean continueSettling() -> c
-    void dragTo(int,int,int,int) -> c
-    void saveLastMotion(android.view.MotionEvent) -> c
-    void setMaxSettleDuration(int) -> c
-    void clearMotionHistory(int) -> d
-    int getDragState() -> d
-    boolean smoothSettleCapturedViewTo(int,int,int,int) -> d
-    void ensureMotionHistorySizeForId(int) -> e
-    com.billy.android.swipe.SwipeConsumer getSwipeConsumer() -> e
-    boolean isValidPointerForActionMove(int) -> f
-    void nestedScrollingRelease() -> f
-    void clearMotionHistory() -> g
-    void releaseViewForPointerUp() -> h
-com.billy.android.swipe.internal.SwipeHelper$1 -> com.billy.android.swipe.internal.a:
-com.billy.android.swipe.internal.ViewCompat -> com.billy.android.swipe.internal.c:
-    boolean canListViewScrollVertical(android.widget.AbsListView,int) -> a
-    void postInvalidateOnAnimation(android.view.View) -> a
-com.billy.android.swipe.listener.SimpleSwipeListener -> com.billy.android.swipe.b.a:
-    void onConsumerDetachedFromWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> a
-    void onSwipeProcess(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,boolean,float) -> a
-    void onSwipeRelease(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,float,float,float) -> a
-    void onSwipeStateChanged(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,int,float) -> a
-    void onConsumerAttachedToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> b
-    void onSwipeStart(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> b
-    void onSwipeOpened(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> c
-com.billy.android.swipe.listener.SwipeListener -> com.billy.android.swipe.b.b:
-    void onConsumerDetachedFromWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> a
-    void onSwipeClosed(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> a
-    void onSwipeProcess(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,boolean,float) -> a
-    void onSwipeRelease(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,float,float,float) -> a
-    void onSwipeStateChanged(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int,int,float) -> a
-    void onConsumerAttachedToWrapper(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer) -> b
-    void onSwipeStart(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> b
-    void onSwipeOpened(com.billy.android.swipe.SmartSwipeWrapper,com.billy.android.swipe.SwipeConsumer,int) -> c
-com.billy.android.swipe.refresh.ClassicFooter -> com.billy.android.swipe.refresh.ClassicFooter:
-    boolean mNoMoreData -> e
-com.billy.android.swipe.refresh.ClassicHeader -> com.billy.android.swipe.refresh.ClassicHeader:
-    android.widget.TextView mTitleTextView -> a
-    android.animation.ObjectAnimator animator -> d
-    int mStrResId -> c
-    android.widget.ImageView mProgressImageView -> b
-    void onInit(boolean) -> a
 com.chad.library.adapter.base.BaseItemDraggableAdapter -> com.chad.library.adapter.base.BaseItemDraggableAdapter:
     boolean itemDragEnabled -> M
     boolean itemSwipeEnabled -> N
@@ -2861,7 +2638,7 @@ com.jess.arms.base.BaseActivity -> com.jess.arms.base.BaseActivity:
     io.reactivex.subjects.BehaviorSubject mLifecycleSubject -> a
     com.jess.arms.integration.cache.Cache mCache -> b
     io.reactivex.subjects.Subject provideLifecycleSubject() -> f
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
     boolean useFragment() -> m
 com.jess.arms.base.BaseApplication -> com.jess.arms.base.BaseApplication:
@@ -2874,7 +2651,7 @@ com.jess.arms.base.BaseFragment -> com.jess.arms.base.BaseFragment:
     com.jess.arms.integration.cache.Cache mCache -> c
     android.content.Context mContext -> d
     io.reactivex.subjects.Subject provideLifecycleSubject() -> f
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
 com.jess.arms.base.BaseHolder -> com.jess.arms.base.BaseHolder:
     com.jess.arms.base.BaseHolder$OnViewClickListener mOnViewClickListener -> a
@@ -2968,14 +2745,14 @@ com.jess.arms.base.delegate.IActivity -> com.jess.arms.base.a.h:
     void initData(android.os.Bundle) -> a
     void setupActivityComponent(com.jess.arms.di.component.AppComponent) -> a
     int initView(android.os.Bundle) -> b
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
     boolean useFragment() -> m
 com.jess.arms.base.delegate.IFragment -> com.jess.arms.base.a.i:
     void initData(android.os.Bundle) -> a
     android.view.View initView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle) -> a
     void setupFragmentComponent(com.jess.arms.di.component.AppComponent) -> a
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
 com.jess.arms.di.component.AppComponent -> com.jess.arms.a.a.a:
     android.app.Application application() -> a
@@ -4251,7 +4028,6 @@ kotlin.collections.ArrayAsCollection -> kotlin.collections.a:
     boolean isVarargs -> b
     int getSize() -> a
 kotlin.collections.ArraysKt -> kotlin.collections.b:
-    java.util.List asList(java.lang.Object[]) -> a
     boolean contains(int[],int) -> a
     java.lang.Object[] copyInto$default(java.lang.Object[],java.lang.Object[],int,int,int,int,java.lang.Object) -> a
     char single(char[]) -> a
@@ -4289,7 +4065,6 @@ kotlin.collections.CollectionsKt -> kotlin.collections.h:
     java.util.List listOf(java.lang.Object) -> a
     int[] toIntArray(java.util.Collection) -> a
     java.util.List optimizeReadOnlyList(java.util.List) -> b
-    java.lang.Object single(java.lang.Iterable) -> b
     java.util.List take(java.lang.Iterable,int) -> b
     java.util.List listOf(java.lang.Object[]) -> c
     java.lang.Object firstOrNull(java.util.List) -> e
@@ -4317,15 +4092,13 @@ kotlin.collections.CollectionsKt___CollectionsKt -> kotlin.collections.r:
     java.lang.Object first(java.lang.Iterable) -> a
     java.util.Collection toCollection(java.lang.Iterable,java.util.Collection) -> a
     int[] toIntArray(java.util.Collection) -> a
-    java.lang.Object single(java.lang.Iterable) -> b
     java.util.List take(java.lang.Iterable,int) -> b
+    java.util.List toList(java.lang.Iterable) -> b
     java.util.List toMutableList(java.util.Collection) -> b
-    java.util.List toList(java.lang.Iterable) -> c
+    java.util.List toMutableList(java.lang.Iterable) -> c
     java.lang.Object first(java.util.List) -> d
-    java.util.List toMutableList(java.lang.Iterable) -> d
     java.lang.Object firstOrNull(java.util.List) -> e
     java.lang.Object last(java.util.List) -> f
-    java.lang.Object single(java.util.List) -> g
 kotlin.collections.EmptyIterator -> kotlin.collections.s:
     kotlin.collections.EmptyIterator INSTANCE -> a
 kotlin.collections.EmptyList -> kotlin.collections.EmptyList:
@@ -4629,8 +4402,6 @@ kotlin.ranges.IntRange -> kotlin.d.d:
     kotlin.ranges.IntRange EMPTY -> e
     kotlin.ranges.IntRange$Companion Companion -> f
     kotlin.ranges.IntRange access$getEMPTY$cp() -> b
-    java.lang.Integer getEndInclusive() -> c
-    java.lang.Integer getStart() -> d
 kotlin.ranges.IntRange$Companion -> kotlin.d.d$a:
     kotlin.ranges.IntRange getEMPTY() -> a
 kotlin.ranges.RangesKt -> kotlin.d.e:
@@ -4671,8 +4442,6 @@ kotlin.sequences.ConstrainedOnceSequence -> kotlin.f.a:
 kotlin.sequences.Sequence -> kotlin.f.b:
 kotlin.sequences.SequencesKt -> kotlin.f.c:
     kotlin.sequences.Sequence asSequence(java.util.Iterator) -> a
-    java.lang.String joinToString$default(kotlin.sequences.Sequence,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object) -> a
-    kotlin.sequences.Sequence map(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1) -> a
     java.util.List toList(kotlin.sequences.Sequence) -> b
 kotlin.sequences.SequencesKt__SequenceBuilderKt -> kotlin.f.d:
 kotlin.sequences.SequencesKt__SequencesJVMKt -> kotlin.f.e:
@@ -4683,83 +4452,48 @@ kotlin.sequences.SequencesKt__SequencesKt$asSequence$$inlined$Sequence$1 -> kotl
     java.util.Iterator $this_asSequence$inlined -> a
 kotlin.sequences.SequencesKt___SequencesJvmKt -> kotlin.f.h:
 kotlin.sequences.SequencesKt___SequencesKt -> kotlin.f.i:
-    java.lang.Appendable joinTo(kotlin.sequences.Sequence,java.lang.Appendable,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1) -> a
-    java.lang.String joinToString(kotlin.sequences.Sequence,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1) -> a
-    java.lang.String joinToString$default(kotlin.sequences.Sequence,java.lang.CharSequence,java.lang.CharSequence,java.lang.CharSequence,int,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object) -> a
-    kotlin.sequences.Sequence map(kotlin.sequences.Sequence,kotlin.jvm.functions.Function1) -> a
     java.util.Collection toCollection(kotlin.sequences.Sequence,java.util.Collection) -> a
     java.util.List toList(kotlin.sequences.Sequence) -> b
     java.util.List toMutableList(kotlin.sequences.Sequence) -> c
-kotlin.sequences.TransformingSequence -> kotlin.f.k:
-    kotlin.sequences.Sequence sequence -> a
-    kotlin.jvm.functions.Function1 transformer -> b
-    kotlin.sequences.Sequence access$getSequence$p(kotlin.sequences.TransformingSequence) -> a
-    kotlin.jvm.functions.Function1 access$getTransformer$p(kotlin.sequences.TransformingSequence) -> b
-kotlin.sequences.TransformingSequence$iterator$1 -> kotlin.f.j:
-    kotlin.sequences.TransformingSequence this$0 -> b
-    java.util.Iterator iterator -> a
 kotlin.text.CharsKt__CharJVMKt -> kotlin.text.a:
     int checkRadix(int) -> a
     int digitOf(char,int) -> a
     boolean isWhitespace(char) -> a
 kotlin.text.CharsKt__CharKt -> kotlin.text.b:
     boolean equals(char,char,boolean) -> a
-kotlin.text.DelimitedRangesSequence -> kotlin.text.d:
-    java.lang.CharSequence input -> a
-    int startIndex -> b
-    int limit -> c
-    kotlin.jvm.functions.Function2 getNextMatch -> d
-    kotlin.jvm.functions.Function2 access$getGetNextMatch$p(kotlin.text.DelimitedRangesSequence) -> a
-    java.lang.CharSequence access$getInput$p(kotlin.text.DelimitedRangesSequence) -> b
-    int access$getLimit$p(kotlin.text.DelimitedRangesSequence) -> c
-    int access$getStartIndex$p(kotlin.text.DelimitedRangesSequence) -> d
-kotlin.text.DelimitedRangesSequence$iterator$1 -> kotlin.text.c:
-    kotlin.ranges.IntRange nextItem -> d
-    kotlin.text.DelimitedRangesSequence this$0 -> f
-    int counter -> e
-    int currentStartIndex -> b
-    int nextSearchIndex -> c
-    int nextState -> a
-    void calcNext() -> a
 kotlin.text.Regex -> kotlin.text.Regex:
     kotlin.text.Regex$Companion Companion -> a
     java.util.regex.Pattern nativePattern -> b
     java.util.List split(java.lang.CharSequence,int) -> a
 kotlin.text.Regex$Companion -> kotlin.text.Regex$a:
-kotlin.text.StringsKt -> kotlin.text.e:
-    void appendElement(java.lang.Appendable,java.lang.Object,kotlin.jvm.functions.Function1) -> a
+kotlin.text.StringsKt -> kotlin.text.c:
     boolean contains$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object) -> a
     int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object) -> a
     int indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object) -> a
     boolean isBlank(java.lang.CharSequence) -> a
-    java.lang.String replace$default(java.lang.String,java.lang.String,java.lang.String,boolean,int,java.lang.Object) -> a
     boolean startsWith$default(java.lang.String,java.lang.String,boolean,int,java.lang.Object) -> a
     java.lang.Integer toIntOrNull(java.lang.String) -> a
     int lastIndexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object) -> b
     java.lang.Long toLongOrNull(java.lang.String) -> b
     java.lang.CharSequence trim(java.lang.CharSequence) -> d
     char first(java.lang.CharSequence) -> e
-kotlin.text.StringsKt__IndentKt -> kotlin.text.f:
-kotlin.text.StringsKt__RegexExtensionsJVMKt -> kotlin.text.g:
-kotlin.text.StringsKt__RegexExtensionsKt -> kotlin.text.h:
-kotlin.text.StringsKt__StringBuilderJVMKt -> kotlin.text.i:
-kotlin.text.StringsKt__StringBuilderKt -> kotlin.text.j:
-    void appendElement(java.lang.Appendable,java.lang.Object,kotlin.jvm.functions.Function1) -> a
-kotlin.text.StringsKt__StringNumberConversionsJVMKt -> kotlin.text.k:
-kotlin.text.StringsKt__StringNumberConversionsKt -> kotlin.text.l:
+kotlin.text.StringsKt__IndentKt -> kotlin.text.d:
+kotlin.text.StringsKt__RegexExtensionsJVMKt -> kotlin.text.e:
+kotlin.text.StringsKt__RegexExtensionsKt -> kotlin.text.f:
+kotlin.text.StringsKt__StringBuilderJVMKt -> kotlin.text.g:
+kotlin.text.StringsKt__StringBuilderKt -> kotlin.text.h:
+kotlin.text.StringsKt__StringNumberConversionsJVMKt -> kotlin.text.i:
+kotlin.text.StringsKt__StringNumberConversionsKt -> kotlin.text.j:
     java.lang.Integer toIntOrNull(java.lang.String) -> a
     java.lang.Integer toIntOrNull(java.lang.String,int) -> a
     java.lang.Long toLongOrNull(java.lang.String) -> b
     java.lang.Long toLongOrNull(java.lang.String,int) -> b
-kotlin.text.StringsKt__StringsJVMKt -> kotlin.text.m:
+kotlin.text.StringsKt__StringsJVMKt -> kotlin.text.k:
     boolean isBlank(java.lang.CharSequence) -> a
     boolean regionMatches(java.lang.String,int,java.lang.String,int,int,boolean) -> a
-    java.lang.String replace(java.lang.String,java.lang.String,java.lang.String,boolean) -> a
-    java.lang.String replace$default(java.lang.String,java.lang.String,java.lang.String,boolean,int,java.lang.Object) -> a
     boolean startsWith(java.lang.String,java.lang.String,boolean) -> a
     boolean startsWith$default(java.lang.String,java.lang.String,boolean,int,java.lang.Object) -> a
-kotlin.text.StringsKt__StringsKt -> kotlin.text.n:
-    kotlin.Pair access$findAnyOf(java.lang.CharSequence,java.util.Collection,int,boolean,boolean) -> a
+kotlin.text.StringsKt__StringsKt -> kotlin.text.l:
     boolean contains(java.lang.CharSequence,java.lang.CharSequence,boolean) -> a
     boolean contains$default(java.lang.CharSequence,java.lang.CharSequence,boolean,int,java.lang.Object) -> a
     int indexOf(java.lang.CharSequence,char,int,boolean) -> a
@@ -4769,28 +4503,14 @@ kotlin.text.StringsKt__StringsKt -> kotlin.text.n:
     int indexOf$default(java.lang.CharSequence,char,int,boolean,int,java.lang.Object) -> a
     int indexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object) -> a
     int indexOfAny(java.lang.CharSequence,char[],int,boolean) -> a
-    kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt(java.lang.CharSequence,java.lang.String[],int,boolean,int) -> a
-    kotlin.sequences.Sequence rangesDelimitedBy$StringsKt__StringsKt$default(java.lang.CharSequence,java.lang.String[],int,boolean,int,int,java.lang.Object) -> a
     boolean regionMatchesImpl(java.lang.CharSequence,int,java.lang.CharSequence,int,int,boolean) -> a
-    kotlin.sequences.Sequence splitToSequence(java.lang.CharSequence,java.lang.String[],boolean,int) -> a
-    kotlin.sequences.Sequence splitToSequence$default(java.lang.CharSequence,java.lang.String[],boolean,int,int,java.lang.Object) -> a
-    java.lang.String substring(java.lang.CharSequence,kotlin.ranges.IntRange) -> a
-    kotlin.Pair findAnyOf$StringsKt__StringsKt(java.lang.CharSequence,java.util.Collection,int,boolean,boolean) -> b
     kotlin.ranges.IntRange getIndices(java.lang.CharSequence) -> b
     int lastIndexOf(java.lang.CharSequence,java.lang.String,int,boolean) -> b
     int lastIndexOf$default(java.lang.CharSequence,java.lang.String,int,boolean,int,java.lang.Object) -> b
     int getLastIndex(java.lang.CharSequence) -> c
     java.lang.CharSequence trim(java.lang.CharSequence) -> d
-kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$4 -> kotlin.text.StringsKt__StringsKt$rangesDelimitedBy$4:
-    java.util.List $delimitersList -> a
-    boolean $ignoreCase -> b
-    java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
-    kotlin.Pair invoke(java.lang.CharSequence,int) -> a
-kotlin.text.StringsKt__StringsKt$splitToSequence$1 -> kotlin.text.StringsKt__StringsKt$splitToSequence$1:
-    java.lang.CharSequence $this_splitToSequence -> a
-    java.lang.String invoke(kotlin.ranges.IntRange) -> a
-kotlin.text.StringsKt___StringsJvmKt -> kotlin.text.o:
-kotlin.text.StringsKt___StringsKt -> kotlin.text.p:
+kotlin.text.StringsKt___StringsJvmKt -> kotlin.text.m:
+kotlin.text.StringsKt___StringsKt -> kotlin.text.n:
     char first(java.lang.CharSequence) -> e
 kotlinx.coroutines.AbstractCoroutine -> kotlinx.coroutines.a:
     kotlin.coroutines.CoroutineContext parentContext -> c
@@ -5071,7 +4791,7 @@ kotlinx.coroutines.EventLoopImplBase$DelayedTask -> kotlinx.coroutines.V$a:
     void setHeap(kotlinx.coroutines.internal.ThreadSafeHeap) -> a
     boolean timeToExecute(long) -> a
 kotlinx.coroutines.EventLoopImplBase$DelayedTaskQueue -> kotlinx.coroutines.V$b:
-    long timeNow -> c
+    long timeNow -> b
 kotlinx.coroutines.EventLoopImplPlatform -> kotlinx.coroutines.W:
     void reschedule(long,kotlinx.coroutines.EventLoopImplBase$DelayedTask) -> a
     java.lang.Thread getThread() -> t
@@ -5452,8 +5172,6 @@ kotlinx.coroutines.internal.ThreadContextKt$updateState$1 -> kotlinx.coroutines.
     java.lang.Object invoke(java.lang.Object,java.lang.Object) -> a
     kotlinx.coroutines.internal.ThreadState invoke(kotlinx.coroutines.internal.ThreadState,kotlin.coroutines.CoroutineContext$Element) -> a
 kotlinx.coroutines.internal.ThreadSafeHeap -> kotlinx.coroutines.internal.t:
-    java.util.concurrent.atomic.AtomicIntegerFieldUpdater _size$FU -> a
-    kotlinx.coroutines.internal.ThreadSafeHeapNode[] a -> b
     void addImpl(kotlinx.coroutines.internal.ThreadSafeHeapNode) -> a
     kotlinx.coroutines.internal.ThreadSafeHeapNode firstImpl() -> a
     kotlinx.coroutines.internal.ThreadSafeHeapNode removeAtImpl(int) -> a
@@ -5727,7 +5445,9 @@ me.hegj.wandroid.app.utils.DatetimeUtil -> me.hegj.wandroid.app.utils.j:
     me.hegj.wandroid.app.utils.DatetimeUtil INSTANCE -> d
     java.lang.String formatDate(long,java.lang.String) -> a
     java.lang.String formatDate(java.util.Date,java.lang.String) -> a
+    java.util.Date formatDate(java.lang.String,java.lang.String) -> a
     java.util.Date formatDate(java.lang.String,java.util.Date) -> a
+    java.util.Date getCustomTime(java.lang.String) -> a
     java.lang.String getDATE_PATTERN() -> a
     java.lang.String getDATE_PATTERN_SS() -> b
     java.util.Date getNow() -> c
@@ -5763,6 +5483,7 @@ me.hegj.wandroid.app.utils.SettingUtil -> me.hegj.wandroid.app.utils.o:
     me.hegj.wandroid.app.utils.SettingUtil INSTANCE -> a
     int getColor(android.content.Context) -> a
     android.content.res.ColorStateList getOneColorStateList(int) -> a
+    boolean isHoliDay() -> a
     void setColor(android.content.Context,int) -> a
     void setLoadingColor(android.content.Context,com.kingja.loadsir.core.LoadService) -> a
     void setShapColor(android.view.View,int) -> a
@@ -5948,9 +5669,11 @@ me.hegj.wandroid.di.component.main.home.DaggerHomeComponent -> me.hegj.wandroid.
     javax.inject.Provider provideHomeModelProvider -> e
     javax.inject.Provider gsonProvider -> b
     javax.inject.Provider repositoryManagerProvider -> a
+    javax.inject.Provider homePresenterProvider -> l
+    javax.inject.Provider getAdapterProvider -> k
     javax.inject.Provider imageLoaderProvider -> h
     javax.inject.Provider rxErrorHandlerProvider -> g
-    javax.inject.Provider homePresenterProvider -> j
+    javax.inject.Provider getDataProvider -> j
     javax.inject.Provider appManagerProvider -> i
     me.hegj.wandroid.di.component.main.home.DaggerHomeComponent$Builder builder() -> a
     void initialize(me.hegj.wandroid.di.module.main.home.HomeModule,com.jess.arms.di.component.AppComponent) -> a
@@ -6535,14 +6258,25 @@ me.hegj.wandroid.di.module.integral.IntegralModule_ProvideIntegralViewFactory ->
     me.hegj.wandroid.mvp.contract.integral.IntegralContract$View provideIntegralView(me.hegj.wandroid.di.module.integral.IntegralModule) -> b
 me.hegj.wandroid.di.module.main.home.HomeModule -> me.hegj.wandroid.a.b.c.a.a:
     me.hegj.wandroid.mvp.contract.main.home.HomeContract$View view -> a
+    me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter getAdapter(java.util.ArrayList) -> a
+    java.util.ArrayList getData() -> a
     me.hegj.wandroid.mvp.contract.main.home.HomeContract$Model provideHomeModel(me.hegj.wandroid.mvp.model.main.home.HomeModel) -> a
-    me.hegj.wandroid.mvp.contract.main.home.HomeContract$View provideHomeView() -> a
-me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeModelFactory -> me.hegj.wandroid.a.b.c.a.b:
+    me.hegj.wandroid.mvp.contract.main.home.HomeContract$View provideHomeView() -> b
+me.hegj.wandroid.di.module.main.home.HomeModule_GetAdapterFactory -> me.hegj.wandroid.a.b.c.a.b:
+    javax.inject.Provider dataProvider -> b
+    me.hegj.wandroid.di.module.main.home.HomeModule module -> a
+    me.hegj.wandroid.di.module.main.home.HomeModule_GetAdapterFactory create(me.hegj.wandroid.di.module.main.home.HomeModule,javax.inject.Provider) -> a
+    me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter getAdapter(me.hegj.wandroid.di.module.main.home.HomeModule,java.util.ArrayList) -> a
+me.hegj.wandroid.di.module.main.home.HomeModule_GetDataFactory -> me.hegj.wandroid.a.b.c.a.c:
+    me.hegj.wandroid.di.module.main.home.HomeModule module -> a
+    me.hegj.wandroid.di.module.main.home.HomeModule_GetDataFactory create(me.hegj.wandroid.di.module.main.home.HomeModule) -> a
+    java.util.ArrayList getData(me.hegj.wandroid.di.module.main.home.HomeModule) -> b
+me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeModelFactory -> me.hegj.wandroid.a.b.c.a.d:
     javax.inject.Provider modelProvider -> b
     me.hegj.wandroid.di.module.main.home.HomeModule module -> a
     me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeModelFactory create(me.hegj.wandroid.di.module.main.home.HomeModule,javax.inject.Provider) -> a
     me.hegj.wandroid.mvp.contract.main.home.HomeContract$Model provideHomeModel(me.hegj.wandroid.di.module.main.home.HomeModule,me.hegj.wandroid.mvp.model.main.home.HomeModel) -> a
-me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeViewFactory -> me.hegj.wandroid.a.b.c.a.c:
+me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeViewFactory -> me.hegj.wandroid.a.b.c.a.e:
     me.hegj.wandroid.di.module.main.home.HomeModule module -> a
     me.hegj.wandroid.di.module.main.home.HomeModule_ProvideHomeViewFactory create(me.hegj.wandroid.di.module.main.home.HomeModule) -> a
     me.hegj.wandroid.mvp.contract.main.home.HomeContract$View provideHomeView(me.hegj.wandroid.di.module.main.home.HomeModule) -> b
@@ -6832,7 +6566,7 @@ me.hegj.wandroid.mvp.contract.todo.AddTodoContract$Model -> me.hegj.wandroid.b.a
     io.reactivex.Observable updateTodo(java.lang.String,java.lang.String,java.lang.String,int,int,int) -> a
 me.hegj.wandroid.mvp.contract.todo.AddTodoContract$View -> me.hegj.wandroid.b.a.e.b:
     void addTodoFaild(java.lang.String) -> f
-    void addTodoSucc() -> j
+    void addTodoSucc() -> g
 me.hegj.wandroid.mvp.contract.todo.TodoContract$Model -> me.hegj.wandroid.b.a.e.c:
     io.reactivex.Observable updateTodoData(int,int) -> b
     io.reactivex.Observable getTodoData(int) -> c
@@ -7362,6 +7096,7 @@ me.hegj.wandroid.mvp.presenter.integral.IntegralPresenter_MembersInjector -> me.
 me.hegj.wandroid.mvp.presenter.main.home.HomePresenter -> me.hegj.wandroid.mvp.presenter.main.home.HomePresenter:
     me.jessyan.rxerrorhandler.core.RxErrorHandler mErrorHandler -> e
     com.jess.arms.integration.AppManager mAppManager -> h
+    me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter adapter -> i
     android.app.Application mApplication -> f
     com.jess.arms.http.imageloader.ImageLoader mImageLoader -> g
     me.hegj.wandroid.mvp.contract.main.home.HomeContract$Model access$getMModel$p(me.hegj.wandroid.mvp.presenter.main.home.HomePresenter) -> a
@@ -7398,8 +7133,10 @@ me.hegj.wandroid.mvp.presenter.main.home.HomePresenter_Factory -> me.hegj.wandro
     javax.inject.Provider mImageLoaderProvider -> e
     javax.inject.Provider rootViewProvider -> b
     javax.inject.Provider modelProvider -> a
-    me.hegj.wandroid.mvp.presenter.main.home.HomePresenter_Factory create(javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider) -> a
+    javax.inject.Provider adapterProvider -> g
+    me.hegj.wandroid.mvp.presenter.main.home.HomePresenter_Factory create(javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider,javax.inject.Provider) -> a
 me.hegj.wandroid.mvp.presenter.main.home.HomePresenter_MembersInjector -> me.hegj.wandroid.mvp.presenter.main.home.g:
+    void injectAdapter(me.hegj.wandroid.mvp.presenter.main.home.HomePresenter,me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter) -> a
     void injectMAppManager(me.hegj.wandroid.mvp.presenter.main.home.HomePresenter,com.jess.arms.integration.AppManager) -> a
     void injectMApplication(me.hegj.wandroid.mvp.presenter.main.home.HomePresenter,android.app.Application) -> a
     void injectMErrorHandler(me.hegj.wandroid.mvp.presenter.main.home.HomePresenter,me.jessyan.rxerrorhandler.core.RxErrorHandler) -> a
@@ -7846,7 +7583,7 @@ me.hegj.wandroid.mvp.ui.BaseActivity -> me.hegj.wandroid.mvp.ui.BaseActivity:
     void hideLoading() -> d
     void showLoading() -> e
     io.reactivex.subjects.Subject provideLifecycleSubject() -> f
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
     boolean useFragment() -> m
 me.hegj.wandroid.mvp.ui.BaseActivity_MembersInjector -> me.hegj.wandroid.mvp.ui.a:
@@ -7864,7 +7601,7 @@ me.hegj.wandroid.mvp.ui.BaseFragment -> me.hegj.wandroid.mvp.ui.BaseFragment:
     void hideLoading() -> d
     void showLoading() -> e
     io.reactivex.subjects.Subject provideLifecycleSubject() -> f
-    boolean useEventBus() -> i
+    boolean useEventBus() -> j
     com.jess.arms.integration.cache.Cache provideCache() -> l
     void _$_clearFindViewByIdCache() -> p
 me.hegj.wandroid.mvp.ui.BaseFragment_MembersInjector -> me.hegj.wandroid.mvp.ui.b:
@@ -7874,8 +7611,8 @@ me.hegj.wandroid.mvp.ui.activity.MainActivity -> me.hegj.wandroid.mvp.ui.activit
     void initData(android.os.Bundle) -> a
     void setupActivityComponent(com.jess.arms.di.component.AppComponent) -> a
     int initView(android.os.Bundle) -> b
-    void onBackPressedSupport() -> g
-    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> h
+    void onBackPressedSupport() -> h
+    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> i
 me.hegj.wandroid.mvp.ui.activity.collect.CollectActivity -> me.hegj.wandroid.mvp.ui.activity.collect.CollectActivity:
     java.util.HashMap _$_findViewCache -> h
     java.util.List fragments -> f
@@ -8145,27 +7882,31 @@ me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$la
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$3 -> me.hegj.wandroid.mvp.ui.activity.main.home.e:
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$4 -> me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$4:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$4 -> me.hegj.wandroid.mvp.ui.activity.main.home.f:
+    me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$5 -> me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$$inlined$run$lambda$5:
     com.yanzhenjie.recyclerview.SwipeRecyclerView $this_run -> a
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> b
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$5 -> me.hegj.wandroid.mvp.ui.activity.main.home.f:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initData$5 -> me.hegj.wandroid.mvp.ui.activity.main.home.g:
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
     void onLoadMore() -> a
 me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initView$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$initView$1:
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestAritilFaild$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.g:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestAritilFaild$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.h:
     java.lang.String $errorMsg -> a
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestAritilSucces$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.h:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestAritilSucces$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.i:
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestBannerSucces$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.i:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestBannerSucces$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.home.j:
     java.util.List $banners$inlined -> b
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
     void fillBannerItem(cn.bingoogolapple.bgabanner.BGABanner,android.view.View,java.lang.Object,int) -> a
     void fillBannerItem(cn.bingoogolapple.bgabanner.BGABanner,android.widget.ImageView,me.hegj.wandroid.mvp.model.entity.BannerResponse,int) -> a
-me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestBannerSucces$$inlined$apply$lambda$2 -> me.hegj.wandroid.mvp.ui.activity.main.home.j:
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment$requestBannerSucces$$inlined$apply$lambda$2 -> me.hegj.wandroid.mvp.ui.activity.main.home.k:
     java.util.List $banners$inlined -> b
     me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment this$0 -> a
     void onBannerItemClick(cn.bingoogolapple.bgabanner.BGABanner,android.view.View,java.lang.Object,int) -> a
+me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment_MembersInjector -> me.hegj.wandroid.mvp.ui.activity.main.home.l:
+    void injectAdapter(me.hegj.wandroid.mvp.ui.activity.main.home.HomeFragment,me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter) -> a
 me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchActivity -> me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchActivity:
     java.util.HashMap _$_findViewCache -> h
     java.util.List historyData -> f
@@ -8816,7 +8557,7 @@ me.hegj.wandroid.mvp.ui.activity.todo.AddTodoActivity -> me.hegj.wandroid.mvp.ui
     int initView(android.os.Bundle) -> b
     android.view.View _$_findCachedViewById(int) -> e
     void addTodoFaild(java.lang.String) -> f
-    void addTodoSucc() -> j
+    void addTodoSucc() -> g
 me.hegj.wandroid.mvp.ui.activity.todo.AddTodoActivity$initData$$inlined$run$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.todo.a:
     me.hegj.wandroid.mvp.ui.activity.todo.AddTodoActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.todo.AddTodoActivity$onViewClicked$$inlined$apply$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.todo.b:
@@ -9028,6 +8769,7 @@ me.hegj.wandroid.mvp.ui.adapter.TodoAdapter -> me.hegj.wandroid.mvp.ui.adapter.T
     void convert(com.chad.library.adapter.base.BaseViewHolder,me.hegj.wandroid.mvp.model.entity.TodoResponse) -> a
 me.hegj.wandroid.mvp.ui.adapter.ViewPagerAdapter -> me.hegj.wandroid.mvp.ui.adapter.ViewPagerAdapter:
     java.util.List fragments -> a
+me.hegj.wandroid.mvp.ui.base.BaseIView -> me.hegj.wandroid.mvp.ui.a.a:
 me.jessyan.progressmanager.ProgressListener -> me.jessyan.progressmanager.a:
     void onError(long,java.lang.Exception) -> a
     void onProgress(me.jessyan.progressmanager.body.ProgressInfo) -> a
@@ -9118,16 +8860,16 @@ me.yokeyword.fragmentation.Fragmentation$FragmentationBuilder -> me.yokeyword.fr
     int access$100(me.yokeyword.fragmentation.Fragmentation$FragmentationBuilder) -> b
     me.yokeyword.fragmentation.helper.ExceptionHandler access$200(me.yokeyword.fragmentation.Fragmentation$FragmentationBuilder) -> c
 me.yokeyword.fragmentation.ISupportActivity -> me.yokeyword.fragmentation.b:
-    void onBackPressedSupport() -> g
-    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> h
+    void onBackPressedSupport() -> h
+    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> i
     me.yokeyword.fragmentation.SupportActivityDelegate getSupportDelegate() -> k
     me.yokeyword.fragmentation.anim.FragmentAnimator getFragmentAnimator() -> n
 me.yokeyword.fragmentation.ISupportFragment -> me.yokeyword.fragmentation.c:
     void onFragmentResult(int,int,android.os.Bundle) -> a
     void onEnterAnimationEnd(android.os.Bundle) -> b
     void onLazyInitView(android.os.Bundle) -> c
-    boolean onBackPressedSupport() -> g
-    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> h
+    boolean onBackPressedSupport() -> h
+    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> i
     me.yokeyword.fragmentation.SupportFragmentDelegate getSupportDelegate() -> k
     boolean isSupportVisible() -> m
     void onSupportInvisible() -> n
@@ -9135,8 +8877,8 @@ me.yokeyword.fragmentation.ISupportFragment -> me.yokeyword.fragmentation.c:
 me.yokeyword.fragmentation.SupportActivity -> me.yokeyword.fragmentation.SupportActivity:
     me.yokeyword.fragmentation.ISupportFragment findFragment(java.lang.Class) -> a
     void loadRootFragment(int,me.yokeyword.fragmentation.ISupportFragment) -> a
-    void onBackPressedSupport() -> g
-    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> h
+    void onBackPressedSupport() -> h
+    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> i
     me.yokeyword.fragmentation.SupportActivityDelegate getSupportDelegate() -> k
     me.yokeyword.fragmentation.anim.FragmentAnimator getFragmentAnimator() -> n
 me.yokeyword.fragmentation.SupportActivityDelegate -> me.yokeyword.fragmentation.e:
@@ -9177,8 +8919,8 @@ me.yokeyword.fragmentation.SupportFragment -> me.yokeyword.fragmentation.Support
     void showHideFragment(me.yokeyword.fragmentation.ISupportFragment) -> a
     void onEnterAnimationEnd(android.os.Bundle) -> b
     void onLazyInitView(android.os.Bundle) -> c
-    boolean onBackPressedSupport() -> g
-    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> h
+    boolean onBackPressedSupport() -> h
+    me.yokeyword.fragmentation.anim.FragmentAnimator onCreateFragmentAnimator() -> i
     me.yokeyword.fragmentation.SupportFragmentDelegate getSupportDelegate() -> k
     boolean isSupportVisible() -> m
     void onSupportInvisible() -> n

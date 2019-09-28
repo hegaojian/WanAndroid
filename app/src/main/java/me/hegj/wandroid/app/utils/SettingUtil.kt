@@ -8,7 +8,6 @@ import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.preference.PreferenceManager
-import android.util.TypedValue
 import android.view.View
 import android.widget.ProgressBar
 import com.jess.arms.utils.ArmsUtils
@@ -16,6 +15,7 @@ import com.kingja.loadsir.core.LoadService
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.weight.loadCallBack.LoadingCallback
 import java.lang.reflect.InvocationTargetException
+import kotlin.math.roundToInt
 
 
 object SettingUtil {
@@ -24,12 +24,16 @@ object SettingUtil {
      * 获取主题颜色
      */
     fun getColor(context: Context): Int {
-        val setting = PreferenceManager.getDefaultSharedPreferences(context)
-        val defaultColor = ArmsUtils.getColor(context, R.color.colorPrimary)
-        val color = setting.getInt("color", defaultColor)
-        return if (color != 0 && Color.alpha(color) != 255) {
-            defaultColor
-        } else color
+        return if(isHoliDay()){
+            ArmsUtils.getColor(context, R.color.chinaHoliDay)
+        }else{
+            val setting = PreferenceManager.getDefaultSharedPreferences(context)
+            val defaultColor = ArmsUtils.getColor(context, R.color.colorPrimary)
+            val color = setting.getInt("color", defaultColor)
+            if (color != 0 && Color.alpha(color) != 255) {
+                defaultColor
+            } else color
+        }
     }
 
     /**
@@ -87,7 +91,7 @@ object SettingUtil {
         return ColorStateList(states, colors)
     }
 
-    fun getOneColorStateList(color:Int): ColorStateList {
+    fun getOneColorStateList(color: Int): ColorStateList {
         val colors = intArrayOf(color)
         val states = arrayOfNulls<IntArray>(1)
         states[0] = intArrayOf()
@@ -108,11 +112,12 @@ object SettingUtil {
     /**
      * 设置shap的渐变颜色
      */
-    fun setShapColor(view:View,color:IntArray,orientation: GradientDrawable.Orientation){
+    fun setShapColor(view: View, color: IntArray, orientation: GradientDrawable.Orientation) {
         val drawable = view.background as GradientDrawable
         drawable.orientation = orientation//渐变方向
         drawable.colors = color//渐变颜色数组
     }
+
     /**
      * 设置selector文件的颜色
      *
@@ -157,7 +162,7 @@ object SettingUtil {
      */
     fun translucentColor(color: Int): Int {
         val factor = 0.5f
-        val alpha = Math.round(Color.alpha(color) * factor)
+        val alpha = (Color.alpha(color) * factor).roundToInt()
         val red = Color.red(color)
         val green = Color.green(color)
         val blue = Color.blue(color)
@@ -176,7 +181,12 @@ object SettingUtil {
         }
     }
 
-
+    /**
+     * 判断是否过了国庆节了
+     */
+    fun isHoliDay(): Boolean {
+        return DatetimeUtil.nows <= DatetimeUtil.getCustomTime("2019-10-7")
+    }
 
 
 }

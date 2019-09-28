@@ -5,8 +5,8 @@ ext {
             buildToolsVersion: "28.0.3",
             minSdkVersion    : 21,
             targetSdkVersion : 28,
-            versionCode      : 5,
-            versionName      : "1.0.4"
+            versionCode      : 6,
+            versionName      : "1.0.5"
     ]
 
     version = [
@@ -150,8 +150,6 @@ ext {
             "flow-layout"           : 'com.hyman:flowlayout-lib:1.1.2',
             //高性能通用 key-value 组件
             "mmkv"                  : 'com.tencent:mmkv:1.0.22',
-            //侧滑返回
-            "swipe"                 : 'com.billy.android:smart-swipe:1.0.7',
             //阻止app崩溃
             "customactivityoncrash" : 'cat.ereza:customactivityoncrash:2.2.0',
 

@@ -27,15 +27,18 @@ object DatetimeUtil {
     val nows: Date
         get() = formatDate(DATE_PATTERN, now)
 
+
+
     /**
      * Date to Strin
      */
+    @SuppressLint("SimpleDateFormat")
     fun formatDate(date: Date?, formatStyle: String): String {
-        if (date != null) {
+        return if (date != null) {
             val sdf = SimpleDateFormat(formatStyle)
-            return sdf.format(date)
+            sdf.format(date)
         } else {
-            return ""
+            ""
         }
 
     }
@@ -48,6 +51,20 @@ object DatetimeUtil {
         return sdf.format(Date(date))
 
     }
+
+    fun formatDate(formatStyle: String, formatStr: String): Date {
+        val format = SimpleDateFormat(formatStyle, Locale.CHINA)
+        return try {
+            val date = Date()
+            date.time = format.parse(formatStr).time
+            date
+        } catch (e: Exception) {
+            println(e.message)
+            nows
+        }
+
+    }
+
     /**
      * Date to Date
      */
@@ -76,5 +93,11 @@ object DatetimeUtil {
         return Date(lt)
     }
 
+    /**
+     * 获得指定时间的日期
+     */
+    fun getCustomTime(dateStr: String):Date{
+        return formatDate(DATE_PATTERN,dateStr)
+    }
 
 }

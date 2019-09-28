@@ -84,6 +84,9 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.
                     SettingUtil.setColor(parentActivity, color)
                     //通知其他界面立马修改配置
                     SettingChangeEvent().post()
+                    if(SettingUtil.isHoliDay()){
+                        parentActivity.showMessage("大家一起给祖国母亲庆生，固定大红色走起，10月8号自动恢复正常")
+                    }
                 }
                 positiveButton(R.string.done)
                 negativeButton(R.string.cancel)

@@ -93,10 +93,10 @@ object ShowUtils {
     /**
      * 在屏幕底部吐司 默认
      */
-    fun showToast(context: Context, arg: String) {
-        if (!TextUtils.isEmpty(arg)) {
+    fun showToast(context: Context, msg: String) {
+        if (!TextUtils.isEmpty(msg)) {
             toast?.cancel()
-            toast = Toast.makeText(context.applicationContext, arg, Toast.LENGTH_SHORT).apply {
+            toast = Toast.makeText(context.applicationContext, msg, Toast.LENGTH_SHORT).apply {
                 show()
             }
         }
