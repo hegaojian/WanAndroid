@@ -3,6 +3,7 @@ package me.hegj.wandroid.mvp.ui.activity
 import android.os.Bundle
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
+import com.tencent.bugly.beta.Beta
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.ShowUtils
@@ -28,7 +29,8 @@ class MainActivity : BaseActivity<IPresenter>() {
         if (findFragment(MainFragment::class.java) == null) {
             loadRootFragment(R.id.main_framelayout, MainFragment.newInstance())
         }
-
+        //进入首页检查更新
+        Beta.checkUpgrade(true, false)
     }
 
     override fun onCreateFragmentAnimator(): FragmentAnimator {
