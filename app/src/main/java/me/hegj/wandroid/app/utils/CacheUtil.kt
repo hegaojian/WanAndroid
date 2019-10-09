@@ -7,7 +7,6 @@ import com.tencent.mmkv.MMKV
 import me.hegj.wandroid.mvp.model.entity.*
 
 object CacheUtil {
-
     /**
      * 获取保存的账户信息
      */
@@ -76,7 +75,7 @@ object CacheUtil {
         val kv = MMKV.mmkvWithID("cache")
         val projCacheStr =  kv.decodeString("proj")
         if (!TextUtils.isEmpty(projCacheStr)) {
-            return Gson().fromJson<MutableList<ClassifyResponse>>(projCacheStr
+            return Gson().fromJson(projCacheStr
                     , object : TypeToken<MutableList<ClassifyResponse>>() {}.type)
         }
         return mutableListOf()

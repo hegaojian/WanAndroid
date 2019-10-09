@@ -40,13 +40,13 @@ class HomeModule(private val view: HomeContract.View) {
 
     @FragmentScope
     @Provides
-    fun getData():ArrayList<AriticleResponse>{
-        return arrayListOf()
+    fun getData():MutableList<AriticleResponse>{
+        return mutableListOf()
     }
 
     @FragmentScope
     @Provides
-    fun getAdapter(data:ArrayList<AriticleResponse>):AriticleAdapter{
+    fun getAdapter(data:MutableList<AriticleResponse>):AriticleAdapter{
         return AriticleAdapter(data,true)
     }
 }

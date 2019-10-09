@@ -7,8 +7,11 @@ import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
+import kotlinx.android.synthetic.main.activity_collect.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import kotlinx.android.synthetic.main.include_viewpager.*
+import kotlinx.android.synthetic.main.include_viewpager.magic_indicator
+import kotlinx.android.synthetic.main.include_viewpager.view_pager
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.weight.ScaleTransitionPagerTitleView
@@ -52,7 +55,7 @@ class CollectActivity : BaseActivity<IPresenter>() {
             add(CollectAriticleFragment.newInstance())
             add(CollectUrlFragment.newInstance())
         }
-        viewpager_linear.setBackgroundColor(SettingUtil.getColor(this))
+        collect_viewpager_linear.setBackgroundColor(SettingUtil.getColor(this))
         pagerAdapter = ViewPagerAdapter(supportFragmentManager, fragments)
         view_pager.adapter = pagerAdapter
         val commonNavigator = CommonNavigator(this)

@@ -84,9 +84,6 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.
                     SettingUtil.setColor(parentActivity, color)
                     //通知其他界面立马修改配置
                     SettingChangeEvent().post()
-                    if(SettingUtil.isHoliDay()){
-                        parentActivity.showMessage("大家一起给祖国母亲庆生，固定大红色走起，10月8号自动恢复正常")
-                    }
                 }
                 positiveButton(R.string.done)
                 negativeButton(R.string.cancel)
@@ -107,7 +104,7 @@ class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.
             false
         }
         findPreference<Preference>("project")?.setOnPreferenceClickListener {
-            val data = BannerResponse("", 0, "", 0, 0, "一位练习长达两年半的安卓练习生根据鸿神提供的WanAndroid开放Api来制作的产品级App", 0, findPreference<Preference>("project")?.summary.toString())
+            val data = BannerResponse("", 0, "", 0, 0, "一位练习时长两年半的安卓练习生根据鸿神提供的WanAndroid开放Api来制作的产品级App", 0, findPreference<Preference>("project")?.summary.toString())
             parentActivity.launchActivity(Intent(parentActivity, WebviewActivity::class.java).apply {
                 putExtras(Bundle().apply {
                     putSerializable("bannerdata", data)

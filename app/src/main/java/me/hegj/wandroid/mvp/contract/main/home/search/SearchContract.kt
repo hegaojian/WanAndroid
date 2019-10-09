@@ -1,10 +1,10 @@
 package me.hegj.wandroid.mvp.contract.main.home.search
 
 import com.jess.arms.mvp.IModel
+import com.jess.arms.mvp.IView
 import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.ApiResponse
 import me.hegj.wandroid.mvp.model.entity.SearchResponse
-import me.hegj.wandroid.mvp.ui.base.BaseIView
 
 
 /**
@@ -21,7 +21,7 @@ import me.hegj.wandroid.mvp.ui.base.BaseIView
  */
 interface SearchContract {
     //对于经常使用的关于UI的方法可以定义到IView中,如显示隐藏进度条,和显示文字消息
-    interface View : BaseIView {
+    interface View : IView {
         fun  requestSearchSucc(tagData:MutableList<SearchResponse>)
     }
 

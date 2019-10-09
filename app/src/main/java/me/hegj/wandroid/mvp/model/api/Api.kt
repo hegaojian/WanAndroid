@@ -228,5 +228,38 @@ interface Api {
     @FormUrlEncoded
     fun doneTodo(@Path("id") id: Int, @Field("status") status: Int): Observable<ApiResponse<Any>>
 
+    /**
+     * 获取Todo列表数据 根据完成时间排序
+     */
+    @GET("/user_article/list/{page}/json")
+    fun getSquareData(@Path("page") page: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>>
+
+    /**
+     * 获取分享文章列表数据
+     */
+    @GET("/user/lg/private_articles/{page}/json")
+    fun getShareData(@Path("page") page: Int): Observable<ApiResponse<ShareResponse>>
+
+
+    /**
+     *  删除自己分享的文章
+     */
+    @POST("/lg/user_article/delete/{id}/json")
+    fun deleteShareData(@Path("id") id: Int): Observable<ApiResponse<Any>>
+
+    /**
+     * 添加文章
+     */
+    @POST("/lg/user_article/add/json")
+    @FormUrlEncoded
+    fun addAriticle(@Field("title") title: String,
+                @Field("link") content: String): Observable<ApiResponse<Any>>
+
+    /**
+     * 获取分享文章列表数据
+     */
+    @GET("/user/{id}/share_articles/{page}/json")
+    fun getShareByidData(@Path("page") page: Int,@Path("id") id: Int): Observable<ApiResponse<ShareResponse>>
+
 
 }

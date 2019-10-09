@@ -10,7 +10,8 @@ import com.jess.arms.di.component.AppComponent
 import kotlinx.android.synthetic.main.activity_add_todo.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hegj.wandroid.R
-import me.hegj.wandroid.app.event.AddTodoEvent
+import me.hegj.wandroid.app.event.AddEvent
+import me.hegj.wandroid.app.event.AddEvent.Companion.TODO_CODE
 import me.hegj.wandroid.app.utils.DatetimeUtil
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.weight.PriorityDialog
@@ -133,7 +134,7 @@ class AddTodoActivity : BaseActivity<AddTodoPresenter>(), AddTodoContract.View {
     }
 
     override fun addTodoSucc() {
-        AddTodoEvent().post()
+        AddEvent(TODO_CODE).post()
         finish()
     }
 

@@ -27,7 +27,7 @@ object ColorUtil {
             Color.parseColor("#78909C"))
 
     val PRIMARY_COLORS_SUB = arrayOf(
-            intArrayOf(Color.parseColor("#EF5350"), Color.parseColor("#F44336"), Color.parseColor("#E53935"),Color.parseColor("#e10015"), Color.parseColor("#D32F2F"), Color.parseColor("#C62828"), Color.parseColor("#B71C1C")),
+            intArrayOf(Color.parseColor("#EF5350"), Color.parseColor("#F44336"), Color.parseColor("#E53935"), Color.parseColor("#D32F2F"), Color.parseColor("#C62828"), Color.parseColor("#B71C1C")),
             intArrayOf(Color.parseColor("#EC407A"), Color.parseColor("#E91E63"), Color.parseColor("#D81B60"), Color.parseColor("#C2185B"), Color.parseColor("#AD1457"), Color.parseColor("#880E4F")),
             intArrayOf(Color.parseColor("#AB47BC"), Color.parseColor("#9C27B0"), Color.parseColor("#8E24AA"), Color.parseColor("#7B1FA2"), Color.parseColor("#6A1B9A"), Color.parseColor("#4A148C")),
             intArrayOf(Color.parseColor("#7E57C2"), Color.parseColor("#673AB7"), Color.parseColor("#5E35B1"), Color.parseColor("#512DA8"), Color.parseColor("#4527A0"), Color.parseColor("#311B92")),

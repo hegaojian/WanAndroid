@@ -41,8 +41,7 @@ class SystemFragment : BaseFragment<SystemPresenter>(), SystemContract.View {
 
     companion object {
         fun newInstance(): SystemFragment {
-            val fragment = SystemFragment()
-            return fragment
+            return SystemFragment()
         }
     }
 

@@ -36,7 +36,7 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
                 Ariticle -> {
                     //文章布局的赋值
                     item.run{
-                        helper.setText(R.id.item_home_author, author)
+                        helper.setText(R.id.item_home_author, if(author.isEmpty()) "匿名用户" else author)
                         helper.setText(R.id.item_home_content, Html.fromHtml(title))
                         helper.setText(R.id.item_home_type2, Html.fromHtml(chapterName))
                         helper.setText(R.id.item_home_date, niceDate)
@@ -55,7 +55,7 @@ class CollectAdapter(data: ArrayList<CollectResponse>?) : BaseQuickAdapter<Colle
                 Project -> {
                     //项目布局的赋值
                     item.run{
-                        helper.setText(R.id.item_project_author, author)
+                        helper.setText(R.id.item_project_author, if(author.isEmpty()) "匿名用户" else author)
                         helper.setText(R.id.item_project_title, Html.fromHtml(title))
                         helper.setText(R.id.item_project_content, Html.fromHtml(desc))
                         helper.setText(R.id.item_project_type, Html.fromHtml(chapterName))

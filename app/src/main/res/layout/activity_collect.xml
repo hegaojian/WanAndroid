@@ -12,7 +12,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/viewpager_linear"
+        android:id="@+id/collect_viewpager_linear"
         android:layout_width="wrap_content"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary"
@@ -38,5 +38,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewpager_linear" />
+        app:layout_constraintTop_toBottomOf="@+id/collect_viewpager_linear" />
 </androidx.constraintlayout.widget.ConstraintLayout>

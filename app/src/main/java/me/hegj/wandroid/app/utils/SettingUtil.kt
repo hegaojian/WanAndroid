@@ -24,16 +24,15 @@ object SettingUtil {
      * 获取主题颜色
      */
     fun getColor(context: Context): Int {
-        return if(isHoliDay()){
-            ArmsUtils.getColor(context, R.color.chinaHoliDay)
-        }else{
-            val setting = PreferenceManager.getDefaultSharedPreferences(context)
-            val defaultColor = ArmsUtils.getColor(context, R.color.colorPrimary)
-            val color = setting.getInt("color", defaultColor)
-            if (color != 0 && Color.alpha(color) != 255) {
-                defaultColor
-            } else color
+        val setting = PreferenceManager.getDefaultSharedPreferences(context)
+        val defaultColor = ArmsUtils.getColor(context, R.color.colorPrimary)
+        val color = setting.getInt("color", defaultColor)
+        return if (color != 0 && Color.alpha(color) != 255) {
+            defaultColor
+        } else {
+            color
         }
+
     }
 
     /**

@@ -30,7 +30,7 @@ class MainActivity : BaseActivity<IPresenter>() {
             loadRootFragment(R.id.main_framelayout, MainFragment.newInstance())
         }
         //进入首页检查更新
-        Beta.checkUpgrade(true, false)
+        Beta.checkUpgrade(false, true)
     }
 
     override fun onCreateFragmentAnimator(): FragmentAnimator {

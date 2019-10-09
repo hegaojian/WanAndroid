@@ -1,12 +1,12 @@
 package me.hegj.wandroid.mvp.contract.integral
 
 import com.jess.arms.mvp.IModel
+import com.jess.arms.mvp.IView
 import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.ApiPagerResponse
 import me.hegj.wandroid.mvp.model.entity.ApiResponse
 import me.hegj.wandroid.mvp.model.entity.IntegralHistoryResponse
 import me.hegj.wandroid.mvp.model.entity.IntegralResponse
-import me.hegj.wandroid.mvp.ui.base.BaseIView
 
 
 /**
@@ -23,7 +23,7 @@ import me.hegj.wandroid.mvp.ui.base.BaseIView
  */
 interface IntegralContract {
     //对于经常使用的关于UI的方法可以定义到IView中,如显示隐藏进度条,和显示文字消息
-    interface View : BaseIView {
+    interface View : IView {
         fun requestDataSucces(ariticles: ApiPagerResponse<MutableList<IntegralResponse>>)
         fun requestHistoryDataSucces(ariticles: ApiPagerResponse<MutableList<IntegralHistoryResponse>>)
         fun requestDataFaild(errorMsg: String)

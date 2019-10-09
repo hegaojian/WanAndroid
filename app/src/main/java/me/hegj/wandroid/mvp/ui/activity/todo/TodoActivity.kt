@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_integral.*
 import kotlinx.android.synthetic.main.include_recyclerview.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hegj.wandroid.R
-import me.hegj.wandroid.app.event.AddTodoEvent
+import me.hegj.wandroid.app.event.AddEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
@@ -42,7 +42,6 @@ import org.greenrobot.eventbus.Subscribe
  * @CreateDate:     2019/9/1 13:42
  */
 class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
-
 
     lateinit var loadsir: LoadService<Any>
     lateinit var adapter: TodoAdapter
@@ -95,7 +94,6 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
             }
             setOnItemChildClickListener { adapter1, view, position ->
                 MaterialDialog(this@TodoActivity).show {
-                    message(text = "你要弄啥咧？？？")
                     listItems(items = adapter.data[position].isDone().let {
                         if (it) {
                             listOf("编辑", "删除")
@@ -119,6 +117,7 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
             }
         }
         floatbtn.run {
+            backgroundTintList = SettingUtil.getOneColorStateList(this@TodoActivity)
             setOnClickListener {
                 val layoutManager = swiperecyclerview.layoutManager as LinearLayoutManager
                 //如果当前recyclerview 最后一个视图位置的索引大于等于40，则迅速返回顶部，否则带有滚动动画效果返回到顶部
@@ -131,6 +130,7 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
         }
         //初始化 swipeRefreshLayout
         swipeRefreshLayout.run {
+            setColorSchemeColors(SettingUtil.getColor(this@TodoActivity))
             setOnRefreshListener {
                 //刷新
                 pageNo = initPageNo
@@ -141,7 +141,9 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
         footView = RecyclerViewUtils().initRecyclerView(this, swiperecyclerview, SwipeRecyclerView.LoadMoreListener {
             //加载更多
             mPresenter?.getTodoData(pageNo)
-        })
+        }).apply {
+            setLoadViewColor(SettingUtil.getOneColorStateList(this@TodoActivity))
+        }
 
         //监听recyclerview滑动到顶部的时候，需要把向上返回顶部的按钮隐藏
         swiperecyclerview.run {
@@ -161,11 +163,13 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
     }
 
     @Subscribe
-    fun todoChange(event: AddTodoEvent) {
+    fun todoChange(event: AddEvent) {
         //刷新
-        swipeRefreshLayout.isRefreshing = true
-        pageNo = initPageNo
-        mPresenter?.getTodoData(pageNo)
+        if(event.code==AddEvent.TODO_CODE){
+            swipeRefreshLayout.isRefreshing = true
+            pageNo = initPageNo
+            mPresenter?.getTodoData(pageNo)
+        }
     }
 
     override fun requestDataSucces(ariticles: ApiPagerResponse<MutableList<TodoResponse>>) {
@@ -233,20 +237,6 @@ class TodoActivity : BaseActivity<TodoPresenter>(), TodoContract.View {
     override fun updateTodoDataFaild(errorMsg: String) {
         //删除或完成 待办清单 失败
         showMessage(errorMsg)
-    }
-
-    override fun onResume() {
-        super.onResume()
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(this)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(this))
-        SettingUtil.setLoadingColor(this, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(this))
-        if (SettingUtil.getListMode(this) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(this))
-        } else {
-            adapter.closeLoadAnimation()
-        }
-
     }
 
 

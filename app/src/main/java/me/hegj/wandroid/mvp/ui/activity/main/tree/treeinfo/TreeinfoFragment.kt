@@ -42,7 +42,6 @@ import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter
 import org.greenrobot.eventbus.Subscribe
 
-
 /**
  * @Author:         hegaojian
  * @CreateDate:     2019/8/23 17:14

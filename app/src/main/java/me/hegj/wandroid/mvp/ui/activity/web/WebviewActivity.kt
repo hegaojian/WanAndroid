@@ -139,14 +139,16 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            R.id.web_share -> {//分享
+            R.id.web_share -> {
+                //分享
                 startActivity(Intent.createChooser(Intent().apply {
                     action = Intent.ACTION_SEND
                     putExtra(Intent.EXTRA_TEXT, "$showTitle:$url")
                     type = "text/plain"
                 }, "分享到"))
             }
-            R.id.web_refresh -> {//刷新网页
+            R.id.web_refresh -> {
+                //刷新网页
                 mAgentWeb.urlLoader.reload()
             }
             R.id.web_collect -> {//点击收藏

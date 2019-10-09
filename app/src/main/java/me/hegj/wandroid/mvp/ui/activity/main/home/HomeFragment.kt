@@ -108,13 +108,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
         toolbar.run {
             setBackgroundColor(SettingUtil.getColor(_mActivity))
             //当前时间时间没有超过10月7号，使用国庆主题
-            if(SettingUtil.isHoliDay()){
-                title = "为祖国母亲庆生"
-                setNavigationIcon(R.drawable.china_day)
-                setNavigationOnClickListener { this@HomeFragment.showMessage("祝老哥国庆节快乐，感谢老哥的支持，没有卸载这个APP，哈哈") }
-            }else{
-                title = "首页"
-            }
+            title = "首页"
             inflateMenu(R.menu.home_menu)
             setOnMenuItemClickListener {
                 when (it.itemId) {

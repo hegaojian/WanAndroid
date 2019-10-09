@@ -78,6 +78,7 @@
                     android:text="时长2年半的练习生"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16dp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/integral_merank"
                     app:layout_constraintStart_toEndOf="@+id/integral_merank"
                     app:layout_constraintTop_toTopOf="@+id/integral_merank" />

@@ -6,10 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import com.jess.arms.base.BaseFragment
 import com.jess.arms.base.delegate.IFragment
 import com.jess.arms.integration.cache.Cache
 import com.jess.arms.integration.cache.CacheType
@@ -20,9 +17,7 @@ import com.jess.arms.utils.ArmsUtils
 import com.trello.rxlifecycle2.android.FragmentEvent
 import io.reactivex.subjects.BehaviorSubject
 import io.reactivex.subjects.Subject
-import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.ShowUtils
-import me.hegj.wandroid.mvp.ui.base.BaseIView
 import me.yokeyword.fragmentation.SupportFragment
 import javax.inject.Inject
 
@@ -43,7 +38,7 @@ import javax.inject.Inject
  * [Follow me](https://github.com/JessYanCoding)
  * ================================================
  */
-abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, FragmentLifecycleable, BaseIView {
+abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, FragmentLifecycleable, IView {
     protected val TAG = this.javaClass.simpleName
     private val mLifecycleSubject = BehaviorSubject.create<FragmentEvent>()
     private var mCache: Cache<*, *>? = null
@@ -120,7 +115,4 @@ abstract class BaseFragment<P : IPresenter> : SupportFragment(), IFragment, Frag
         ArmsUtils.startActivity(intent)
     }
 
-    override fun getActivityContext(): AppCompatActivity {
-        return _mActivity
-    }
 }

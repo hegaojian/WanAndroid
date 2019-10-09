@@ -1,10 +1,10 @@
 package me.hegj.wandroid.mvp.contract.main.me
 
 import com.jess.arms.mvp.IModel
+import com.jess.arms.mvp.IView
 import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.ApiResponse
 import me.hegj.wandroid.mvp.model.entity.IntegralResponse
-import me.hegj.wandroid.mvp.ui.base.BaseIView
 
 
 /**
@@ -21,7 +21,7 @@ import me.hegj.wandroid.mvp.ui.base.BaseIView
  */
 interface MeContract {
     //对于经常使用的关于UI的方法可以定义到IView中,如显示隐藏进度条,和显示文字消息
-    interface View : BaseIView {
+    interface View : IView {
         //获取积分回调
         fun getIntegralSucc(integral: IntegralResponse)
         fun getIntegralFaild(errorMsg: String)
