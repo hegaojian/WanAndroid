@@ -9,12 +9,12 @@
 
 
 # WanAndroid
-一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，采用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
+一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，使用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
 如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
 
 # 前言
-前段时间学习了 **Kotlin** ，就打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 虽然根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是每个人的喜好与审美不一样，所以都没有做到我心目中的最完美，于是我就想做一个自己觉得最满意的app。界面的话参考了很多的app风格，根据自己的搭配实现，感觉还不错吧
+前段时间学习了 **Kotlin** ，于是打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 虽然根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是每个人的喜好与审美不一样，所以都没有做到我心目中的最完美，于是我就想自己设计开发一个让自己觉得满意的玩安卓App。界面的话参考了一些市场上App的风格搭配实现
 
 ## 实现的功能
 
@@ -32,6 +32,7 @@
 - 文章在任何地方收藏与取消，其他界面相对应的数据也会变化
 - 布局优化，大量使用ConstraintLayout
 - 集成Bugly收集bug并实现App更新
+- 全局捕捉异常防止崩溃
 
 ## APP下载
 
@@ -76,16 +77,16 @@
 - [全局捕捉异常防止崩溃-CustomActivityOnCrash](https://github.com/Ereza/CustomActivityOnCrash)
 ## 素材来源
 - [阿里巴巴矢量图标库](http://www.iconfont.cn/)
-- 借鉴了[花瓣](https://huaban.com/)的登录页
+- 借鉴了[花瓣APP](https://huaban.com/)的登录页
 - [goweii](https://github.com/goweii/WanAndroid)项目中的App图标
 
 ## 特别感谢
-- 感谢[鸿神](https://github.com/hongyangAndroid)的[WanAndroid网站提供的开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
+- 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
 
-## v 1.0.5(2019-9-28)
-- 1.😍😍😍为祖国母亲庆生，添加国庆主题
+## v 1.0.5 (2019-9-28)
+- 😍😍😍为祖国母亲庆生，添加国庆主题
 
 ## v 1.0.4 (2019-9-25)
 - 1.修复bug体系-广场中的列表数据没有显示作者
