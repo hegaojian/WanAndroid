@@ -25,6 +25,8 @@
 - 积分功能 积分排行 积分获取记录
 - 收藏功能 收藏文章 收藏网址 
 - 待办清单 添加清单 编辑清单 删除清单
+- 广场功能
+- 发布自己的文章、查询、删除文章
 - 文章网址详情 详情中收藏 分享 浏览器打开
 - 全局修改应用主题色
 - 全局修改列表的加载动画
@@ -36,7 +38,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.5/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.6/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -84,6 +86,12 @@
 - 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## v 1.0.5 (2019-9-28)
+- 1.添加广场功能
+- 2.自己的文章-删除、查询、添加
+- 3.可以查看他人的信息
+- 4.个人中心界面改版
 
 ## v 1.0.5 (2019-9-28)
 - 😍😍😍为祖国母亲庆生，添加国庆主题
