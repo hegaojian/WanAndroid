@@ -20,8 +20,11 @@ import net.lucode.hackware.magicindicator.buildins.UIUtil
 
 @SuppressLint("Registered")
 class OpenProjectActivity : BaseActivity<IPresenter>() {
+
     lateinit var openAdapter: OpenProjectAdapter
+
     var openData: ArrayList<OpenProject> = arrayListOf()
+
     override fun setupActivityComponent(appComponent: AppComponent) {}
 
     override fun initView(savedInstanceState: Bundle?): Int {
@@ -35,7 +38,9 @@ class OpenProjectActivity : BaseActivity<IPresenter>() {
             setNavigationIcon(R.drawable.ic_back)
             setNavigationOnClickListener { finish() }
         }
+
         getOpenData()
+
         openAdapter = OpenProjectAdapter(openData).apply {
             if (SettingUtil.getListMode(this@OpenProjectActivity) != 0) {
                 openLoadAnimation(SettingUtil.getListMode(this@OpenProjectActivity))

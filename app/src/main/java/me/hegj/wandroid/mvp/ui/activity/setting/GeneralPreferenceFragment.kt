@@ -25,7 +25,6 @@ import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 
 class GeneralPreferenceFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
 
-
     private var colorPreview: IconPreference? = null
     private lateinit var parentActivity: SettingActivity
 

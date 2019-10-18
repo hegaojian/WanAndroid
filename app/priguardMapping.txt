@@ -1,7 +1,7 @@
 # compiler: R8
-# compiler_version: 1.5.64
+# compiler_version: 1.5.68
 # min_api: 21
-# pg_map_id: 3ecf2ab
+# pg_map_id: 92d2a40
 butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY -> butterknife.a:
     butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY INSTANCE -> a
 butterknife.Unbinder$-CC -> butterknife.b:
@@ -787,25 +787,28 @@ com.afollestad.materialdialogs.DialogBehavior -> com.afollestad.materialdialogs.
     void setWindowConstraints(android.content.Context,android.view.Window,com.afollestad.materialdialogs.internal.main.DialogLayout,java.lang.Integer) -> a
     void onPostShow(com.afollestad.materialdialogs.MaterialDialog) -> b
 com.afollestad.materialdialogs.LayoutMode -> com.afollestad.materialdialogs.LayoutMode:
-    com.afollestad.materialdialogs.LayoutMode[] $VALUES -> b
-    com.afollestad.materialdialogs.LayoutMode WRAP_CONTENT -> a
+    com.afollestad.materialdialogs.LayoutMode MATCH_PARENT -> a
+    com.afollestad.materialdialogs.LayoutMode[] $VALUES -> c
+    com.afollestad.materialdialogs.LayoutMode WRAP_CONTENT -> b
 com.afollestad.materialdialogs.MaterialDialog -> com.afollestad.materialdialogs.MaterialDialog:
-    com.afollestad.materialdialogs.DialogBehavior dialogBehavior -> o
-    com.afollestad.materialdialogs.DialogBehavior DEFAULT_BEHAVIOR -> p
+    com.afollestad.materialdialogs.DialogBehavior dialogBehavior -> q
+    com.afollestad.materialdialogs.DialogBehavior DEFAULT_BEHAVIOR -> r
     android.graphics.Typeface titleFont -> c
-    java.lang.Integer maxWidth -> g
-    com.afollestad.materialdialogs.internal.main.DialogLayout view -> h
-    java.lang.Float cornerRadius -> f
+    java.util.List neutralListeners -> o
+    com.afollestad.materialdialogs.internal.main.DialogLayout view -> j
+    java.lang.Integer maxWidth -> i
+    java.lang.Float cornerRadius -> h
     android.graphics.Typeface bodyFont -> d
     android.graphics.Typeface buttonFont -> e
     java.util.Map config -> a
-    android.content.Context windowContext -> n
-    java.util.List dismissListeners -> j
-    java.util.List preShowListeners -> i
+    android.content.Context windowContext -> p
+    boolean cancelOnTouchOutside -> f
+    boolean cancelable -> g
+    java.util.List negativeListeners -> n
     boolean autoDismissEnabled -> b
-    java.util.List neutralListeners -> m
-    java.util.List negativeListeners -> l
-    java.util.List positiveListeners -> k
+    java.util.List positiveListeners -> m
+    java.util.List dismissListeners -> l
+    java.util.List preShowListeners -> k
     java.lang.Object config(java.lang.String) -> a
     com.afollestad.materialdialogs.MaterialDialog cornerRadius(java.lang.Float,java.lang.Integer) -> a
     com.afollestad.materialdialogs.MaterialDialog cornerRadius$default(com.afollestad.materialdialogs.MaterialDialog,java.lang.Float,java.lang.Integer,int,java.lang.Object) -> a
@@ -820,15 +823,17 @@ com.afollestad.materialdialogs.MaterialDialog -> com.afollestad.materialdialogs.
     android.graphics.Typeface getBodyFont() -> b
     com.afollestad.materialdialogs.MaterialDialog negativeButton(java.lang.Integer,java.lang.CharSequence,kotlin.jvm.functions.Function1) -> b
     com.afollestad.materialdialogs.MaterialDialog negativeButton$default(com.afollestad.materialdialogs.MaterialDialog,java.lang.Integer,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object) -> b
-    java.util.Map getConfig() -> c
+    boolean getCancelOnTouchOutside() -> c
     com.afollestad.materialdialogs.MaterialDialog positiveButton(java.lang.Integer,java.lang.CharSequence,kotlin.jvm.functions.Function1) -> c
     com.afollestad.materialdialogs.MaterialDialog positiveButton$default(com.afollestad.materialdialogs.MaterialDialog,java.lang.Integer,java.lang.CharSequence,kotlin.jvm.functions.Function1,int,java.lang.Object) -> c
-    java.util.List getDismissListeners$com_afollestad_material_dialogs_core() -> d
-    java.util.List getPreShowListeners$com_afollestad_material_dialogs_core() -> e
-    com.afollestad.materialdialogs.internal.main.DialogLayout getView() -> f
-    android.content.Context getWindowContext() -> g
-    void invalidateBackgroundColorAndRadius() -> h
-    void setWindowConstraints() -> i
+    boolean getCancelable() -> d
+    java.util.Map getConfig() -> e
+    java.util.List getDismissListeners$com_afollestad_material_dialogs_core() -> f
+    java.util.List getPreShowListeners$com_afollestad_material_dialogs_core() -> g
+    com.afollestad.materialdialogs.internal.main.DialogLayout getView() -> h
+    android.content.Context getWindowContext() -> i
+    void invalidateBackgroundColorAndRadius() -> j
+    void setWindowConstraints() -> k
 com.afollestad.materialdialogs.MaterialDialog$Companion -> com.afollestad.materialdialogs.MaterialDialog$a:
 com.afollestad.materialdialogs.MaterialDialog$WhenMappings -> com.afollestad.materialdialogs.b:
     int[] $EnumSwitchMapping$0 -> a
@@ -867,6 +872,117 @@ com.afollestad.materialdialogs.actions.DialogActionExtKt -> com.afollestad.mater
     boolean hasActionButtons(com.afollestad.materialdialogs.MaterialDialog) -> a
     void setActionButtonEnabled(com.afollestad.materialdialogs.MaterialDialog,com.afollestad.materialdialogs.WhichButton,boolean) -> a
     boolean hasActionButton(com.afollestad.materialdialogs.MaterialDialog,com.afollestad.materialdialogs.WhichButton) -> b
+com.afollestad.materialdialogs.bottomsheets.BottomSheet -> com.afollestad.materialdialogs.bottomsheets.BottomSheet:
+    android.view.ViewGroup bottomSheetView -> b
+    com.afollestad.materialdialogs.MaterialDialog dialog -> e
+    kotlin.properties.ReadWriteProperty actualPeekHeight$delegate -> g
+    com.google.android.material.bottomsheet.BottomSheetBehavior bottomSheetBehavior -> a
+    kotlin.properties.ReadWriteProperty defaultPeekHeight$delegate -> f
+    com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout buttonsLayout -> d
+    com.afollestad.materialdialogs.LayoutMode layoutMode -> h
+    androidx.coordinatorlayout.widget.CoordinatorLayout rootView -> c
+    kotlin.reflect.KProperty[] $$delegatedProperties -> i
+    int access$getActualPeekHeight$p(com.afollestad.materialdialogs.bottomsheets.BottomSheet) -> a
+    void access$invalidateDividers(com.afollestad.materialdialogs.bottomsheets.BottomSheet,int) -> a
+    void carryOverWindowFlags(android.view.Window,android.app.Activity) -> a
+    android.view.ViewGroup createView(android.content.Context,android.view.Window,android.view.LayoutInflater,com.afollestad.materialdialogs.MaterialDialog) -> a
+    com.google.android.material.bottomsheet.BottomSheetBehavior getBottomSheetBehavior$com_afollestad_material_dialogs_bottomsheets() -> a
+    com.afollestad.materialdialogs.internal.main.DialogLayout getDialogLayout(android.view.ViewGroup) -> a
+    int getThemeRes(boolean) -> a
+    void onPreShow(com.afollestad.materialdialogs.MaterialDialog) -> a
+    void setBackgroundColor(com.afollestad.materialdialogs.internal.main.DialogLayout,int,float) -> a
+    void setDefaultPeekHeight$com_afollestad_material_dialogs_bottomsheets(int) -> a
+    void setWindowConstraints(android.content.Context,android.view.Window,com.afollestad.materialdialogs.internal.main.DialogLayout,java.lang.Integer) -> a
+    android.view.ViewGroup access$getBottomSheetView$p(com.afollestad.materialdialogs.bottomsheets.BottomSheet) -> b
+    void access$setActualPeekHeight$p(com.afollestad.materialdialogs.bottomsheets.BottomSheet,int) -> b
+    int getDefaultPeekHeight$com_afollestad_material_dialogs_bottomsheets() -> b
+    void invalidateDividers(int) -> b
+    void onPostShow(com.afollestad.materialdialogs.MaterialDialog) -> b
+    com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout access$getButtonsLayout$p(com.afollestad.materialdialogs.bottomsheets.BottomSheet) -> c
+    int getActualPeekHeight() -> c
+    void setActualPeekHeight(int) -> c
+    com.afollestad.materialdialogs.MaterialDialog access$getDialog$p(com.afollestad.materialdialogs.bottomsheets.BottomSheet) -> d
+    void hideButtons() -> d
+    void access$showButtons(com.afollestad.materialdialogs.bottomsheets.BottomSheet) -> e
+    void setupBottomSheetBehavior() -> e
+    void showButtons() -> f
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$Companion -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$a:
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$hideButtons$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$hideButtons$1:
+    android.animation.Animator $animator -> a
+    void invoke(com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$hideButtons$animator$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$hideButtons$animator$1:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    void invoke(int) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$b:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$2 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$2:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    void invoke(android.view.ViewGroup) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$2$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$2$1:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet$onPreShow$2 this$0 -> a
+    java.lang.Object invoke() -> b
+    void invoke() -> b
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$2 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$2:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    void invoke(int) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$3 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$3:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    java.lang.Object invoke() -> b
+    void invoke() -> b
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$4 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$setupBottomSheetBehavior$4:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    void invoke(android.view.ViewGroup) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$showButtons$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$showButtons$1:
+    android.animation.Animator $animator -> a
+    void invoke(com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout) -> a
+com.afollestad.materialdialogs.bottomsheets.BottomSheet$showButtons$animator$1 -> com.afollestad.materialdialogs.bottomsheets.BottomSheet$showButtons$animator$1:
+    com.afollestad.materialdialogs.bottomsheets.BottomSheet this$0 -> a
+    void invoke(int) -> a
+com.afollestad.materialdialogs.bottomsheets.GridIconDialogAdapter -> com.afollestad.materialdialogs.bottomsheets.GridIconDialogAdapter:
+    java.util.List items -> c
+    int[] disabledIndices -> a
+    com.afollestad.materialdialogs.MaterialDialog dialog -> b
+    boolean waitForPositiveButton -> d
+    kotlin.jvm.functions.Function3 selection -> e
+    void itemClicked(int) -> a
+    void onBindViewHolder(com.afollestad.materialdialogs.bottomsheets.GridItemViewHolder,int) -> a
+    void positiveButtonClicked() -> a
+com.afollestad.materialdialogs.bottomsheets.GridItem -> com.afollestad.materialdialogs.bottomsheets.a:
+    void populateIcon(android.widget.ImageView) -> a
+com.afollestad.materialdialogs.bottomsheets.GridItemViewHolder -> com.afollestad.materialdialogs.bottomsheets.GridItemViewHolder:
+    android.widget.TextView titleView -> b
+    com.afollestad.materialdialogs.bottomsheets.GridIconDialogAdapter adapter -> c
+    android.widget.ImageView iconView -> a
+    android.widget.ImageView getIconView() -> a
+    android.widget.TextView getTitleView() -> b
+com.afollestad.materialdialogs.bottomsheets.UtilKt -> com.afollestad.materialdialogs.bottomsheets.UtilKt:
+    void animatePeekHeight(com.google.android.material.bottomsheet.BottomSheetBehavior,android.view.View,int,int,long,kotlin.jvm.functions.Function0) -> a
+    android.animation.Animator animateValues(int,int,long,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function0) -> a
+    android.animation.Animator animateValues$default(int,int,long,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function0,int,java.lang.Object) -> a
+    void onDetach(android.view.View,kotlin.jvm.functions.Function1) -> a
+    void setCallbacks(com.google.android.material.bottomsheet.BottomSheetBehavior,kotlin.jvm.functions.Function1,kotlin.jvm.functions.Function0) -> a
+com.afollestad.materialdialogs.bottomsheets.UtilKt$animatePeekHeight$2 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$animatePeekHeight$2:
+    android.animation.Animator $animator -> a
+    void invoke(android.view.View) -> a
+com.afollestad.materialdialogs.bottomsheets.UtilKt$animatePeekHeight$animator$1 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$animatePeekHeight$animator$1:
+    void invoke(int) -> a
+    kotlin.reflect.KDeclarationContainer getOwner() -> i
+    java.lang.String getSignature() -> k
+com.afollestad.materialdialogs.bottomsheets.UtilKt$animateValues$$inlined$apply$lambda$1 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$a:
+    kotlin.jvm.functions.Function1 $onUpdate$inlined -> a
+com.afollestad.materialdialogs.bottomsheets.UtilKt$animateValues$$inlined$apply$lambda$2 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$b:
+    kotlin.jvm.functions.Function0 $onEnd$inlined -> a
+com.afollestad.materialdialogs.bottomsheets.UtilKt$animateValues$1 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$animateValues$1:
+    com.afollestad.materialdialogs.bottomsheets.UtilKt$animateValues$1 INSTANCE -> a
+    java.lang.Object invoke() -> b
+    void invoke() -> b
+com.afollestad.materialdialogs.bottomsheets.UtilKt$onDetach$1 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$c:
+    android.view.View $this_onDetach -> a
+    kotlin.jvm.functions.Function1 $onAttached -> b
+com.afollestad.materialdialogs.bottomsheets.UtilKt$setCallbacks$1 -> com.afollestad.materialdialogs.bottomsheets.UtilKt$d:
+    com.google.android.material.bottomsheet.BottomSheetBehavior $this_setCallbacks -> a
+    kotlin.jvm.functions.Function1 $onSlide -> b
+    kotlin.jvm.functions.Function0 $onHide -> c
 com.afollestad.materialdialogs.callbacks.DialogCallbackExtKt -> com.afollestad.materialdialogs.f.a:
     void invokeAll(java.util.List,com.afollestad.materialdialogs.MaterialDialog) -> a
     com.afollestad.materialdialogs.MaterialDialog onDismiss(com.afollestad.materialdialogs.MaterialDialog,kotlin.jvm.functions.Function1) -> a
@@ -1239,6 +1355,7 @@ com.afollestad.materialdialogs.internal.main.DialogLayout -> com.afollestad.mate
     int frameMarginVerticalLess -> e
     boolean debugMode -> b
     int maxHeight -> a
+    void attachButtonsLayout(com.afollestad.materialdialogs.internal.button.DialogActionButtonLayout) -> a
     void attachDialog(com.afollestad.materialdialogs.MaterialDialog) -> a
     void box(android.graphics.Canvas,int,float,float,float,float,float) -> a
     void horizontalLine(android.graphics.Canvas,int,float,float) -> a
@@ -1352,9 +1469,14 @@ com.afollestad.materialdialogs.utils.MDUtil -> com.afollestad.materialdialogs.j.
     java.lang.CharSequence resolveString$default(com.afollestad.materialdialogs.utils.MDUtil,com.afollestad.materialdialogs.MaterialDialog,java.lang.Integer,java.lang.Integer,boolean,int,java.lang.Object) -> a
     void updatePadding(android.view.View,int,int,int,int) -> a
     void updatePadding$default(com.afollestad.materialdialogs.utils.MDUtil,android.view.View,int,int,int,int,int,java.lang.Object) -> a
-    void waitForWidth(android.view.View,kotlin.jvm.functions.Function1) -> a
+    void waitForHeight(android.view.View,kotlin.jvm.functions.Function1) -> a
     int resolveInt(android.content.Context,int,int) -> b
-com.afollestad.materialdialogs.utils.MDUtil$waitForWidth$1 -> com.afollestad.materialdialogs.j.e$a:
+    void waitForWidth(android.view.View,kotlin.jvm.functions.Function1) -> b
+com.afollestad.materialdialogs.utils.MDUtil$waitForHeight$1 -> com.afollestad.materialdialogs.j.e$a:
+    android.view.View $this_waitForHeight -> b
+    java.lang.Integer lastHeight -> a
+    kotlin.jvm.functions.Function1 $block -> c
+com.afollestad.materialdialogs.utils.MDUtil$waitForWidth$1 -> com.afollestad.materialdialogs.j.e$b:
     android.view.View $this_waitForWidth -> b
     java.lang.Integer lastWidth -> a
     kotlin.jvm.functions.Function1 $block -> c
@@ -8324,15 +8446,15 @@ me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$Companion -> me.hegj.wandroi
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$initData$$inlined$run$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$b:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding:
-    android.view.View view7f090133 -> i
-    android.view.View view7f090139 -> h
+    android.view.View view7f090137 -> i
+    android.view.View view7f09013d -> h
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment target -> a
-    android.view.View view7f090135 -> c
-    android.view.View view7f09013c -> b
-    android.view.View view7f09013e -> e
-    android.view.View view7f09013a -> d
-    android.view.View view7f090134 -> g
-    android.view.View view7f090138 -> f
+    android.view.View view7f090139 -> c
+    android.view.View view7f090140 -> b
+    android.view.View view7f090142 -> e
+    android.view.View view7f09013e -> d
+    android.view.View view7f090138 -> g
+    android.view.View view7f09013c -> f
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment val$target -> a
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$b:
@@ -8868,7 +8990,7 @@ me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity$onViewClicked$$inli
     void invoke(com.afollestad.materialdialogs.MaterialDialog) -> a
 me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity target -> a
-    android.view.View view7f0901b2 -> b
+    android.view.View view7f0901b8 -> b
 me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.share.ShareByIdActivity -> me.hegj.wandroid.mvp.ui.activity.share.ShareByIdActivity:
@@ -8995,9 +9117,9 @@ me.hegj.wandroid.mvp.ui.activity.start.LoginActivity$initData$4 -> me.hegj.wandr
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity target -> a
-    android.view.View view7f09011a -> c
-    android.view.View view7f090116 -> b
-    android.view.View view7f090117 -> d
+    android.view.View view7f09011b -> c
+    android.view.View view7f090117 -> b
+    android.view.View view7f090118 -> d
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$b:
@@ -9024,9 +9146,9 @@ me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$5 -> me.hegj.wa
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$6 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$f:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding:
-    android.view.View view7f090186 -> c
+    android.view.View view7f09018b -> c
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity target -> a
-    android.view.View view7f090181 -> b
+    android.view.View view7f090186 -> b
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$b:

@@ -7,6 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import androidx.preference.Preference
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.jess.arms.di.component.AppComponent
@@ -19,6 +20,7 @@ import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.ShowUtils
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
@@ -27,10 +29,12 @@ import me.hegj.wandroid.di.component.integral.DaggerIntegralComponent
 import me.hegj.wandroid.di.module.integral.IntegralModule
 import me.hegj.wandroid.mvp.contract.integral.IntegralContract
 import me.hegj.wandroid.mvp.model.entity.ApiPagerResponse
+import me.hegj.wandroid.mvp.model.entity.BannerResponse
 import me.hegj.wandroid.mvp.model.entity.IntegralHistoryResponse
 import me.hegj.wandroid.mvp.model.entity.IntegralResponse
 import me.hegj.wandroid.mvp.presenter.integral.IntegralPresenter
 import me.hegj.wandroid.mvp.ui.BaseActivity
+import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import me.hegj.wandroid.mvp.ui.adapter.IntegralAdapter
 
 
@@ -89,7 +93,7 @@ class IntegralActivity : BaseActivity<IntegralPresenter>(), IntegralContract.Vie
             integral?.run {
                 myRank = rank
                 integral_mename.text = username
-                integral_merank.text = if (rank > 999) "999+" else rank.toString()
+                integral_merank.text = rank.toString()
                 integral_mecount.text = coinCount.toString()
                 SettingUtil.getColor(this@IntegralActivity).let {
                     integral_mename.setTextColor(it)
@@ -209,6 +213,14 @@ class IntegralActivity : BaseActivity<IntegralPresenter>(), IntegralContract.Vie
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
+            R.id.integral_guize ->{
+                val data = BannerResponse("", 0, "", 0, 0, "积分规则", 0, "https://www.wanandroid.com/blog/show/2653")
+                launchActivity(Intent(this, WebviewActivity::class.java).apply {
+                    putExtras(Bundle().apply {
+                        putSerializable("bannerdata", data)
+                    })
+                })
+            }
             R.id.integral_history -> {
                 launchActivity(Intent(this, IntegralHistoryActivity::class.java))
             }

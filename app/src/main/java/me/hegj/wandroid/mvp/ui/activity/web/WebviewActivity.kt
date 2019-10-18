@@ -15,13 +15,11 @@ import com.jess.arms.integration.AppManager
 import com.just.agentweb.AgentWeb
 import kotlinx.android.synthetic.main.activity_webview.*
 import kotlinx.android.synthetic.main.include_toolbar.*
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.CollectEvent
 import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.utils.CacheUtil
+import me.hegj.wandroid.app.weight.LollipopFixedWebView
 import me.hegj.wandroid.di.component.web.DaggerWebviewComponent
 import me.hegj.wandroid.di.module.web.WebviewModule
 import me.hegj.wandroid.mvp.contract.web.WebviewContract
@@ -30,7 +28,6 @@ import me.hegj.wandroid.mvp.model.entity.BannerResponse
 import me.hegj.wandroid.mvp.model.entity.CollectResponse
 import me.hegj.wandroid.mvp.model.entity.CollectUrlResponse
 import me.hegj.wandroid.mvp.model.entity.enums.CollectType
-import me.hegj.wandroid.mvp.model.entity.enums.TodoType
 import me.hegj.wandroid.mvp.presenter.web.WebviewPresenter
 import me.hegj.wandroid.mvp.ui.BaseActivity
 import me.hegj.wandroid.mvp.ui.activity.start.LoginActivity
@@ -111,6 +108,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         mAgentWeb = AgentWeb.with(this)
                 .setAgentWebParent(webview_content, LinearLayout.LayoutParams(-1, -1))
                 .useDefaultIndicator()
+                .setWebView(LollipopFixedWebView(this))
                 .createAgentWeb()
                 .ready()
                 .go(url)

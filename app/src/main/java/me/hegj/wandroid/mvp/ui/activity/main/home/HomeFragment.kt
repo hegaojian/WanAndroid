@@ -31,7 +31,6 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
-import me.hegj.wandroid.app.utils.ShowUtils
 import me.hegj.wandroid.app.weight.CollectView
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
@@ -107,7 +106,6 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
         super.initData(savedInstanceState)
         toolbar.run {
             setBackgroundColor(SettingUtil.getColor(_mActivity))
-            //当前时间时间没有超过10月7号，使用国庆主题
             title = "首页"
             inflateMenu(R.menu.home_menu)
             setOnMenuItemClickListener {

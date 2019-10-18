@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 /**
- * Created by Haozi on 2018/10/10 0023.
+  * @Author:         hegaojian
+  * @CreateDate:     2019/10/11 14:29
  */
-
 public class GridDividerItemDecoration extends RecyclerView.ItemDecoration {
     private Paint mPaint;
-    private int mDividerWidth;          //您所需指定的间隔宽度，主要为第一列和最后一列与父控件的间隔；行间距，列间距将动态分配
+    private int mDividerWidth;//您所需指定的间隔宽度，主要为第一列和最后一列与父控件的间隔；行间距，列间距将动态分配
     private int mFirstRowTopMargin = 0; //第一行顶部是否需要间隔
     private boolean isNeedSpace = false;//第一列和最后一列是否需要指定间隔(默认不指定)
     private boolean isLastRowNeedSpace = false;//最后一行是否需要间隔(默认不需要)

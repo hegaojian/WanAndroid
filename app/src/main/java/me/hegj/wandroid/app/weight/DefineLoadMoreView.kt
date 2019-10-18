@@ -91,7 +91,6 @@ class DefineLoadMoreView(context: Context) : LinearLayout(context), SwipeRecycle
      */
     override fun onWaitToLoadMore(loadMoreListener: SwipeRecyclerView.LoadMoreListener) {
         this.mLoadMoreListener = loadMoreListener
-
         visibility = View.VISIBLE
         mProgressBar.visibility = View.GONE
         mTvMessage.visibility = View.VISIBLE
@@ -119,9 +118,10 @@ class DefineLoadMoreView(context: Context) : LinearLayout(context), SwipeRecycle
      */
     @SuppressLint("LogNotTimber")
     override fun onClick(v: View) {
-        //为什么加后面那个判断，因为Wandroid第0页能够请求完所有数据的情况下， 再去请求第1页 也能取到值，所以这里要判断没有更多数据的时候禁止在响应点击事件了
+        //为什么加后面那个判断，因为Wandroid第0页能够请求完所有数据的情况下， 再去请求第1页 也能取到值，
+        // 所以这里要判断没有更多数据的时候禁止在响应点击事件了,同时在加载中时也不能触发加载更多的监听
         mLoadMoreListener?.let {
-            if (mTvMessage.text != "没有更多数据啦"){
+            if (mTvMessage.text != "没有更多数据啦"&&mProgressBar.visibility!=View.VISIBLE){
                 it.onLoadMore()
             }
         }

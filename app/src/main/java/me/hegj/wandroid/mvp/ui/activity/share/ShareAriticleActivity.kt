@@ -1,9 +1,14 @@
 package me.hegj.wandroid.mvp.ui.activity.share
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import butterknife.OnClick
 import com.afollestad.materialdialogs.MaterialDialog
+import com.afollestad.materialdialogs.bottomsheets.BottomSheet
+import com.afollestad.materialdialogs.customview.customView
 import com.jess.arms.di.component.AppComponent
 import kotlinx.android.synthetic.main.activity_share_ariticle.*
 import kotlinx.android.synthetic.main.include_recyclerview.*
@@ -16,9 +21,12 @@ import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.di.component.share.DaggerShareAriticleComponent
 import me.hegj.wandroid.di.module.share.ShareAriticleModule
 import me.hegj.wandroid.mvp.contract.share.ShareAriticleContract
+import me.hegj.wandroid.mvp.model.entity.BannerResponse
 import me.hegj.wandroid.mvp.model.entity.UserInfoResponse
 import me.hegj.wandroid.mvp.presenter.share.ShareAriticlePresenter
 import me.hegj.wandroid.mvp.ui.BaseActivity
+import me.hegj.wandroid.mvp.ui.activity.integral.IntegralHistoryActivity
+import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import org.greenrobot.eventbus.Subscribe
 
 /**
@@ -79,6 +87,25 @@ class ShareAriticleActivity : BaseActivity<ShareAriticlePresenter>(), ShareAriti
     override fun addSucc() {
         AddEvent(SHARE_CODE).post()
         finish()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.share_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            R.id.share_guize ->{
+                MaterialDialog(this,BottomSheet()).show {
+                    title(text = "温馨提示")
+                    customView(R.layout.customview,scrollable = true,horizontalPadding = true)
+                    positiveButton(text = "知道了")
+                    cornerRadius(16f)
+                }
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

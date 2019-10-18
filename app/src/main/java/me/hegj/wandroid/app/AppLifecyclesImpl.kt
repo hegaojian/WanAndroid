@@ -81,8 +81,8 @@ class AppLifecyclesImpl : AppLifecycles {
         val strategy = UserStrategy(context)
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
-        Bugly.init(context, "xxx", BuildConfig.DEBUG)
-
+        Bugly.init(context, BuildConfig.BUGLY_KE, BuildConfig.DEBUG)
+        //防止项目崩溃，崩溃后打开错误界面
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM
                 .enabled(true)//是否启用CustomActivityOnCrash崩溃拦截机制 必须启用！不然集成这个库干啥？？？

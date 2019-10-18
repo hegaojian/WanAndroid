@@ -13,6 +13,7 @@ import android.widget.Toast
 import com.afollestad.materialdialogs.MaterialDialog
 import me.hegj.wandroid.R
 
+
 object ShowUtils {
     private var dialog: ProgressDialog? = null
     private var toast: Toast? = null
@@ -100,7 +101,6 @@ object ShowUtils {
                 show()
             }
         }
-
     }
 
     /**
