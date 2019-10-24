@@ -38,7 +38,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.6/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.7/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -86,6 +86,13 @@
 - 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## v 1.0.7 (2019-10-18)
+- 1.添加积分规则
+- 2.添加分享文章提示
+- 3.修复5.1手机打开webview报错bug
+- 4.修复recyclerview在加载更多时，点击会调用多次接口bug
+- 5.升级gradle版本至3.5.1,SDK提升至29
 
 ## v 1.0.6 (2019-10-9)
 - 1.添加广场功能
