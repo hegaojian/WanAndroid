@@ -19,7 +19,8 @@ class IntegralAdapter(data: ArrayList<IntegralResponse>?) : BaseQuickAdapter<Int
         this.rankNum = rank
     }
 
-    override fun convert(helper: BaseViewHolder, item: IntegralResponse?) {
+    override fun convert(helper: BaseViewHolder?, item: IntegralResponse?) {
+        helper?:return
         //赋值
         item?.run {
             if(rankNum==helper.adapterPosition+1){
