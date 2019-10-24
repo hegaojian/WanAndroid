@@ -123,7 +123,6 @@ ext {
             "fragmentationx"        : 'me.yokeyword:fragmentationx:1.0.1',
             //底部导航栏
             "BottomNavigationViewEx": 'com.github.ittianyu:BottomNavigationViewEx:2.0.4',
-            "MagicIndicator"        : 'com.github.hackware1993:MagicIndicator:1.6.0',
             //tablayout指示器
             "Magicindicator"        : 'com.github.hackware1993:MagicIndicator:1.6.0',
             //轮播图

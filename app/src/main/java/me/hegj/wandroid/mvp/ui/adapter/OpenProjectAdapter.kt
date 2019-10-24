@@ -12,7 +12,8 @@ import me.hegj.wandroid.mvp.model.entity.OpenProject
  */
 class OpenProjectAdapter(data: ArrayList<OpenProject>?) : BaseQuickAdapter<OpenProject, BaseViewHolder>(R.layout.item_openproject, data) {
 
-    override fun convert(helper: BaseViewHolder, item: OpenProject?) {
+    override fun convert(helper: BaseViewHolder?, item: OpenProject?) {
+        helper?:return
         //赋值
         item?.run {
             helper.setText(R.id.item_openproject_name, name)

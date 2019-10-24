@@ -20,15 +20,17 @@ class AriticleAdapter(data: MutableList<AriticleResponse>?) : BaseQuickAdapter<A
     private val Ariticle = 1//文章类型
     private val Project = 2//项目类型 本来打算不区分文章和项目布局用统一布局的，但是布局完以后发现差异化蛮大的，所以还是分开吧
     private var showTag = false//是否展示标签 tag 一般主页才用的到
-    private var clickable = true//点击作者是否能跳转
+    private var clickable = true//点击作者是否能跳转查看他的信息
 
     constructor(data: MutableList<AriticleResponse>?, showTag: Boolean) : this(data) {
         this.showTag = showTag
     }
-    constructor(data: MutableList<AriticleResponse>?, showTag: Boolean,clickable:Boolean) : this(data) {
+
+    constructor(data: MutableList<AriticleResponse>?, showTag: Boolean, clickable: Boolean) : this(data) {
         this.showTag = showTag
         this.clickable = clickable
     }
+
     init {
         //初始化
         multiTypeDelegate = object : MultiTypeDelegate<AriticleResponse>() {
@@ -76,9 +78,9 @@ class AriticleAdapter(data: MutableList<AriticleResponse>?) : BaseQuickAdapter<A
                     }
                 })
                 helper.getView<TextView>(R.id.item_home_author).setOnClickListener {
-                    if(clickable){
-                        mContext.startActivity(Intent(mContext,ShareByIdActivity::class.java).apply {
-                            putExtra("id",item?.userId)
+                    if (clickable) {
+                        mContext.startActivity(Intent(mContext, ShareByIdActivity::class.java).apply {
+                            putExtra("id", item?.userId)
                         })
                     }
                 }
@@ -125,9 +127,9 @@ class AriticleAdapter(data: MutableList<AriticleResponse>?) : BaseQuickAdapter<A
                     }
                 })
                 helper.getView<TextView>(R.id.item_project_author).setOnClickListener {
-                    if(clickable){
-                        mContext.startActivity(Intent(mContext,ShareByIdActivity::class.java).apply {
-                            putExtra("id",item?.userId)
+                    if (clickable) {
+                        mContext.startActivity(Intent(mContext, ShareByIdActivity::class.java).apply {
+                            putExtra("id", item?.userId)
                         })
                     }
                 }
