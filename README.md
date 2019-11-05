@@ -44,16 +44,16 @@
 
 - 扫码
 
-![](image/qrcode_img.png)
+![](https://upload-images.jianshu.io/upload_images/9305757-30650b8a016156a3.png?imageMogr2/auto-orient/strip|imageView2/2/w/448/format/webp)
  
 
 ## 应用截图
 
-![](image/1-3.png)
-![](image/4-6.png)
-![](image/7-9.png)
-![](image/10-12.png)
-![](image/13-15.png)
+![](https://upload-images.jianshu.io/upload_images/9305757-cfe71359e8b28283.png?imageMogr2/auto-orient/strip|imageView2/2/w/986/format/webp)
+![](https://upload-images.jianshu.io/upload_images/9305757-1e7f1d3b963681ce.png?imageMogr2/auto-orient/strip|imageView2/2/w/987/format/webp)
+![](https://upload-images.jianshu.io/upload_images/9305757-29f7facf2c51304f.png?imageMogr2/auto-orient/strip|imageView2/2/w/980/format/webp)
+![](https://upload-images.jianshu.io/upload_images/9305757-85ce00bc6e56fc4c.png?imageMogr2/auto-orient/strip|imageView2/2/w/976/format/webp)
+![](https://upload-images.jianshu.io/upload_images/9305757-017b33c24c2fa8ed.png?imageMogr2/auto-orient/strip|imageView2/2/w/991/format/webp)
 
 ## 主要开源框架
 - [一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的框架-RxJava2](https://github.com/ReactiveX/RxJava)
