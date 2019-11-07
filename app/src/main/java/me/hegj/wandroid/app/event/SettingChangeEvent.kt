@@ -5,6 +5,4 @@ package me.hegj.wandroid.app.event
   * @Author:         hegaojian
   * @CreateDate:     2019/9/2 21:17
  */
-class SettingChangeEvent :BaseEvent{
-    constructor() : super()
-}
+class SettingChangeEvent :BaseEvent()

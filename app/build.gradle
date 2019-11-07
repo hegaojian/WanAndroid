@@ -60,7 +60,7 @@ android {
         release {
             buildConfigField "boolean", "LOG_DEBUG",  "false"
             buildConfigField "boolean", "USE_CANARY", "false"
-            buildConfigField "String", "BUGLY_KE", '"5a5f6366fc"'
+            buildConfigField "String", "BUGLY_KE", '"xxxxx"'
             minifyEnabled true//开启混淆
             shrinkResources true
             zipAlignEnabled true//去除无用资源
@@ -88,7 +88,7 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //androidX基础库
     implementation "androidx.appcompat:appcompat:1.1.0"
-    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.2.0-alpha01'
     implementation "androidx.constraintlayout:constraintlayout:1.1.3"
     implementation "androidx.preference:preference:1.1.0"
     implementation "androidx.cardview:cardview:1.0.0"

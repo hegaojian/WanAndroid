@@ -29,11 +29,11 @@ class SpaceItemDecoration//leftRight为横向间的距离 topBottom为纵向间�
             outRect.right = leftRight
         } else {
             //最后一项需要right
-            if (parent.getChildAdapterPosition(view) == layoutManager.itemCount - 1) {
+            if (parent.getChildAdapterPosition(view) != layoutManager.itemCount - 1) {
                 outRect.right = leftRight
             }
             outRect.top = topBottom
-            outRect.left = leftRight
+            outRect.left = 0
             outRect.bottom = topBottom
         }
     }
