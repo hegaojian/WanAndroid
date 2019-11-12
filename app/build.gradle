@@ -50,7 +50,7 @@ android {
         debug {
             buildConfigField "boolean", "LOG_DEBUG",  "true"
             buildConfigField "boolean", "USE_CANARY", "false"
-            buildConfigField "String", "BUGLY_KE", '"xxxxxx"'
+            buildConfigField "String", "BUGLY_KEY", '"xxxxxx"'
             minifyEnabled false
             shrinkResources false
             zipAlignEnabled false
@@ -60,7 +60,7 @@ android {
         release {
             buildConfigField "boolean", "LOG_DEBUG",  "false"
             buildConfigField "boolean", "USE_CANARY", "false"
-            buildConfigField "String", "BUGLY_KE", '"xxxxx"'
+            buildConfigField "String", "BUGLY_KEY", '"5a5f6366fc"'//bugly key
             minifyEnabled true//开启混淆
             shrinkResources true
             zipAlignEnabled true//去除无用资源
@@ -86,16 +86,9 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    //androidX基础库
-    implementation "androidx.appcompat:appcompat:1.1.0"
-    implementation 'com.google.android.material:material:1.2.0-alpha01'
-    implementation "androidx.constraintlayout:constraintlayout:1.1.3"
-    implementation "androidx.preference:preference:1.1.0"
-    implementation "androidx.cardview:cardview:1.0.0"
     //dagger
     annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
     kapt rootProject.ext.dependencies["dagger2-compiler"]
-
     //黄油刀
     implementation "com.jakewharton:butterknife:10.1.0"
     kapt "com.jakewharton:butterknife-compiler:10.1.0"

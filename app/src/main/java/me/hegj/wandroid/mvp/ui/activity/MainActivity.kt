@@ -4,6 +4,7 @@ import android.os.Bundle
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
 import com.tencent.bugly.beta.Beta
+import me.hegj.wandroid.BuildConfig
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.ShowUtils
@@ -31,6 +32,13 @@ class MainActivity : BaseActivity<IPresenter>() {
         }
         //进入首页检查更新
         Beta.checkUpgrade(false, true)
+
+        //如果你导入了该项目并打算以该项目为基础编写自己的项目，看到了这段代码，请记得更换 Bugly Key！
+        //Bugly网址：https://bugly.qq.com/v2/index ，具体修改请看 https://github.com/hegaojian/WanAndroid/issues/7
+        if(BuildConfig.APPLICATION_ID != "me.hegj.wandroid"&&BuildConfig.BUGLY_KEY =="5a5f6366fc"){
+            showMessage("请更换Bugly Key！防止产生的错误信息反馈到作者账号上，具体请查看app模块中的 build.gradle文件，修改BUGLY_KEY字段值为自己在Bugly官网申请的Key")
+        }
+
     }
 
     override fun onCreateFragmentAnimator(): FragmentAnimator {

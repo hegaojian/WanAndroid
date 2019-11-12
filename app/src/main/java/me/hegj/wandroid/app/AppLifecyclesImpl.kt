@@ -81,7 +81,7 @@ class AppLifecyclesImpl : AppLifecycles {
         val strategy = UserStrategy(context)
         strategy.isUploadProcess = processName == null || processName == packageName
         // 初始化Bugly
-        Bugly.init(context, BuildConfig.BUGLY_KE, BuildConfig.DEBUG)
+        Bugly.init(context, BuildConfig.BUGLY_KEY, BuildConfig.DEBUG)
         //防止项目崩溃，崩溃后打开错误界面
         CaocConfig.Builder.create()
                 .backgroundMode(CaocConfig.BACKGROUND_MODE_SILENT) //default: CaocConfig.BACKGROUND_MODE_SHOW_CUSTOM

@@ -191,7 +191,7 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
                 })
             }
             R.id.me_join -> {
-                joinQQGroup("arD6CZ5Bt8_ReDpb56-5n5cIY6sBqTtl")
+                joinQQGroup("9n4i5sHt4189d4DvbotKiCHy-5jZtD4D")
             }
             R.id.me_setting -> {
                 launchActivity(Intent(_mActivity, SettingActivity::class.java))

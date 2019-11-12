@@ -1,7 +1,7 @@
 # compiler: R8
 # compiler_version: 1.5.68
 # min_api: 21
-# pg_map_id: 92d2a40
+# pg_map_id: 8e2e2a2
 butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY -> butterknife.a:
     butterknife.-$$Lambda$Unbinder$aAZZEjRDCcxQlrGZAdKWmLXqruY INSTANCE -> a
 butterknife.Unbinder$-CC -> butterknife.b:
@@ -8446,15 +8446,15 @@ me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$Companion -> me.hegj.wandroi
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$initData$$inlined$run$lambda$1 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment$b:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding:
-    android.view.View view7f090137 -> i
-    android.view.View view7f09013d -> h
+    android.view.View view7f09013a -> i
+    android.view.View view7f090140 -> h
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment target -> a
-    android.view.View view7f090139 -> c
-    android.view.View view7f090140 -> b
-    android.view.View view7f090142 -> e
-    android.view.View view7f09013e -> d
-    android.view.View view7f090138 -> g
-    android.view.View view7f09013c -> f
+    android.view.View view7f09013c -> c
+    android.view.View view7f090143 -> b
+    android.view.View view7f090145 -> e
+    android.view.View view7f090141 -> d
+    android.view.View view7f09013b -> g
+    android.view.View view7f09013f -> f
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment val$target -> a
 me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment_ViewBinding$b:
@@ -8990,7 +8990,7 @@ me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity$onViewClicked$$inli
     void invoke(com.afollestad.materialdialogs.MaterialDialog) -> a
 me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity target -> a
-    android.view.View view7f0901b8 -> b
+    android.view.View view7f0901ba -> b
 me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.share.ShareAriticleActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.share.ShareByIdActivity -> me.hegj.wandroid.mvp.ui.activity.share.ShareByIdActivity:
@@ -9117,9 +9117,9 @@ me.hegj.wandroid.mvp.ui.activity.start.LoginActivity$initData$4 -> me.hegj.wandr
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity target -> a
-    android.view.View view7f09011b -> c
-    android.view.View view7f090117 -> b
-    android.view.View view7f090118 -> d
+    android.view.View view7f09011e -> c
+    android.view.View view7f09011a -> b
+    android.view.View view7f09011b -> d
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.start.LoginActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.start.LoginActivity_ViewBinding$b:
@@ -9146,9 +9146,9 @@ me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$5 -> me.hegj.wa
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$initData$6 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity$f:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity this$0 -> a
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding:
-    android.view.View view7f09018b -> c
+    android.view.View view7f09018e -> c
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity target -> a
-    android.view.View view7f090186 -> b
+    android.view.View view7f090189 -> b
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$1 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$a:
     me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity val$target -> a
 me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$2 -> me.hegj.wandroid.mvp.ui.activity.start.RegisterActivity_ViewBinding$b:
