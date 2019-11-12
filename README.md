@@ -7,7 +7,7 @@
 [5]:https://img.shields.io/badge/license-Apache%202-blue.svg
 [6]:https://github.com/hegaojian/WanAndroid/blob/master/LICENSE
 
-## 紧急通知： 请用到本项目的老哥尽快将作者的Bugly Key换掉，防止出现我更新后你的商用项目弹窗更新到了我的App，赶紧换吧，我现在看到我的Bugly后台我就心疼：[#7](https://github.com/hegaojian/WanAndroid/issues/7)
+## 紧急通知： 请用到本项目的老哥尽快将作者的Bugly Key换掉，防止出现我更新后你的商用项目弹窗更新到了我的App，赶紧换，我现在看到我的Bugly后台我就心疼：[#7](https://github.com/hegaojian/WanAndroid/issues/7)
 
 ![](https://upload-images.jianshu.io/upload_images/9305757-828f6004b6672fcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
