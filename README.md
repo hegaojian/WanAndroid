@@ -40,6 +40,8 @@
 
 - [fir.im下载](https://fir.im/4ybt)
 
+- [小米应用市场下载](http://app.mi.com/download/933598?id=me.hegj.wandroid&ref=search&nonce=2368478985935143674%3A26235470&appClientId=2882303761517485445&appSignature=T49mZxF9fm7r1qKDSyN68zGb37Ar0wJUK_9EQK6PC2s)
+
 - 扫码
 
 ![](https://upload-images.jianshu.io/upload_images/9305757-30650b8a016156a3.png?imageMogr2/auto-orient/strip|imageView2/2/w/448/format/webp)
