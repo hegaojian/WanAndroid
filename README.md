@@ -7,12 +7,6 @@
 [5]:https://img.shields.io/badge/license-Apache%202-blue.svg
 [6]:https://github.com/hegaojian/WanAndroid/blob/master/LICENSE
 
-## 紧急通知： 请用到本项目并在基础上改为商用项目的老哥尽快将作者的Bugly Key换掉，防止出现我更新后你的商用项目弹窗更新到了我的App，赶紧换，我现在看到我的Bugly后台我就心疼：[#7](https://github.com/hegaojian/WanAndroid/issues/7)
-
-![](https://upload-images.jianshu.io/upload_images/9305757-828f6004b6672fcf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-
-
 # WanAndroid
 一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，使用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
