@@ -12,6 +12,8 @@
 
 如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
 
+给我点个star，我愿意拿出三上悠亚珍藏版高清步兵资源，想要的打开该项目App点我的-加入我们 私聊群主，嘘，不要说出去
+
 # 前言
 前段时间学习了 **Kotlin** ，于是打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 虽然根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是每个人的喜好与审美不一样，所以都没有做到我心目中的最完美，于是我就想自己设计开发一个让自己觉得满意的玩安卓App。界面的话参考了一些市场上App的风格搭配实现
 
