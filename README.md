@@ -80,7 +80,7 @@
 ## 素材来源
 - [阿里巴巴矢量图标库](http://www.iconfont.cn/)
 - 借鉴了[花瓣APP](https://huaban.com/)的登录页
-- 个人中心界面借鉴 https://www.ui.cn/detail/495986.html
+- [个人中心界面借鉴](https://www.ui.cn/detail/495986.html)
 - [goweii](https://github.com/goweii/WanAndroid)项目中的Launch图标
 
 ## 特别感谢
