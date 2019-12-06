@@ -74,6 +74,7 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
             loadsir.showCallback(LoadingCallback::class.java)
             mPresenter?.getProjectTitles()
         }.apply {
+
             SettingUtil.setLoadingColor(_mActivity, this)
         }
         return rootview
@@ -83,6 +84,7 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
         super.initData(savedInstanceState)
         viewpager_linear.setBackgroundColor(SettingUtil.getColor(_mActivity))
         mPresenter?.getProjectTitles()//初始化的时候就请求数据，就是说一进入主页Activity这个就会请求
+
         // 不然 用户进来这个Fragment的时候再请求的话，界面头部啥都没有，这就不好看了
     }
 

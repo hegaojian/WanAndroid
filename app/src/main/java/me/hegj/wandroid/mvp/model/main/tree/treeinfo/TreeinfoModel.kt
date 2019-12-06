@@ -37,32 +37,23 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun getTreeInfoDatas(pageNo: Int,cid:Int): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getAritrilDataByTree(pageNo,cid))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getAritrilDataByTree(pageNo,cid)
     }
 
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
 
     override fun onDestroy() {

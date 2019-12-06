@@ -37,19 +37,13 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
 
 
     override fun addTodo(title: String, content: String, date: String, type: Int, priority: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .addTodo(title, content, date, type, priority))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .addTodo(title, content, date, type, priority)
     }
 
     override fun updateTodo(title: String, content: String, date: String, type: Int, priority: Int, id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .updateTodo(title, content, date, type, priority,id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .updateTodo(title, content, date, type, priority,id)
     }
 
     override fun onDestroy() {

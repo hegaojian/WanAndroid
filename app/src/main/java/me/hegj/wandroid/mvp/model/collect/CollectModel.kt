@@ -39,21 +39,15 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun getCollectDatas(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<CollectResponse>>>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getCollectData(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getCollectData(pageNo)
     }
 
 
     override fun uncollectList(id: Int, originId: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollectList(id, originId))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollectList(id, originId)
     }
 
     override fun onDestroy() {

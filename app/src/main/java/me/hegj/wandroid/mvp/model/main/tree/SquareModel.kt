@@ -39,31 +39,22 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
 
     //获取广场数据
     override fun getSquareData(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getSquareData(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getSquareData(pageNo)
     }
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
 
 

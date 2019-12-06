@@ -41,47 +41,32 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //取消收藏
     override fun uncollectList(id: Int, originId: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollectList(id,originId))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollectList(id,originId)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
     override fun collectUrl(name: String, link: String): Observable<ApiResponse<CollectUrlResponse>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collectUrl(name,link))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collectUrl(name,link)
     }
     //取消收藏网址
     override fun uncollectUrl(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .deletetool(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .deletetool(id)
     }
 
     override fun onDestroy() {

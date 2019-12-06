@@ -39,31 +39,22 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
 
 
     override fun getArilist(pageNo: Int,searchKey:String): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getSearchDataByKey(pageNo,searchKey))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getSearchDataByKey(pageNo,searchKey)
     }
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
 
     override fun onDestroy() {

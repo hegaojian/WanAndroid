@@ -32,12 +32,9 @@ class NavigationModel
 @Inject
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager), NavigationContract.Model {
     override fun getNavigationData(): Observable<ApiResponse<MutableList<NavigationResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getNavigationData())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getNavigationData()
     }
 
     @Inject

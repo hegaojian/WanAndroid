@@ -37,20 +37,14 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun getCollectUrlDatas(): Observable<ApiResponse<MutableList<CollectUrlResponse>>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getCollectUrlData())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getCollectUrlData()
     }
 
     override fun uncollectList(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .deletetool(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .deletetool(id)
     }
 
     override fun onDestroy() {

@@ -33,30 +33,21 @@ class ShareByIdModel
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager), ShareByIdContract.Model {
 
     override fun getShareData(pageNo: Int,id:Int): Observable<ApiResponse<ShareResponse>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getShareByidData(pageNo,id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getShareByidData(pageNo,id)
     }
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
 
     @Inject

@@ -35,22 +35,16 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun register(username: String, password: String, password1: String): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .register(username, password, password1))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .register(username, password, password1)
     }
 
 
     override fun login(username: String, password: String): Observable<ApiResponse<UserInfoResponse>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .login(username, password))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .login(username, password)
     }
 
 

@@ -30,12 +30,9 @@ class MeModel
 @Inject
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager), MeContract.Model {
     override fun getIntegral(): Observable<ApiResponse<IntegralResponse>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getIntegral())
-                .flatMap { apiResponseObservable->
-                    apiResponseObservable
-                }
+                .getIntegral()
 
     }
 

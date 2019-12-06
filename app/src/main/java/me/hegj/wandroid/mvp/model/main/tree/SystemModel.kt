@@ -32,12 +32,9 @@ class SystemModel
 @Inject
 constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager), SystemContract.Model {
     override fun getSystemData(): Observable<ApiResponse<MutableList<SystemResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getSystemData())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getSystemData()
     }
 
     @Inject

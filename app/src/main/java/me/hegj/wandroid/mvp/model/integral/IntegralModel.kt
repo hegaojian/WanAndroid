@@ -42,17 +42,11 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     }
 
     override fun getIntegralData(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<IntegralResponse>>>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getIntegralRank(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getIntegralRank(pageNo)
     }
     override fun getIntegralHistoryData(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<IntegralHistoryResponse>>>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getIntegralHistory(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getIntegralHistory(pageNo)
     }
 }

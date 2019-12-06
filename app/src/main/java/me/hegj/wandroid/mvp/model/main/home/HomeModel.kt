@@ -40,49 +40,33 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     @Inject
     lateinit var mApplication: Application
     override fun getArilist(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>> {
-        return Observable.just(mRepositoryManager
-                .obtainRetrofitService(Api::class.java)
-                .getAritrilList(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+       return  mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getAritrilList(pageNo)
     }
 
     override fun getBannList(): Observable<ApiResponse<MutableList<BannerResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getBanner())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getBanner()
     }
 
     override fun getTopArilist(): Observable<ApiResponse<MutableList<AriticleResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getTopAritrilList())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getTopAritrilList()
     }
 
     //取消收藏
     override fun uncollect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .uncollect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .uncollect(id)
     }
     //收藏
     override fun collect(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .collect(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .collect(id)
     }
 
     override fun onDestroy() {

@@ -38,27 +38,18 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun getTodoData(pageNo: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<TodoResponse>>>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getTodoData(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getTodoData(pageNo)
     }
 
     override fun updateTodoData(id: Int, status: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .doneTodo(id, status))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .doneTodo(id, status)
     }
 
     override fun deleteTodoData(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .deleteTodo(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .deleteTodo(id)
     }
 
     override fun onDestroy() {

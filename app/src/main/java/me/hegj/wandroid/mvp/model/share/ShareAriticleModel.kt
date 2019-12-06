@@ -39,11 +39,8 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
 
 
     override fun addAriticle(title: String, url: String): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .addAriticle(title, url))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .addAriticle(title, url)
     }
 
     override fun onDestroy() {

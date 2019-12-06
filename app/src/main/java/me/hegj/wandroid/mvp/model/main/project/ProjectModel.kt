@@ -51,12 +51,9 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     }*/
 
     override fun getTitles(): Observable<ApiResponse<MutableList<ClassifyResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getProjecTypes())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getProjecTypes()
     }
 
 

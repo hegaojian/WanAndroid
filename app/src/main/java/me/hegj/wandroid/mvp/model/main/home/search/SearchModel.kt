@@ -41,11 +41,8 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     }
 
     override fun getHotData(): Observable<ApiResponse<MutableList<SearchResponse>>> {
-        return Observable.just(mRepositoryManager
+        return mRepositoryManager
                 .obtainRetrofitService(Api::class.java)
-                .getSearchData())
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+                .getSearchData()
     }
 }

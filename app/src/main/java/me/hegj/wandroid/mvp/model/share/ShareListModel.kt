@@ -36,19 +36,13 @@ constructor(repositoryManager: IRepositoryManager) : BaseModel(repositoryManager
     lateinit var mApplication: Application
 
     override fun getShareData(pageNo: Int): Observable<ApiResponse<ShareResponse>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .getShareData(pageNo))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .getShareData(pageNo)
     }
 
     override fun deleteShareData(id: Int): Observable<ApiResponse<Any>> {
-        return Observable.just(mRepositoryManager.obtainRetrofitService(Api::class.java)
-                .deleteShareData(id))
-                .flatMap { apiResponseObservable ->
-                    apiResponseObservable
-                }
+        return mRepositoryManager.obtainRetrofitService(Api::class.java)
+                .deleteShareData(id)
     }
 
     override fun onDestroy() {
