@@ -36,7 +36,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.8/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.9/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -86,6 +86,9 @@
 - 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## v 1.0.9 (2019-12-6)
+- 1.添加kotlin拓展函数，优化设置控件主题，跳转拦截代码
 
 ## v 1.0.8 (2019-11-12)
 - 1.添加Bugly校验
