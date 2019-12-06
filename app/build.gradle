@@ -27,7 +27,7 @@ android {
         }
     }
 
-    signingConfigs {
+   /* signingConfigs {
         def alias = "wandroid"
         def password = "password"
         def filePath = "wandroid.jks"
@@ -44,7 +44,7 @@ android {
             storeFile file(filePath)
             storePassword(password)
         }
-    }
+    }*/
 
     buildTypes {
         debug {
