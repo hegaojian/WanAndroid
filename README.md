@@ -7,11 +7,10 @@
 [5]:https://img.shields.io/badge/license-Apache%202-blue.svg
 [6]:https://github.com/hegaojian/WanAndroid/blob/master/LICENSE
 
-
 # WanAndroid
 一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，使用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
-如果你觉得做的还可以对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
+如果你觉得本项目做的还不错对你有帮助，**容我卑微地向你要个star**，有任何问题或建议，欢迎提交[issues](https://github.com/hegaojian/WanAndroid/issues)
 
 # 前言
 前段时间学习了 **Kotlin** ，于是打算写一个项目来练练手刷刷熟练度，因为经常逛鸿神的[WanAndroid](https://www.wanandroid.com)网站，觉得很不错，Api也很丰富健全， 虽然根据[WanAndroid](https://www.wanandroid.com)APi开发出的app多如牛毛，有诸多优秀的app,但是每个人的喜好与审美不一样，所以都没有做到我心目中的最完美，于是我就想自己设计开发一个让自己觉得满意的玩安卓App。界面的话参考了一些市场上App的风格搭配实现
@@ -30,7 +29,6 @@
 - 文章网址详情 详情中收藏 分享 浏览器打开
 - 全局修改应用主题色
 - 全局修改列表的加载动画
-- 侧滑返回 可打开与关闭
 - 文章在任何地方收藏与取消，其他界面相对应的数据也会变化
 - 布局优化，大量使用ConstraintLayout
 - 集成Bugly收集bug并实现App更新
@@ -38,9 +36,11 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.7/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.8/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
+
+- [小米应用市场下载](http://app.mi.com/download/933598?id=me.hegj.wandroid&ref=search&nonce=2368478985935143674%3A26235470&appClientId=2882303761517485445&appSignature=T49mZxF9fm7r1qKDSyN68zGb37Ar0wJUK_9EQK6PC2s)
 
 - 扫码
 
@@ -87,6 +87,11 @@
 
 # 更新日志
 
+## v 1.0.8 (2019-11-12)
+- 1.添加Bugly校验
+- 2.我的-加入我们 修改了群号为作者自己的
+- 3.删除build中的signingConfigs编译信息
+
 ## v 1.0.7 (2019-10-18)
 - 1.添加积分规则
 - 2.添加分享文章提示
@@ -131,17 +136,17 @@
 
 ## License
 ```
-Copyright 2019 hegaojian
+ Copyright 2019, hegaojian       
+  
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at 
+ 
+       http://www.apache.org/licenses/LICENSE-2.0 
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
 ```
