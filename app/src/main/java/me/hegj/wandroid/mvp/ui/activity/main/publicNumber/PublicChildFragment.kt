@@ -25,6 +25,7 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.CollectView
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
@@ -41,7 +42,6 @@ import me.hegj.wandroid.mvp.ui.activity.web.WebviewActivity
 import me.hegj.wandroid.mvp.ui.adapter.AriticleAdapter
 import org.greenrobot.eventbus.Subscribe
 
-
 class PublicChildFragment : BaseFragment<PublicChildPresenter>(), PublicChildContract.View {
 
     lateinit var loadsir: LoadService<Any>
@@ -49,7 +49,7 @@ class PublicChildFragment : BaseFragment<PublicChildPresenter>(), PublicChildCon
     private var initPageNo = 1 //注意，公众号页码从 1开始的 ！！！！
     private var pageNo: Int = initPageNo
     private var cid: Int = 0
-    private var footView: DefineLoadMoreView? = null
+    lateinit var footView: DefineLoadMoreView
 
     companion object {
         fun newInstance(cid: Int): PublicChildFragment {
@@ -279,14 +279,6 @@ class PublicChildFragment : BaseFragment<PublicChildPresenter>(), PublicChildCon
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(_mActivity))
-        if (SettingUtil.getListMode(_mActivity) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(_mActivity))
-        } else {
-            adapter.closeLoadAnimation()
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
 }

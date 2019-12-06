@@ -26,6 +26,7 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.CollectView
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
@@ -52,7 +53,7 @@ class TreeinfoFragment : BaseFragment<TreeinfoPresenter>(), TreeinfoContract.Vie
     private var initPageNo = 0 //注意，体系页码从 0开始的 ！！！！
     private var pageNo: Int = initPageNo //注意，体系页码从 0开始的 ！！！！
     private var cid: Int = 0
-    private var footView: DefineLoadMoreView? = null
+    lateinit var footView: DefineLoadMoreView
 
     companion object {
         fun newInstance(cid: Int): TreeinfoFragment {
@@ -279,14 +280,6 @@ class TreeinfoFragment : BaseFragment<TreeinfoPresenter>(), TreeinfoContract.Vie
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(_mActivity))
-        if (SettingUtil.getListMode(_mActivity) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(_mActivity))
-        } else {
-            adapter.closeLoadAnimation()
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
 }

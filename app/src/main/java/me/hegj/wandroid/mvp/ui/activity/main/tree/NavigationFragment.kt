@@ -23,6 +23,7 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.utils.SpaceItemDecoration
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
 import me.hegj.wandroid.app.weight.loadCallBack.LoadingCallback
 import me.hegj.wandroid.di.component.main.tree.DaggerNavigationComponent
@@ -213,16 +214,7 @@ class NavigationFragment : BaseFragment<NavigationPresenter>(), NavigationContra
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        adapter.run {
-            if (SettingUtil.getListMode(_mActivity) != 0) {
-                openLoadAnimation(SettingUtil.getListMode(_mActivity))
-            } else {
-                closeLoadAnimation()
-            }
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,loadsir,swipeRefreshLayout,adapter))
     }
 
 }

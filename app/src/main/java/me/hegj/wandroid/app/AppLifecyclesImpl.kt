@@ -56,7 +56,6 @@ class AppLifecyclesImpl : AppLifecycles {
     override fun onCreate(application: Application) {
         //初始化MMKV
         MMKV.initialize(application.filesDir.absolutePath + "/mmkv")
-
         if (LeakCanary.isInAnalyzerProcess(application)) {
             return
         }

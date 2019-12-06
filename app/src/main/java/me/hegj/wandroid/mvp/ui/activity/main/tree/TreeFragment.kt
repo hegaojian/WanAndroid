@@ -12,11 +12,13 @@ import android.view.animation.DecelerateInterpolator
 import androidx.viewpager.widget.ViewPager
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
+import kotlinx.android.synthetic.main.fragment_main.*
 import kotlinx.android.synthetic.main.include_toolbar.*
 import kotlinx.android.synthetic.main.include_viewpager.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.ScaleTransitionPagerTitleView
 import me.hegj.wandroid.mvp.ui.BaseFragment
 import me.hegj.wandroid.mvp.ui.activity.main.home.search.SearchActivity
@@ -143,7 +145,6 @@ class TreeFragment : BaseFragment<IPresenter>() {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        viewpager_linear.setBackgroundColor(SettingUtil.getColor(_mActivity))
-        include_viewpager_toolbar.setBackgroundColor(SettingUtil.getColor(_mActivity))
+        setUiTheme(_mActivity, listOf(viewpager_linear,include_viewpager_toolbar))
     }
 }

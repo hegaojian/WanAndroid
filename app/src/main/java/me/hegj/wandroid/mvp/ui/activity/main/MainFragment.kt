@@ -9,6 +9,7 @@ import kotlinx.android.synthetic.main.fragment_main.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.di.component.DaggerMainComponent
 import me.hegj.wandroid.di.module.MainModule
 import me.hegj.wandroid.mvp.contract.MainContract
@@ -27,11 +28,11 @@ import org.greenrobot.eventbus.Subscribe
  *主页
  */
 class MainFragment : BaseFragment<MainPresenter>(), MainContract.View {
-    private val first  = 0
-    private val two    = 1
-    private val three  = 2
-    private val four   = 3
-    private val five   = 4
+    private val first = 0
+    private val two = 1
+    private val three = 2
+    private val four = 3
+    private val five = 4
     private val mFragments = arrayOfNulls<SupportFragment>(5)
 
     companion object {
@@ -57,18 +58,18 @@ class MainFragment : BaseFragment<MainPresenter>(), MainContract.View {
         val homeFragment = findChildFragment(HomeFragment::class.java)
         if (homeFragment == null) {
             mFragments[first] = HomeFragment.newInstance()//主页
-            mFragments[two]   = ProjectFragment.newInstance()//项目
+            mFragments[two] = ProjectFragment.newInstance()//项目
             mFragments[three] = TreeFragment.newInstance()//体系
-            mFragments[four]  = PublicFragment.newInstance()//公众号
-            mFragments[five]  = MeFragment.newInstance()//我的
+            mFragments[four] = PublicFragment.newInstance()//公众号
+            mFragments[five] = MeFragment.newInstance()//我的
             loadMultipleRootFragment(R.id.main_frame, first, mFragments[first]
                     , mFragments[two], mFragments[three], mFragments[four], mFragments[five])
         } else {
             mFragments[first] = homeFragment
-            mFragments[two]   = findChildFragment(ProjectFragment::class.java)
+            mFragments[two] = findChildFragment(ProjectFragment::class.java)
             mFragments[three] = findChildFragment(TreeFragment::class.java)
-            mFragments[four]  = findChildFragment(PublicFragment::class.java)
-            mFragments[five]  = findChildFragment(MeFragment::class.java)
+            mFragments[four] = findChildFragment(PublicFragment::class.java)
+            mFragments[five] = findChildFragment(MeFragment::class.java)
         }
         main_bnve.run {
             enableAnimation(false)
@@ -96,9 +97,6 @@ class MainFragment : BaseFragment<MainPresenter>(), MainContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        main_bnve?.run {
-            itemIconTintList = SettingUtil.getColorStateList(_mActivity)
-            itemTextColor = SettingUtil.getColorStateList(_mActivity)
-        }
+        setUiTheme(_mActivity, listOf(main_bnve))
     }
 }

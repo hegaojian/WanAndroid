@@ -13,9 +13,6 @@ import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
-import me.hegj.wandroid.app.utils.CacheUtil
-import me.hegj.wandroid.app.utils.SettingUtil
-import me.hegj.wandroid.app.utils.ShowUtils
 import me.hegj.wandroid.di.component.main.me.DaggerMeComponent
 import me.hegj.wandroid.di.module.main.me.MeModule
 import me.hegj.wandroid.mvp.contract.main.me.MeContract
@@ -35,6 +32,9 @@ import org.greenrobot.eventbus.Subscribe
 import android.net.Uri
 import com.jess.arms.http.imageloader.glide.ImageConfigImpl
 import com.jess.arms.utils.ArmsUtils
+import kotlinx.android.synthetic.main.fragment_list.*
+import kotlinx.android.synthetic.main.include_recyclerview.*
+import me.hegj.wandroid.app.utils.*
 
 
 /**
@@ -133,10 +133,7 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        me_swipe.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        toolbar.setBackgroundColor(SettingUtil.getColor(_mActivity))
-        me_linear.setBackgroundColor(SettingUtil.getColor(_mActivity))
-        me_integral.setTextColor(SettingUtil.getColor(_mActivity))
+        setUiTheme(_mActivity, listOf(me_swipe,toolbar,me_linear,me_integral))
     }
 
     @OnClick(R.id.me_setting, R.id.me_collect, R.id.me_linear, R.id.me_todo, R.id.me_integralLinear
@@ -145,56 +142,36 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
         when (view.id) {
             R.id.me_linear -> {
                 if (!CacheUtil.isLogin()) {
-                    launchActivity(Intent(_mActivity, LoginActivity::class.java))
+                    startActivityKx(LoginActivity::class.java)
                 }
             }
             R.id.me_collect -> {
-                if (!CacheUtil.isLogin()) {
-                    launchActivity(Intent(_mActivity, LoginActivity::class.java))
-                } else {
-                    launchActivity(Intent(_mActivity, CollectActivity::class.java))
-                }
+                startActivityKx(CollectActivity::class.java,true)
             }
             R.id.me_todo -> {
-                if (!CacheUtil.isLogin()) {
-                    launchActivity(Intent(_mActivity, LoginActivity::class.java))
-                } else {
-                    launchActivity(Intent(_mActivity, TodoActivity::class.java))
-                }
+                startActivityKx(TodoActivity::class.java,true)
             }
             R.id.me_integralLinear -> {
-                if (!CacheUtil.isLogin()) {
-                    launchActivity(Intent(_mActivity, LoginActivity::class.java))
-                } else {
-                    launchActivity(Intent(_mActivity, IntegralActivity::class.java).apply {
-                        integral?.let {
-                            putExtras(Bundle().apply {
-                                putSerializable("integral", it)
-                            })
-                        }
-                    })
-                }
+                startActivityKx(IntegralActivity::class.java,true,Bundle().apply {
+                    integral?.let {
+                        putSerializable("integral", it)
+                    }
+                })
             }
             R.id.me_article -> {
-                if (!CacheUtil.isLogin()) {
-                    launchActivity(Intent(_mActivity, LoginActivity::class.java))
-                } else {
-                    launchActivity(Intent(_mActivity,ShareListActivity::class.java))
-                }
+                startActivityKx(ShareListActivity::class.java,true)
             }
             R.id.me_about ->{
                 val data = BannerResponse("", 0, "", 0, 0, "玩Android网站", 0, "https://www.wanandroid.com/")
-                launchActivity(Intent(_mActivity, WebviewActivity::class.java).apply {
-                    putExtras(Bundle().apply {
+                startActivityKx(WebviewActivity::class.java,false,Bundle().apply {
                         putSerializable("bannerdata", data)
-                    })
                 })
             }
             R.id.me_join -> {
                 joinQQGroup("9n4i5sHt4189d4DvbotKiCHy-5jZtD4D")
             }
             R.id.me_setting -> {
-                launchActivity(Intent(_mActivity, SettingActivity::class.java))
+                startActivityKx(SettingActivity::class.java)
             }
         }
     }

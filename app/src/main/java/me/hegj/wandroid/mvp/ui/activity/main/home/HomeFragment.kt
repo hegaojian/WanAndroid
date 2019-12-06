@@ -31,6 +31,7 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.CollectView
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
@@ -62,7 +63,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
     lateinit var adapter: AriticleAdapter
 
     lateinit var loadsir: LoadService<Any>
-    private var footView: DefineLoadMoreView? = null
+    lateinit var footView: DefineLoadMoreView
 
     companion object {
         fun newInstance(): HomeFragment {
@@ -345,16 +346,7 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        toolbar.setBackgroundColor(SettingUtil.getColor(_mActivity))
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(_mActivity))
-        if (SettingUtil.getListMode(_mActivity) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(_mActivity))
-        } else {
-            adapter.closeLoadAnimation()
-        }
+        setUiTheme(_mActivity, listOf(toolbar,floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
 
 }

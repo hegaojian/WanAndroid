@@ -19,7 +19,6 @@ import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.*
 import retrofit2.http.*
 
-
 /**
  * 存放一些与 API 有关的东西,如请求地址,请求码等
  * @Author:         hegaojian

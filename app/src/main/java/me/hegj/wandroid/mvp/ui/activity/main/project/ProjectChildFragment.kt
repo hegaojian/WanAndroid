@@ -16,6 +16,7 @@ import com.kingja.loadsir.core.LoadSir
 import com.yanzhenjie.recyclerview.SwipeRecyclerView
 import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.include_recyclerview.*
+import kotlinx.android.synthetic.main.include_viewpager.*
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
@@ -25,6 +26,7 @@ import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.CollectView
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
@@ -50,7 +52,7 @@ class ProjectChildFragment : BaseFragment<ProjectChildPresenter>(), ProjectChild
     private var isNew = false//是否是最新项目
     private var initPageNo: Int = 1 //初始化页码，因为最新项目跟其他分类的初始页码不一样 最新 为0 分类项目为1
     private var pageNo: Int = 1 //当前页码
-    private var footView: DefineLoadMoreView? = null
+    lateinit var footView: DefineLoadMoreView
 
     companion object {
         fun newInstance(cid: Int, initPageNo: Int): ProjectChildFragment {
@@ -311,14 +313,6 @@ class ProjectChildFragment : BaseFragment<ProjectChildPresenter>(), ProjectChild
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(_mActivity))
-        if (SettingUtil.getListMode(_mActivity) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(_mActivity))
-        } else {
-            adapter.closeLoadAnimation()
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
 }

@@ -12,10 +12,14 @@ import android.view.animation.DecelerateInterpolator
 import com.jess.arms.di.component.AppComponent
 import com.kingja.loadsir.core.LoadService
 import com.kingja.loadsir.core.LoadSir
+import kotlinx.android.synthetic.main.fragment_list.*
+import kotlinx.android.synthetic.main.include_recyclerview.*
 import kotlinx.android.synthetic.main.include_viewpager.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.setUiTheme
+import me.hegj.wandroid.app.utils.startActivityKx
 import me.hegj.wandroid.app.weight.ScaleTransitionPagerTitleView
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
 import me.hegj.wandroid.app.weight.loadCallBack.LoadingCallback
@@ -105,11 +109,14 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
             override fun getIndicator(context: Context): IPagerIndicator {
                 return LinePagerIndicator(context).apply {
                     mode = LinePagerIndicator.MODE_EXACTLY
+                    //线条的宽高度
                     lineHeight = UIUtil.dip2px(context, 3.0).toFloat()
                     lineWidth = UIUtil.dip2px(context, 30.0).toFloat()
+                    //线条的圆角
                     roundRadius = UIUtil.dip2px(context, 6.0).toFloat()
                     startInterpolator = AccelerateInterpolator()
                     endInterpolator = DecelerateInterpolator(2.0f)
+                    //线条的颜色
                     setColors(Color.WHITE)
                 }
             }
@@ -151,8 +158,7 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        viewpager_linear.setBackgroundColor(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
+        setUiTheme(_mActivity, listOf(viewpager_linear,loadsir))
     }
 
 }

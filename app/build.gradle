@@ -49,7 +49,7 @@ android {
     buildTypes {
         debug {
             buildConfigField "boolean", "LOG_DEBUG",  "true"
-            buildConfigField "boolean", "USE_CANARY", "false"
+            buildConfigField "boolean", "USE_CANARY", "true"
             buildConfigField "String", "BUGLY_KEY", '"xxxxxx"'
             minifyEnabled false
             shrinkResources false

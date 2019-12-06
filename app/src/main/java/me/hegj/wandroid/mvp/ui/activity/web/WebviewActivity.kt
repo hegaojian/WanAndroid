@@ -19,6 +19,7 @@ import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.CollectEvent
 import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.utils.CacheUtil
+import me.hegj.wandroid.app.utils.startActivityKx
 import me.hegj.wandroid.app.weight.LollipopFixedWebView
 import me.hegj.wandroid.di.component.web.DaggerWebviewComponent
 import me.hegj.wandroid.di.module.web.WebviewModule
@@ -149,7 +150,8 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
                 //刷新网页
                 mAgentWeb.urlLoader.reload()
             }
-            R.id.web_collect -> {//点击收藏
+            R.id.web_collect -> {
+                //点击收藏
                 //是否已经登录了，没登录需要跳转到登录页去
                 if (CacheUtil.isLogin()) {
                     //是否已经收藏了
@@ -173,7 +175,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
                     }
                 } else {
                     //跳转到登录页
-                    AppManager.getAppManager().startActivity(Intent(this, LoginActivity::class.java))
+                    startActivityKx(LoginActivity::class.java)
                 }
             }
             R.id.web_liulanqi -> {

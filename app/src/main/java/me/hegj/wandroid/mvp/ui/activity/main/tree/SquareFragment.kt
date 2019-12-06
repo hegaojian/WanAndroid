@@ -26,6 +26,7 @@ import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.RecyclerViewUtils
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.utils.SpaceItemDecoration
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
 import me.hegj.wandroid.app.weight.loadCallBack.EmptyCallback
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
@@ -52,7 +53,7 @@ class SquareFragment : BaseFragment<SquarePresenter>(), SquareContract.View {
     var pageNo = initPageNo //当前页码
     lateinit var loadsir: LoadService<Any>
     lateinit var adapter: AriticleAdapter
-    private var footView: DefineLoadMoreView? = null
+    lateinit var footView: DefineLoadMoreView
     companion object {
         fun newInstance(): SquareFragment {
             return SquareFragment()
@@ -267,15 +268,7 @@ class SquareFragment : BaseFragment<SquarePresenter>(), SquareContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        footView?.setLoadViewColor(SettingUtil.getOneColorStateList(_mActivity))
-        if (SettingUtil.getListMode(_mActivity) != 0) {
-            adapter.openLoadAnimation(SettingUtil.getListMode(_mActivity))
-        } else {
-            adapter.closeLoadAnimation()
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
 
     /**

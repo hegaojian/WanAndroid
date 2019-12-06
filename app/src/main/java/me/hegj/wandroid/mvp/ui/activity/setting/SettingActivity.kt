@@ -1,18 +1,19 @@
 package me.hegj.wandroid.mvp.ui.activity.setting
 
-
 import android.os.Bundle
 import com.jess.arms.di.component.AppComponent
 import com.jess.arms.mvp.IPresenter
 import kotlinx.android.synthetic.main.include_toolbar.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
+import me.hegj.wandroid.app.utils.startActivityKx
 import me.hegj.wandroid.mvp.ui.BaseActivity
 import org.greenrobot.eventbus.Subscribe
 
 class SettingActivity : BaseActivity<IPresenter>() {
 
     override fun setupActivityComponent(appComponent: AppComponent) {
+
     }
 
     override fun initView(savedInstanceState: Bundle?): Int {

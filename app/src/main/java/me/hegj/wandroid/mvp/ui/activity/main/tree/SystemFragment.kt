@@ -14,10 +14,12 @@ import com.kingja.loadsir.core.LoadService
 import com.kingja.loadsir.core.LoadSir
 import kotlinx.android.synthetic.main.fragment_list.*
 import kotlinx.android.synthetic.main.include_recyclerview.*
+import kotlinx.android.synthetic.main.include_viewpager.*
 import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.SettingChangeEvent
 import me.hegj.wandroid.app.utils.SettingUtil
 import me.hegj.wandroid.app.utils.SpaceItemDecoration
+import me.hegj.wandroid.app.utils.setUiTheme
 import me.hegj.wandroid.app.weight.loadCallBack.ErrorCallback
 import me.hegj.wandroid.app.weight.loadCallBack.LoadingCallback
 import me.hegj.wandroid.di.component.main.tree.DaggerSystemComponent
@@ -163,16 +165,7 @@ class SystemFragment : BaseFragment<SystemPresenter>(), SystemContract.View {
      */
     @Subscribe
     fun settingEvent(event: SettingChangeEvent) {
-        floatbtn.backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
-        SettingUtil.setLoadingColor(_mActivity, loadsir)
-        swipeRefreshLayout.setColorSchemeColors(SettingUtil.getColor(_mActivity))
-        adapter.run {
-            if (SettingUtil.getListMode(_mActivity) != 0) {
-                openLoadAnimation(SettingUtil.getListMode(_mActivity))
-            } else {
-                closeLoadAnimation()
-            }
-        }
+        setUiTheme(_mActivity, listOf(floatbtn,loadsir,swipeRefreshLayout,adapter))
     }
 
 }

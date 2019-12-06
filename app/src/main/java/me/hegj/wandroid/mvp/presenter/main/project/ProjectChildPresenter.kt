@@ -48,7 +48,6 @@ constructor(model: ProjectChildContract.Model, rootView: ProjectChildContract.Vi
     @Inject
     lateinit var mAppManager: AppManager
 
-
     fun getProjectDataByType(pageNo: Int, cid: Int) {
         mModel.getProjects(pageNo, cid)
                 .subscribeOn(Schedulers.io())
@@ -64,7 +63,6 @@ constructor(model: ProjectChildContract.Model, rootView: ProjectChildContract.Vi
                             mRootView.requestDataFaild(response.errorMsg)
                         }
                     }
-
                     override fun onError(t: Throwable) {
                         super.onError(t)
                         mRootView.requestDataFaild(HttpUtils.getErrorText(t))
