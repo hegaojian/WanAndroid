@@ -36,7 +36,7 @@
 
 ## APP下载
 
-- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.8/app-release.apk)
+- [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.9/app-release.apk)
 
 - [fir.im下载](https://fir.im/4ybt)
 
@@ -55,7 +55,7 @@
 ![](https://upload-images.jianshu.io/upload_images/9305757-85ce00bc6e56fc4c.png?imageMogr2/auto-orient/strip|imageView2/2/w/976/format/webp)
 ![](https://upload-images.jianshu.io/upload_images/9305757-017b33c24c2fa8ed.png?imageMogr2/auto-orient/strip|imageView2/2/w/991/format/webp)
 
-## 主要开源框架
+## 项目中用到的开源库
 - [一个在 Java VM 上使用可观测的序列来组成异步的、基于事件的程序的框架-RxJava2](https://github.com/ReactiveX/RxJava)
 - [一个依赖注入框架-Dagger2](https://github.com/square/dagger)
 - [处理网络请求的框架-Okhttp](https://github.com/square/okhttp)
@@ -80,12 +80,16 @@
 ## 素材来源
 - [阿里巴巴矢量图标库](http://www.iconfont.cn/)
 - 借鉴了[花瓣APP](https://huaban.com/)的登录页
-- [goweii](https://github.com/goweii/WanAndroid)项目中的App图标
+- [个人中心界面借鉴](https://www.ui.cn/detail/495986.html)
+- [goweii](https://github.com/goweii/WanAndroid)项目中的Launch图标
 
 ## 特别感谢
-- 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神也耐心的帮忙添加了，谢谢
+- 感谢[鸿洋大神](https://github.com/hongyangAndroid)提供的[WanAndroid开放API](https://www.wanandroid.com/blog/show/2)，我在issues提了一些自己的需求，鸿神都耐心的帮忙添加了，谢谢
 
 # 更新日志
+
+## v 1.0.9 (2019-12-6)
+- 1.添加kotlin拓展函数，优化设置控件主题，跳转拦截代码
 
 ## v 1.0.8 (2019-11-12)
 - 1.添加Bugly校验
