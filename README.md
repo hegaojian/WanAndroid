@@ -90,6 +90,7 @@
 
 ## v 1.0.9 (2019-12-6)
 - 1.添加kotlin拓展函数，优化设置控件主题，跳转拦截代码
+- 2.请求网络写法纠正，具体看[#11](https://github.com/hegaojian/WanAndroid/issues/11)
 
 ## v 1.0.8 (2019-11-12)
 - 1.添加Bugly校验
@@ -140,7 +141,7 @@
 
 ## License
 ```
- Copyright 2019, hegaojian       
+ Copyright 2019, hegaojian(何高建)       
   
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
