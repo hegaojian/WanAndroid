@@ -17,6 +17,7 @@ package me.hegj.wandroid.mvp.model.api
 
 import io.reactivex.Observable
 import me.hegj.wandroid.mvp.model.entity.*
+import okhttp3.ResponseBody
 import retrofit2.http.*
 
 /**
@@ -43,7 +44,6 @@ interface Api {
     @FormUrlEncoded
     @POST("/user/register")
     fun register(@Field("username") username: String, @Field("password") pwd: String, @Field("repassword") rpwd: String): Observable<ApiResponse<Any>>
-
 
     /**
      * 获取banner数据
@@ -228,7 +228,7 @@ interface Api {
     fun doneTodo(@Path("id") id: Int, @Field("status") status: Int): Observable<ApiResponse<Any>>
 
     /**
-     * 获取Todo列表数据 根据完成时间排序
+     * 广场列表数据
      */
     @GET("/user_article/list/{page}/json")
     fun getSquareData(@Path("page") page: Int): Observable<ApiResponse<ApiPagerResponse<MutableList<AriticleResponse>>>>

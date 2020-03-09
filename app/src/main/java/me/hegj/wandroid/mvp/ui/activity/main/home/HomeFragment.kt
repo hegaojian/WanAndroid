@@ -3,6 +3,7 @@ package me.hegj.wandroid.mvp.ui.activity.main.home
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -149,7 +150,6 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
         floatbtn.run {
             backgroundTintList = SettingUtil.getOneColorStateList(_mActivity)
             setOnClickListener {
-
                 val layoutManager = swiperecyclerview.layoutManager as LinearLayoutManager
                 //如果当前recyclerview 最后一个视图位置的索引大于等于40，则迅速返回顶部，否则带有滚动动画效果返回到顶部
                 if (layoutManager.findLastVisibleItemPosition() >= 40) {
@@ -348,7 +348,6 @@ class HomeFragment : BaseFragment<HomePresenter>(), HomeContract.View {
     fun settingEvent(event: SettingChangeEvent) {
         setUiTheme(_mActivity, listOf(toolbar,floatbtn,swipeRefreshLayout,loadsir,footView,adapter))
     }
-
 }
 
 

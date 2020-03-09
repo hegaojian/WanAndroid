@@ -11,7 +11,6 @@ import android.view.Window
 import android.widget.LinearLayout
 import androidx.core.content.ContextCompat
 import com.jess.arms.di.component.AppComponent
-import com.jess.arms.integration.AppManager
 import com.just.agentweb.AgentWeb
 import kotlinx.android.synthetic.main.activity_webview.*
 import kotlinx.android.synthetic.main.include_toolbar.*
@@ -36,12 +35,15 @@ import org.greenrobot.eventbus.Subscribe
 
 class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
 
-    var collect = false//是否收藏
-    var id = 0//id
-    lateinit var showTitle:String//标题
-    lateinit var url:String
-
-    var collectTYpe = 0 //需要收藏的类型 具体参数说明请看 CollectType 枚举类
+    //是否收藏
+    var collect = false
+    //id
+    var id = 0
+    lateinit var showTitle: String
+    //标题
+    lateinit var url: String
+    //需要收藏的类型 具体参数说明请看 CollectType 枚举类
+    var collectTYpe = 0
 
     private lateinit var mAgentWeb: AgentWeb
 
@@ -156,18 +158,18 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
                 if (CacheUtil.isLogin()) {
                     //是否已经收藏了
                     if (collect) {
-                        if(collectTYpe==CollectType.Url.type){
+                        if (collectTYpe == CollectType.Url.type) {
                             //取消收藏网址
                             mPresenter?.uncollectUrl(id)
-                        }else{
+                        } else {
                             //取消收藏文章
                             mPresenter?.uncollect(id)
                         }
                     } else {
-                        if(collectTYpe==CollectType.Url.type){
+                        if (collectTYpe == CollectType.Url.type) {
                             //收藏网址
-                            mPresenter?.collectUrl(showTitle,url)
-                        }else{
+                            mPresenter?.collectUrl(showTitle, url)
+                        } else {
                             //收藏文章
                             mPresenter?.collect(id)
                         }
@@ -195,7 +197,7 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         window.invalidatePanelMenu(Window.FEATURE_OPTIONS_PANEL)
         invalidateOptionsMenu()
         //通知app刷新相对应ID的数据的收藏的值
-        CollectEvent(collected,id).post()
+        CollectEvent(collected, id).post()
     }
 
     /**
@@ -208,8 +210,9 @@ class WebviewActivity : BaseActivity<WebviewPresenter>(), WebviewContract.View {
         invalidateOptionsMenu()
         id = data.id
         //通知app刷新相对应ID的数据的收藏的值
-        CollectEvent(collected,id).post()
+        CollectEvent(collected, id).post()
     }
+
     @Subscribe
     fun freshLogin(event: LoginFreshEvent) {
         //如果是登录了， 当前界面的id与账户收藏集合id匹配的值需要设置已经收藏 并刷新menu

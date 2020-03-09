@@ -15,6 +15,7 @@ import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.utils.CacheUtil
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.afterTextChange
 import me.hegj.wandroid.di.component.start.DaggerLoginComponent
 import me.hegj.wandroid.di.module.start.LoginModule
 import me.hegj.wandroid.mvp.contract.start.LoginContract
@@ -52,48 +53,28 @@ class RegisterActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
         }
         SettingUtil.setShapColor(register_sub, SettingUtil.getColor(this))
         login_goregister?.setTextColor(SettingUtil.getColor(this))
-        register_username.addTextChangedListener(object : TextWatcher {
 
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.isNotEmpty()) {
-                    register_clear.visibility = View.VISIBLE
-                } else {
-                    register_clear.visibility = View.GONE
-                }
+        register_username.afterTextChange {
+            if (it.isNotEmpty()) {
+                register_clear.visibility = View.VISIBLE
+            } else {
+                register_clear.visibility = View.GONE
             }
-        })
-        register_pwd.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.isNotEmpty()) {
-                    register_key.visibility = View.VISIBLE
-                } else {
-                    register_key.visibility = View.GONE
-                }
+        }
+        register_pwd.afterTextChange {
+            if (it.isNotEmpty()) {
+                register_key.visibility = View.VISIBLE
+            } else {
+                register_key.visibility = View.GONE
             }
-        })
-        register_pwd1.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.isNotEmpty()) {
-                    register_key1.visibility = View.VISIBLE
-                } else {
-                    register_key1.visibility = View.GONE
-                }
+        }
+        register_pwd1.afterTextChange {
+            if (it.isNotEmpty()) {
+                register_key1.visibility = View.VISIBLE
+            } else {
+                register_key1.visibility = View.GONE
             }
-        })
+        }
         register_key.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 register_pwd.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD

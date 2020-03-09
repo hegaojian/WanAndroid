@@ -40,7 +40,9 @@ import me.hegj.wandroid.mvp.ui.adapter.SearchistoryAdapter
 class SearchActivity : BaseActivity<SearchPresenter>(), SearchContract.View {
 
     var mtagData = mutableListOf<SearchResponse>()//搜索热词数据
+
     var historyData = mutableListOf<String>()//搜索历史数据
+
     lateinit var adapter: SearchistoryAdapter//搜索历史适配器
 
     override fun setupActivityComponent(appComponent: AppComponent) {

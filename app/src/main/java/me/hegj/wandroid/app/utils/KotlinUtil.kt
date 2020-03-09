@@ -4,6 +4,9 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
+import android.widget.EditText
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -16,10 +19,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
 import com.kingja.loadsir.core.LoadService
 import me.hegj.wandroid.app.weight.DefineLoadMoreView
-import me.hegj.wandroid.mvp.ui.activity.main.me.MeFragment
-import me.hegj.wandroid.mvp.ui.activity.setting.SettingActivity
 import me.hegj.wandroid.mvp.ui.activity.start.LoginActivity
-import me.yokeyword.fragmentation.SupportFragment
 
 /**
  * 根据控件的类型设置主题，注意，控件具有优先级， 基本类型的控件建议放到最后，像 Textview，FragmentLayout，不然会出现问题，
@@ -40,7 +40,7 @@ fun setUiTheme(context: Context, anylist: List<Any>) {
                     it.closeLoadAnimation()
                 }
             }
-            is BottomNavigationViewEx ->{
+            is BottomNavigationViewEx -> {
                 it.itemIconTintList = SettingUtil.getColorStateList(context)
                 it.itemTextColor = SettingUtil.getColorStateList(context)
             }
@@ -52,34 +52,51 @@ fun setUiTheme(context: Context, anylist: List<Any>) {
         }
     }
 }
-    fun Fragment.startActivityKx(cls :Class<*>,isNeedLogin:Boolean = false,bundle: Bundle = Bundle()){
-        if(isNeedLogin){
-            if (!CacheUtil.isLogin()) {
-                startActivity(Intent(this.activity,LoginActivity::class.java))
-            }else{
-                startActivity(Intent(this.activity,cls).apply {
-                    putExtras(bundle)
-                })
-            }
-        }else{
-            startActivity(Intent(this.activity,cls).apply {
+
+fun Fragment.startActivityKx(cls: Class<*>, isNeedLogin: Boolean = false, bundle: Bundle = Bundle()) {
+    if (isNeedLogin) {
+        if (!CacheUtil.isLogin()) {
+            startActivity(Intent(this.activity, LoginActivity::class.java))
+        } else {
+            startActivity(Intent(this.activity, cls).apply {
                 putExtras(bundle)
             })
         }
+    } else {
+        startActivity(Intent(this.activity, cls).apply {
+            putExtras(bundle)
+        })
     }
-    fun Activity.startActivityKx(cls :Class<*>, isNeedLogin:Boolean = false,bundle: Bundle = Bundle()){
-        if(isNeedLogin){
-            if (!CacheUtil.isLogin()) {
-                startActivity(Intent(this,LoginActivity::class.java))
-            }else{
-                startActivity(Intent(this,cls).apply {
-                    putExtras(bundle)
-                })
-            }
-        }else{
-            startActivity(Intent(this,cls).apply {
+}
+
+fun Activity.startActivityKx(cls: Class<*>, isNeedLogin: Boolean = false, bundle: Bundle = Bundle()) {
+    if (isNeedLogin) {
+        if (!CacheUtil.isLogin()) {
+            startActivity(Intent(this, LoginActivity::class.java))
+        } else {
+            startActivity(Intent(this, cls).apply {
                 putExtras(bundle)
             })
+        }
+    } else {
+        startActivity(Intent(this, cls).apply {
+            putExtras(bundle)
+        })
+    }
+}
+
+fun EditText.afterTextChange(afterTextChanged: (String) -> Unit) {
+    this.addTextChangedListener(object : TextWatcher {
+        override fun afterTextChanged(s: Editable?) {
+            afterTextChanged.invoke(s.toString())
         }
 
-    }
+        override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+        }
+
+        override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+
+        }
+    })
+}

@@ -14,12 +14,14 @@ import me.hegj.wandroid.R
 import me.hegj.wandroid.app.event.LoginFreshEvent
 import me.hegj.wandroid.app.utils.CacheUtil
 import me.hegj.wandroid.app.utils.SettingUtil
+import me.hegj.wandroid.app.utils.afterTextChange
 import me.hegj.wandroid.di.component.start.DaggerLoginComponent
 import me.hegj.wandroid.di.module.start.LoginModule
 import me.hegj.wandroid.mvp.contract.start.LoginContract
 import me.hegj.wandroid.mvp.model.entity.UserInfoResponse
 import me.hegj.wandroid.mvp.presenter.start.LoginPresenter
 import me.hegj.wandroid.mvp.ui.BaseActivity
+import org.greenrobot.eventbus.EventBus
 
 /**
  * 登录
@@ -51,34 +53,20 @@ class LoginActivity : BaseActivity<LoginPresenter>(), LoginContract.View {
         }
         SettingUtil.setShapColor(login_sub, SettingUtil.getColor(this))
         login_goregister?.setTextColor(SettingUtil.getColor(this))
-        login_username.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.isNotEmpty()) {
-                    login_clear.visibility = View.VISIBLE
-                } else {
-                    login_clear.visibility = View.GONE
-                }
+        login_username.afterTextChange {
+            if (it.isNotEmpty()) {
+                login_clear.visibility = View.VISIBLE
+            } else {
+                login_clear.visibility = View.GONE
             }
-        })
-        login_pwd.addTextChangedListener(object : TextWatcher {
-
-            override fun afterTextChanged(s: Editable?) {}
-
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence, start: Int, before: Int, count: Int) {
-                if (s.isNotEmpty()) {
-                    login_key.visibility = View.VISIBLE
-                } else {
-                    login_key.visibility = View.GONE
-                }
+        }
+        login_pwd.afterTextChange {
+            if (it.isNotEmpty()) {
+                login_key.visibility = View.VISIBLE
+            } else {
+                login_key.visibility = View.GONE
             }
-        })
+        }
         login_key.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 login_pwd.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD

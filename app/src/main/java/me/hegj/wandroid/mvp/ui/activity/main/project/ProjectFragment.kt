@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
 import android.text.Html
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,7 @@ import me.hegj.wandroid.di.component.main.project.DaggerProjectComponent
 import me.hegj.wandroid.di.module.main.project.ProjectModule
 import me.hegj.wandroid.mvp.contract.main.project.ProjectContract
 import me.hegj.wandroid.mvp.model.entity.ClassifyResponse
+import me.hegj.wandroid.mvp.model.entity.UserInfoResponse
 import me.hegj.wandroid.mvp.presenter.main.project.ProjectPresenter
 import me.hegj.wandroid.mvp.ui.BaseFragment
 import me.hegj.wandroid.mvp.ui.adapter.ViewPagerAdapter
@@ -162,5 +164,4 @@ class ProjectFragment : BaseFragment<ProjectPresenter>(), ProjectContract.View {
     fun settingEvent(event: SettingChangeEvent) {
         setUiTheme(_mActivity, listOf(viewpager_linear,loadsir))
     }
-
 }

@@ -19,6 +19,7 @@ import android.content.Context
 import com.jess.arms.http.GlobalHttpHandler
 import me.hegj.wandroid.app.utils.CacheUtil
 import me.hegj.wandroid.app.utils.HttpUtils.encodeCookie
+import okhttp3.FormBody
 import okhttp3.Interceptor
 import okhttp3.Request
 import okhttp3.Response
@@ -67,11 +68,15 @@ class GlobalHttpHandlerImpl(val context: Context) : GlobalHttpHandler {
     override fun onHttpRequestBefore(chain: Interceptor.Chain, request: Request): Request {
         /* 如果需要在请求服务器之前做一些操作, 则重新构建一个做过操作的 Request 并 return, 如增加 Header、Params 等请求信息, 不做操作则直接返回参数 request*/
         if (CacheUtil.isLogin()) {
+//            chain.request().url().newBuilder().addEncodedPathSegment()
             val cookies = CacheUtil.getCookie()
             //如果已经登录过了，那么请求的时候可以带上cookie 参数
             cookies?.run {
                 return chain.request().newBuilder()
                         .addHeader("Cookie", this)
+                       /* .post(FormBody.Builder().apply {
+                            addEncoded("token","xxx")
+                        }.build())*/
                         .build()
             }
         }

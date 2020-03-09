@@ -209,6 +209,5 @@ class MeFragment : BaseFragment<MePresenter>(), MeContract.View {
             ShowUtils.showToast(_mActivity,"未安装手机QQ或安装的版本不支持")
             false
         }
-
     }
 }

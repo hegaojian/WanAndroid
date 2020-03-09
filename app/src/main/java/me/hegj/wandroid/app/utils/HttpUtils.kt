@@ -38,19 +38,17 @@ object HttpUtils {
     }
 
     private fun convertStatusCode(httpException: HttpException): String {
-        val msg: String
-        if (httpException.code() == 500) {
-            msg = "服务器发生错误"
+        return if (httpException.code() == 500) {
+            "服务器发生错误"
         } else if (httpException.code() == 404) {
-            msg = "请求地址不存在"
+            "请求地址不存在"
         } else if (httpException.code() == 403) {
-            msg = "请求被服务器拒绝"
+            "请求被服务器拒绝"
         } else if (httpException.code() == 307) {
-            msg = "请求被重定向到其他页面"
+            "请求被重定向到其他页面"
         } else {
-            msg = httpException.message()
+            httpException.message()
         }
-        return msg
     }
 
     /**
