@@ -38,13 +38,13 @@
 
 - [GitHub下载](https://github.com/hegaojian/WanAndroid/releases/download/1.0.9/app-release.apk)
 
-- [fir.im下载](https://fir.im/4ybt)
+- [fir.im下载](http://d.6short.com/4ybt)
 
 - [小米应用市场下载](http://app.mi.com/download/933598?id=me.hegj.wandroid&ref=search&nonce=2368478985935143674%3A26235470&appClientId=2882303761517485445&appSignature=T49mZxF9fm7r1qKDSyN68zGb37Ar0wJUK_9EQK6PC2s)
 
 - 扫码
 
-![](https://upload-images.jianshu.io/upload_images/9305757-30650b8a016156a3.png?imageMogr2/auto-orient/strip|imageView2/2/w/448/format/webp)
+![](https://upload-images.jianshu.io/upload_images/9305757-a915f9e674931aa7.png?imageMogr2/auto-orient/strip|imageView2/2/w/500/format/webp)
  
 
 ## 应用截图
