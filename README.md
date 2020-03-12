@@ -7,6 +7,10 @@
 [5]:https://img.shields.io/badge/license-Apache%202-blue.svg
 [6]:https://github.com/hegaojian/WanAndroid/blob/master/LICENSE
 
+# 通知 该项目已停止维护
+
+  已使用JetPack+MVVM重构该项目 新地址： [https://github.com/hegaojian/JetpackMvvm](https://github.com/hegaojian/JetpackMvvm)
+
 # WanAndroid
 一位练习时长两年半的安卓练习生根据鸿神提供的[WanAndroid开放Api](https://www.wanandroid.com/blog/show/2)来制作的产品级App,基本实现了所有的功能，使用Kotlin语言，基于Material Design+AndroidX + MVP + RxJava + Retrofit等优秀的开源框架开发,注释超详细，方便大家练手
 
